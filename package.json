@@ -1,0 +1,40 @@
+{
+  "name": "test-project",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "npm": "6.12.1",
+    "node": "v13.1.0"
+  },
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "bootstrap": "^4.4.1",
+    "express": "^4.17.1",
+    "express-favicon": "^2.0.1",
+    "gsap": "^3.2.6",
+    "node-sass": "^4.14.1",
+    "path": "^0.12.7",
+    "react": "^16.13.1",
+    "react-bootstrap": "^1.0.1",
+    "react-dom": "^16.13.1",
+    "react-elastic-carousel": "^0.4.1",
+    "react-image-gallery": "^1.0.7",
+    "react-phone-input-2": "^2.13.3",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.4.1",
+    "react-slick": "^0.26.1",
+    "react-styled-carousel": "^0.5.1",
+    "react-super-responsive-table": "^5.1.1",
+    "react-use": "^14.2.0",
+    "slick-carousel": "^1.8.1",
+    "styled-components": "^5.1.0"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "build": "react-scripts build",
+    "test": "react-scripts test ",
+    "eject": "react-scripts eject"
+  }
+}
