@@ -1,0 +1,6 @@
+export default {
+  GET_ALL_CARS: 'GET_ALL_CARS',
+  FULLFILLED: '_FULLFILLED',
+  REJECTED: '_REJECTED',
+  PENDING: '_PENDING'
+};
