@@ -9,7 +9,8 @@ import {
   SocialFollow, 
   Icons, 
   HrDotted,
-  H6
+  H6,
+  LogoWrapper
 } from './styles';
 
 import IconFacebook from '../../assets/icons/facebook.JPG';
@@ -17,9 +18,13 @@ import IconTwitter from '../../assets/icons/twitter.JPG';
 import IconGoogle from '../../assets/icons/google.JPG';
 import IconUtube from '../../assets/icons/utube.JPG';
 import IconInsta from '../../assets/icons/insta.JPG';
+import Logo from '../../assets/images/logo@2x-1.png';
 
 const Footer = () => (
   <Container>
+    <LogoWrapper>
+      <img src={Logo} alt="logo"/>
+    </LogoWrapper>
     <Row>
       <Wrapper>
         <Title>Автомобили</Title>

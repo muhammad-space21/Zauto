@@ -9,14 +9,14 @@ import {
 
 import ButtonPrimary from '../Buttons/ButtonPrimary';
 
-const MenuItems = ({model, imageUrl, price, props}) => (
+const MenuItems = ({model, imageUrl, price}) => (
   <Container>
     <ImageContainer>
       <img src={imageUrl} alt='cars' />
     </ImageContainer>
     <Model>{model}</Model>
     <Price>{price}</Price>
-    <ButtonPrimary>Подробнее</ButtonPrimary>
+    <ButtonPrimary orderBtn>Подробнее</ButtonPrimary>
   </Container>
 );
 

@@ -10,33 +10,31 @@ export const Container = styled.div`
   align-items: center;
   text-align: center;
   background-color: white;
+  background-color: #D8D8D85C;
   position: relative;
 `;
 
 export const Heading = styled.h1`
-  font-size: 38px;
-  font-weight: 700;
+  font-size: 48px;
+  font-weight: 600;
   line-height: 55px;
-  color: #000000;
+  color: #4D4D4D;
   margin-top: 100px;
   margin-right: 50px;
   margin-left: 50px;
+  @media screen and (max-width: 768px) {
+    margin-bottom: 100px;
+  }
   @media screen and (max-width: 600px) {
     font-size: 28px;
     line-height: 35px;
-    margin-left: 0;
-    margin-right: 0;
+    margin-right: 20px;
+    margin-left: 20px;
   }
-  @media screen and (max-width: 460px) {
+  @media screen and (max-width: 500px) {
     font-size: 25px;
     line-height: 30px;
   }
-`;
-
-export const HR = styled.div`
-  width: 80%;
-  border-bottom: 2px solid black;
-  margin-top: 30px;
 `;
 
 export const Row = styled.div`
@@ -49,4 +47,20 @@ export const Row = styled.div`
   justify-content: space-evenly;
   margin-top: 50px;
   margin-bottom: 50px;
+  @media screen and (max-width: 768px) {
+    margin-top: 0;
+    magin-bottom: 0;
+  }
+
+`;
+
+export const BtnWrapper = styled.div`
+  display: ${(props) => props.catalog ? 'none' : 'block'};
+  width: 100%;
+  margin-left: auo;
+  margin-right: auto;
+  margin-bottom: 50px;
+  @media screen and (max-width: 768px) {
+    margin-top: -50px;
+  }
 `;

@@ -11,9 +11,7 @@ import {
   Value
 } from './styles';
 
-import ButtonPrimary from '../Buttons/ButtonPrimary';
 import ImageCar from '../../assets/images/spark.png';
-import IconPrint from '../../assets/icons/print.icon.png';
 
 const PricesInfo = () => (
   <Container>
@@ -89,8 +87,6 @@ const PricesInfo = () => (
       </Col2>
     </Row>
     <ButtonsWrapper>
-      <ButtonPrimary printBtn> <img src={IconPrint} alt="icon"/> Print qilish </ButtonPrimary>
-      <ButtonPrimary orderBtn>Buyurtma berish</ButtonPrimary>
 
     </ButtonsWrapper>
   </Container>

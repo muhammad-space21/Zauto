@@ -6,7 +6,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 100px;
+  padding-bottom: 50px;
   position: relative;
   background-color: white;
 `;
@@ -75,6 +75,10 @@ export const Card = styled.div`
     height: 70px;
     margin-top: 30px;
     margin-bottom: 50px;
+    @media screen and (max-width: 550px) {
+      margin-top: 50px;
+      margin-bottom: 0px;
+    }
   }
   @media screen and (max-width: 900px) {
     width: 80vw;

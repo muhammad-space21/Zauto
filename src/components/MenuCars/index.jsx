@@ -4,12 +4,13 @@ import gsap from "gsap";
 
 import { 
   Container, 
-  Heading, 
-  HR, 
-  Row 
+  Heading,  
+  Row,
+  BtnWrapper
 } from './styles';
 
 import MenuItems from '../MenuItems';
+import ButtonPrimary from '../Buttons/ButtonPrimary';
 import { data } from '../../mockData/index';
 
 
@@ -52,14 +53,16 @@ const MenuCars = () => {
   return (
     <Container className='fadeIn' ref={sectionRef}>
       <Heading>
-          ВЫБЕРИТЕ АВТОМОБИЛЬ В РАССРОЧКУ
+          Выберите Автомобиль в Рассрочку
       </Heading>
-      <HR />
       <Row>
         { carsDataMenu.map(({id, ...otherProps}) =>
           (<MenuItems key={id} {...otherProps} />)
         )}
       </Row>
+      <BtnWrapper> 
+        <ButtonPrimary primary>Все aвтомобили</ButtonPrimary>
+      </BtnWrapper>
     </Container>
   );
 };

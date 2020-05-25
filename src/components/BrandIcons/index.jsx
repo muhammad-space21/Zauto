@@ -4,25 +4,31 @@ import {
   Container, 
   Row, 
   Heading, 
-  ImgGm, 
-  ImgHyundai 
+  ImgChevrolet, 
+  ImgHyundai,
+  ImgLada
 } from './styles';
 
-import LogoGM from '../../assets/icons/gm.logo.png';
-import LogoHyundai from '../../assets/icons/hyundo.logo.png';
+import LogoHyndai from '../../assets/icons/hyunda.png';
+import LogoLada from '../../assets/icons/lada.png';
+import LogoChevrolet from '../../assets/icons/chevrolet.png';
+
 
 
 const BrandIcons = () => {
   return (
     <Container>
-      <Heading>ВЫБЕРИ СЕБЕ АВТО</Heading>
+      <Heading> Выберите модель автомобиля </Heading>
       <Row>
-        <ImgGm>
-          <img src={LogoGM} alt="logo-gm"/>
-        </ImgGm>
         <ImgHyundai>
-          <img src={LogoHyundai} alt="logo-hyundai"/>
+          <img src={LogoHyndai} alt="logo-hyundai"/>
         </ImgHyundai>
+        <ImgChevrolet>
+          <img src={LogoChevrolet} alt="logo-gm"/>
+        </ImgChevrolet>
+        <ImgLada>
+          <img src={LogoLada} alt=""/>
+        </ImgLada>
       </Row>
     </Container>
   );

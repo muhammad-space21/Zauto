@@ -7,8 +7,9 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #dfe6e9;
+  background-color: white;
   position: relative;
+  text-align: center;
 `;
 
 export const Row = styled.div`
@@ -16,52 +17,68 @@ export const Row = styled.div`
   height: fit-content;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 150px;
+  margin-bottom: 150px;
 `;
 
-export const ImgGm = styled.div`
-  width: 30%;
-  height: 400px;
+export const ImgChevrolet = styled.div`
+  width: 20%;
+  height: 20%;
   img {
       width: 100%;
       height: 100%;
     }
-  @media screen and (max-width: 768px) {
-    width: 40%;
-    height: 250px;
-  }
+    &:hover {
+      cursor: pointer;
+    }
 `;
 
 export const ImgHyundai = styled.div`
-  width: 30%;
-  height: 60px;
+  width: 20%;
+  height: 15%;
   img {
       width: 100%;
       height: 100%;
     }
-  @media screen and (max-width: 768px) {
-    width: 40%;
-    height: 30px;
+  &:hover {
+    cursor: pointer;
   }
 `;
 
-export const Heading = styled.h1`
-  font-size: 38px;
-  font-weight: 700;
-  line-height: 55px;
-  color: #000000;
-  margin-top: 50px;
-  margin-right: 50px;
-  margin-left: 50px;
-  @media screen and (max-width: 1000px) {
-    font-size: 38px;
-    line-height: 45px;
-  }
-  @media screen and (max-width: 600px) {
-    margin-left: 0;
-    margin-right: 0;
+export const ImgLada = styled.div`
+  width: 12%;
+  height: 12%;
+  img {
+      width: 100%;
+      height: 100%;
+    }
+  &:hover {
+    cursor: pointer;
   }
 `;
+
+
+export const Heading = styled.h1`
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 55px;
+  color: #4D4D4D;
+  margin-top: 100px;
+  margin-right: 50px;
+  margin-left: 50px;
+  @media screen and (max-width: 768px) {
+    margin-bottom: 100px;
+  }
+  @media screen and (max-width: 600px) {
+    font-size: 28px;
+    line-height: 35px;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+  @media screen and (max-width: 500px) {
+    font-size: 25px;
+    line-height: 30px;
+  }
+  `;

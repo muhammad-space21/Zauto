@@ -1,69 +1,69 @@
 import styled from 'styled-components';
 
-import ImageHeader from '../../assets/images/header-img.65.png';
+import { Carousel } from 'react-bootstrap';
+
 
 export const Container = styled.div`
   width: 100vw;
-  height: 110vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-image: url(${ImageHeader});
-  background-size: cover;
-  background-attachment: fixed;
-  margin: 0;
-  padding: 0;
-  @media screen and (max-width: 1100px) {
-    background-position: center;
-  }
-  @media screen and (max-width: 768px) {
-    background-image: 
-      linear-gradient(to top, #523fdc, #3437a6, #222b71, #191d3d, #0b0b0c);
+  height: fit-content;
+`;
+
+
+export const CarouselItem = styled(Carousel.Item)`
+  width: 100vw;
+  height: 90vh;
+  img {
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
   }
 `;
 
+export const CarouselCaption = styled(Carousel.Caption)`
+  height: 100vh;    
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+`;
 export const Heading = styled.div`
-  width: 80%;
+  width: 100%;
   height: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  font-size: 83px;
-  line-height: 90px;
-  font-weight: 400;
+  font-size: 50px;
+  line-height: 60px;
+  font-weight: 600;
+  font-style: italic;
   color: white;
   font-family: 'Roboto' sans-serif;
-    h2 {
-      font-size: 35px;
-      font-weight: 300;
-      line-height: 40px;
-      color: white;
-      font-family: 'Montserrat' sans-serif;
-      margin-top: 20px;
-    }
     @media screen and (max-width: 1100px) {
-      font-size: 70px;
-      line-height: 90px;
-      text-align: center;
+     width: 100%;
     }
     @media screen and (max-width: 768px) {
-      width: 80%;
       font-size: 40px;
       line-height: 50px;
+      text-align: center;
+    }
+    @media screen and (max-width: 550px) {
+      font-size: 30px;
+      line-height: 33px;
       text-align: center;
     }
 `;
 
 export  const ButtonContainer = styled.div`
-  width: 80%;
+  width: 100%;
   height: fit-content;
   display: flex;
   flex-direction: row;
   justify-content: center;
   margin-top: 30px;
   @media screen and (max-width: 1100px) {
-    justify-content: center;
-  }
+    width: 100%;
+   }
 `;

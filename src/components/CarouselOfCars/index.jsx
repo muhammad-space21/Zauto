@@ -67,23 +67,23 @@ class CarouselOfCars extends React.Component {
       <Container>
         <SliderStyled {...settings}>
           <Wrapper>
-            <img src={Img1} alt='' />
+            <img src={Img1} alt='car' />
           </Wrapper>
           <Wrapper>
-            <img src={Img2} alt=''/>
+            <img src={Img2} alt='car'/>
           </Wrapper>
           <Wrapper>
-            <img src={Img3} alt=''/>
+            <img src={Img3} alt='car'/>
           </Wrapper>
           <Wrapper>
-            <img src={Img4} alt=''/>
+            <img src={Img4} alt='car'/>
           </Wrapper>
           <Wrapper>
-            <img src={Img5} alt=''/>
+            <img src={Img5} alt='car'/>
           </Wrapper>
         </SliderStyled>
         <ButtonWrapper>
-          <ButtonPrimary applyBtn >ОСТАВИТЬ ЗАЯВКУ</ButtonPrimary>
+          <ButtonPrimary primary >Оставить Заявку</ButtonPrimary>
         </ButtonWrapper>
       </Container>
     );

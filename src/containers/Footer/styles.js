@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-import ImageBackgrround from '../../assets/images/footer.png';
+import ImageBackgrround from '../../assets/images/malibu.3.png';
 
 export const Container = styled.div`
   width: 100vw;
@@ -14,8 +14,25 @@ export const Container = styled.div`
   background-position: center; 
   background-size: cover;
   @media screen and (max-width: 768px) {
-    background-image: 
-      linear-gradient(to top, #523fdc, #3437a6, #222b71, #191d3d, #0b0b0c);
+    background-image:
+      linear-gradient(to bottom, #254971, #00648d, #008096, #009987, #00af66);
+  }
+`;
+
+export const LogoWrapper = styled.div`
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-right: auto;
+  img {
+    width: 80%;
+    height: 25px;
+    margin-left: 50px;
+  }
+  @media screen and (max-width: 991px) {
+    margin-left: -20px;
   }
 `;
 
@@ -51,7 +68,7 @@ export const LinkStyle = styled(Link)`
   line-height: 37px;
   color: white;
     &:hover {
-      color: #523FDC;
+      color: #00AF66;
       text-decoration: none;
     }
   @media screen and (max-width: 600px) {
@@ -76,6 +93,11 @@ export const H6 = styled.span`
   margin-right: auto;
   margin-left: 80px;
   margin-top: 30px;
+  @media screen and (max-width: 768px) {
+    color: black;
+    margin-left: 50px;
+
+  }
 `;
 
 export const HrDotted = styled.div`

@@ -7,7 +7,10 @@ export const NavbarStyled = styled(Navbar)`
   height: 100px;
   background-color: #000000;
   font-family: 'Varela Round', sans-serif;
-  position: fixed;
+  position: relative;
+  @media screen and (max-width: 550px) {
+    height: 80px;
+  }
 `;
 
 export const NavStyled = styled(Nav)`
@@ -25,6 +28,7 @@ export const NavStyled = styled(Nav)`
       margin-left: 0;
       margin-right: 20px;
       padding-left: 0;
+      z-index: 100px;
     }
 `;
 
@@ -35,13 +39,14 @@ export const NavLinkStyledBlack = styled(Nav.Link)`
   color: black;
   margin-right: 30px;
     &:hover {
-      color: #523FDC; 
+      curosr: pointer;
+      color: #00AF66; 
     }
   @media screen and (max-width: 1100px) {
     padding-right: 20px;
   }
   @media screen and (max-width: 991px) {
-    color: #523FDC;
+    color: #00AF66;
     margin-right: 0px;
   }
 `;
@@ -54,6 +59,7 @@ export const NavLinkStyled = styled(Nav.Link)`
   margin-right: 30px;
   &:hover {
     color: white;
+    cursor: pointer;
     &::before {
       width: 70px;
     }
@@ -62,11 +68,11 @@ export const NavLinkStyled = styled(Nav.Link)`
     position: absolute;
     content: "";
     bottom: 20px;
-    background-color: #523FDC;
-    height: 3px;
+    background-color: #00AF66;
+    height: 5px;
     width: 0;
     transition: .3s;
-    border-radius: 3px;
+    border-radius: 5px;
     @media screen and (max-width: 991px) {
       display: none;
     }
@@ -74,7 +80,8 @@ export const NavLinkStyled = styled(Nav.Link)`
   @media screen and (max-width: 991px) {
       color: black;
       &:hover {
-        color: #523FDC;
+        color: #00AF66;
+        curosr: pointer;
       }
   }
   
@@ -99,7 +106,7 @@ export const NavItemStyled = styled(Nav.Item)`
         margin-left: 0px;
         color: black;
         &:hover {
-          color: #523FDC;
+          color: #00AF66;
         }
       }
   }
@@ -121,6 +128,10 @@ export const NavbarBrand = styled(Navbar.Brand)`
   img {
     width: 80%;
     height: 25px;
+    @media screen and (max-width: 550px) {
+      width: 70%;
+      height: 20px;
+    }
   }
   @media screen and (max-width: 991px) {
     margin-left: -20px;
@@ -134,5 +145,9 @@ export const NavbarToggle = styled(Navbar.Toggle)`
   img {
     width: 35px;
     height: 20px;
+    @media screen and (max-width: 550px) {
+      width: 30px;
+      height: 15px;
+    }
   }
 `;

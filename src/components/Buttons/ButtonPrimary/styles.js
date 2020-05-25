@@ -3,12 +3,12 @@ import styled, {css} from 'styled-components';
 const getButtonStyles = props => {
     if (props.secondary) {
         return Secondary;
+    } else if (props.primary) {
+      return Primary;
     } else if (props.applyBtn) {
         return ApplyBtn;
     } else if (props.applyBtnWhite) {
         return ApplyBtnWhite;
-    } else if (props.printBtn) {
-      return PrintBtn;
     } else if (props.orderBtn) {
       return OrderBtn;
     } else {
@@ -17,21 +17,49 @@ const getButtonStyles = props => {
 };
 
 
-export const Container = styled.button`
-  width: 150px;
-  height: 50px;
+export const Primary = css`
+  width: 250px;
+  height: 60px;
   outline: none;
-  border: none;
-  border-radius: 5px; 
-  background-color: #523FDC;
+  border-radius: 14px;
+  background-color:  #00AF66;
   text-align: center;
-  font-size: 16px;
-  font-weight: 400;
   color: white;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: none;
+  font-style: normal;
   &:hover {
     cursor: pointer;
     background-image: 
-      linear-gradient(to top, #523fdc, #3437a6, #222b71, #191d3d, #0b0b0c);
+      linear-gradient(to bottom, #00af66, #16b96e, #24c376, #30ce7e, #3ad886);
+  }
+  &:focus {
+    outline: none;
+  }
+  @media screen and (max-width: 768px) {
+    width: 150px;
+    height: 50px;
+    font-size: 15px;
+  }
+`;
+export const Container = styled.button`
+  width: 220px;
+  height: 55px;
+  outline: none;
+  border: none;
+  border-radius: 14px; 
+  background-color: #00AF66;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 400;
+  color: white;
+  text-transform: uppercase;
+  font-style: italic;
+  &:hover {
+    cursor: pointer;
+    background-image: 
+      linear-gradient(to bottom, #00af66, #16b96e, #24c376, #30ce7e, #3ad886);
   }
   &:focus {
     outline: none;
@@ -41,7 +69,7 @@ export const Container = styled.button`
 
 export const Secondary = css`
   width: 223px;
-  height: 45px;
+  height: 55px;
   border: none;
   text-align: center;
   color: white;
@@ -49,8 +77,9 @@ export const Secondary = css`
   font-weight: 600;
   outline: none;
   background-color: #000000;
-  border-radius: 0px;
+  border-radius: 14px;
   transition: 0.5s;
+  font-style: normal;
     &:hover {
       cursor: pointer;
       background-color: #00CE1B;
@@ -62,101 +91,92 @@ export const Secondary = css`
 `;
 
 export const ApplyBtn = css`
-  width: 180px;
-  height: 45px;
+  width: 230px;
+  height: 60px;
   border: none;
   text-align: center;
   color: white;
   font-size: 15px;
-  font-weight: 600;
+  font-weight: 700;
   outline: none;
-  background-color: #3C3C3C;
-  border-radius: 3px;
+  background-color: black;
+  border-radius: 10px;
   transition: 0.5s;
+  font-style: normal;
     &:hover {
       cursor: pointer;
       background-image: 
-        linear-gradient(to top, #523fdc, #3d36a8, #2e2c75, #212045, #141319);
+        linear-gradient(to bottom, #b5b5b5, #848484, #575757, #2d2d2d, #000000);
     }
     &:focus {
       outline: none;
+    }
+    @media screen and (max-width: 768px) {
+      width: 180px;
+      height: 50px;
+      font-size: 13px;
     }
 `;
 
 export const ApplyBtnWhite = css`
-  width: 180px;
-  height: 45px;
+  width: 230px;
+  height: 60px;
   border: none;
   text-align: center;
   color: black;
   font-size: 15px;
-  font-weight: 600;
+  font-weight: 700;
   outline: none;
   background-color: white;
-  border-radius: 3px;
+  border-radius: 10px;
   transition: 0.5s;
-  text-transform: uppercase;
+  font-style: normal;
     &:hover {
       cursor: pointer;
       background-image: 
-        linear-gradient(to top, #523fdc, #836fe8, #ad9ef2, #d6cefa, #ffffff);
+        linear-gradient(to bottom, #b5b5b5, #c7c7c7, #d9d9d9, #ececec, #ffffff);
     }
     &:focus {
       outline: none;
     }
-`;
-
-export const PrintBtn = css`
-  width: 180px;
-  height: 45px;
-  border: none;
-  text-align: center;
-  color: black;
-  font-size: 15px;
-  font-weight: 600;
-  outline: none;
-  background-color: white;
-  text-transform: uppercase;
-    img {
-      width: 20px;
-      height: 20px;
-      margin-right: 5px;
-      margin-left: 5px;
-    }
-    &:hover {
-      cursor: pointer;
-      background-color: white; 
-    }
-    &:focus {
-      outline: none;
+    @media screen and (max-width: 768px) {
+      width: 180px;
+      height: 50px;
+      font-size: 13px;
     }
 `;
 
 export const OrderBtn = css`
   width: 180px;
-  height: 45px;
+  height: 50px;
   border: none;
   text-align: center;
   color: white;
   font-size: 15px;
   font-weight: 600;
   outline: none;
-  background-color: #523FDC;
-  text-transform: uppercase;
-  border-radius: 0px;
-    img {
-      width: 20px;
-      height: 20px;
-      margin-right: 5px;
-      margin-left: 5px;
-    }
+  background-color: #254971;
+  border-radius: 15px;
+  text-transform: none;
+  font-style: normal;
     &:hover {
       cursor: pointer;
       background-image: 
-        linear-gradient(to top, #523fdc, #3437a6, #222b71, #191d3d, #0b0b0c);
+        linear-gradient(to bottom, #254971, #2b5380, #305e90, #3668a0, #3c73b0);
     }
     &:focus {
       outline: none;
     }
-
+    @media screen and (max-width: 768px) {
+      width: 130px;
+      height: 45px;
+      font-size: 13px;
+      border-radius: 13px;
+    }
+    @media screen and (max-width: 768px) {
+      width: 100px;
+      height: 40px;
+      font-size: 13px;
+      border-radius: 13px;
+    }
 `;

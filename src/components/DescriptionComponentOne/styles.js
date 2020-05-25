@@ -5,7 +5,6 @@ export const Container = styled.div`
   height: 98vh;
   background-color: black;
   position: relative;
-  margin-top: ${(props) => props.descriptionPage ? '100px' : '0'};
   @media screen and (max-width: 1100px) {
     height: fit-content;
   }
@@ -60,9 +59,13 @@ export const Title = styled.h1`
   color: white;
   text-transform: uppercase;
   align-self: flex-start;
-  margin-left: 50px;
+  margin-left: 70px;
   @media screen and (max-width: 1100px) {
     display: none;
+  }
+  @media screen and (min-width: 1500px) {
+    font-size: 20px;
+    font-weight: 400;
   }
 `;
 
@@ -74,6 +77,10 @@ export const Type = styled.h1`
   color: white;
   text-transform: uppercase;
   text-align: center;
+  @media screen and (min-width: 1500px) {
+    font-size: 20px;
+    font-weight: 400;
+  }
 `;
 
 export const Model = styled.span`
@@ -89,6 +96,10 @@ export const Model = styled.span`
   @media screen and (max-width: 1100px) {
     display: none;
   }
+  @media screen and (min-width: 1500px) {
+    font-size: 85px;
+    line-height: 45px;
+  }
 `;
 
 export const ModelHide = styled.span`
@@ -103,6 +114,13 @@ export const ModelHide = styled.span`
     font-size: 45px;
     line-height: 45px;
     margin-bottom: 30px;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 25px;
+  }
+  @media screen and (min-width: 1500px) {
+    font-size: 85px;
+    line-height: 45px;
   }
 `;
 
@@ -121,6 +139,7 @@ export const Wrapper = styled.div`
 
 export const ButtonsWrapper = styled.div`
   width: 90%;
+  height: 200px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -132,7 +151,7 @@ export const ButtonsWrapper = styled.div`
   }
   @media screen and (max-width: 768px) {
     display: flex;
-    height: 120px;
+    height: 150px;
     flex-direction: column;
     justify-content: space-between;
     margin-top: 50px;
@@ -150,17 +169,23 @@ export const IconsWrapper = styled.div`
       width: 80px;
       height: 80px;
     }
+    @media screen and (min-width: 1500px) {
+      img {
+        width:  100px;
+        height: 100px;
+      }
+    }
 `;
 
 export const Details = styled.div`
-  font-size: 22px;
+  font-size: 25px;
   line-height: 22px;
-  font-weight: 500;
-  color: #523FDC;
+  font-weight: 600;
+  color: white;
   margin-top: 40px;
     span {
       font-size: 19px;
-      color: #523FDC;
+      color: white;
       margin-left: 3px;
     }
 `;
