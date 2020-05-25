@@ -22,9 +22,6 @@ export const Heading = styled.h1`
   margin-top: 100px;
   margin-right: 50px;
   margin-left: 50px;
-  @media screen and (max-width: 768px) {
-    margin-bottom: 100px;
-  }
   @media screen and (max-width: 600px) {
     font-size: 28px;
     line-height: 35px;
@@ -45,19 +42,14 @@ export const Row = styled.div`
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
-  margin-top: 50px;
   margin-bottom: 50px;
-  @media screen and (max-width: 768px) {
-    margin-top: 0;
-    magin-bottom: 0;
-  }
-
+  margin-top: 50px;
 `;
 
 export const BtnWrapper = styled.div`
   display: ${(props) => props.catalog ? 'none' : 'block'};
   width: 100%;
-  margin-left: auo;
+  margin-left: auto;
   margin-right: auto;
   margin-bottom: 50px;
   @media screen and (max-width: 768px) {

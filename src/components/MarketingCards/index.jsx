@@ -2,12 +2,9 @@ import React from 'react';
 
 import { 
   Container,
-   Card,
-   ImageContainer1,
-   ImageContainer2,
-   ImageContainer3,
-   ImageContainer4
-   } from './styles';
+  Card,
+  ImageContainer
+} from './styles';
 
 import IconCalculator from '../../assets/icons/keys.png';
 import IconCalendar from '../../assets/icons/calendar.png';
@@ -17,27 +14,27 @@ import IconDocument from '../../assets/icons/business-and-finance.png';
 const MarketingCards = () => (
   <Container>
     <Card>
-      <ImageContainer1>
+      <ImageContainer>
         <img src={IconCalculator} alt="calculator"/>
-      </ImageContainer1>
+      </ImageContainer>
       <span>Правила расчета</span>
     </Card>
     <Card>
-      <ImageContainer2>
+      <ImageContainer>
         <img src={IconCalendar} alt="calendar"/>
-      </ImageContainer2>
+      </ImageContainer>
       <span>Рассрочка сроком до 60 месяцев</span>
     </Card>
     <Card>
-      <ImageContainer3>
+      <ImageContainer>
         <img src={IconDocument} alt="document"/>
-      </ImageContainer3>
+      </ImageContainer>
       <span>Автомобиль оформляется на Вас</span>
     </Card>
     <Card>
-      <ImageContainer4>
+      <ImageContainer>
         <img src={IconPassport} alt="passport"/>
-      </ImageContainer4>
+      </ImageContainer>
       <span>Нужен только паспорт</span>
     </Card>
   </Container>

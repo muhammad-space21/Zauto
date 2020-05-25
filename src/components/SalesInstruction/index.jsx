@@ -17,7 +17,7 @@ import ButtonPrimary from '../Buttons/ButtonPrimary';
 import IconCertificate from '../../assets/icons/certificate.png';
 import IconStartup from '../../assets/icons/startup.png';
 import IconDomain from '../../assets/icons/domain-registration.png';
-import IconMarketing from '../../assets/icons/viral-marketing.png';
+import IconMarketing from '../../assets/icons/viral-marketing.jpg';
 
 const SalesInstruction = () => {
    // Ref for our element

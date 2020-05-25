@@ -1,29 +1,23 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  width: 33%;
-  height: 70vh;
+  width: 30%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  margin-bottom: 50px;
   @media screen and (max-width: 1100px) {
     width: 45%;
   }
   @media screen and (max-width: 768px) {
     width: 40%;
   }
-  @media screen and (max-width: 768px) {
-    margin-top: -200px;
-  }
-  @media screen and (max-width: 460px) {
-    margin-top: -200px;
-  }
 `;
 
 export const ImageContainer = styled.div`
   width: 100%;
   height: 50%;
+  overflow: hidden;
   &:hover {
     box-shadow: 0 7px 30px -10px rgba(150, 170, 180, 0.5);
   }

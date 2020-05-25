@@ -38,15 +38,16 @@ export const Card = styled.div`
   text-align: center;
   @media screen and ( max-width: 769px ) {
     width: 50%;
-    height: 20vh;
+    height: 30vh;
   }
-   
+
     span {
-      font-size: 18px;
+      font-size: 16px;
       line-height: 25px;
       margin-left: 40px;
       margin-right: 40px;
       margin-top: 20px;
+      margin-bottom: 50px;
     }
     &:hover {
       background-color: #00AF66;
@@ -73,28 +74,13 @@ export const Card = styled.div`
     }
 `;
 
-export const ImageContainer1 = styled.div`
+export const ImageContainer = styled.div`
+  margin-top: 30px;
+  width: 40px;
+  height: 40px;
   img {
-   width: 45px;
-   height: 45px;
-  }
-`;
-export const ImageContainer2 = styled.div`
-  img {
-    width: 50px;
-    height: 50xp;
-  }
-`;
-export const ImageContainer3 = styled.div`
-  img {
-    width: 50px;
-    height: 50px;
-  }
-`;
-export const ImageContainer4 = styled.div`
-  img {
-    width: 55px;
-    height: 55px;
+    width: 100%;
+    height: 100%;
   }
 `;
 
