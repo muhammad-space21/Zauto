@@ -5,7 +5,7 @@ import actionTypes from '../../constants/actionTypes';
 import { API_URL } from '../../config';
 
 
-export const getAllCars = () => (dispatch) => {
+export const getAllCars = (token) => (dispatch) => {
   dispatch({
     type: actionTypes.GET_ALL_CARS,
     payload: axios({
