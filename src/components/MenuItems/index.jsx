@@ -9,12 +9,12 @@ import {
 
 import ButtonPrimary from '../Buttons/ButtonPrimary';
 
-const MenuItems = ({model, imageUrl, price}) => (
+const MenuItems = ({name, image, price}) => (
   <Container>
     <ImageContainer>
-      <img src={imageUrl} alt='cars' />
+      <img src={image} alt='cars' />
     </ImageContainer>
-    <Model>{model}</Model>
+    <Model>{name}</Model>
     <Price>{price}</Price>
     <ButtonPrimary orderBtn>Подробнее</ButtonPrimary>
   </Container>

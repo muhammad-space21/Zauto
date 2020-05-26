@@ -1,5 +1,6 @@
 import React from 'react';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
+// import PropTypes from 'prop-types';
 import { 
   Container, 
   Heading,  
@@ -7,31 +8,45 @@ import {
   BtnWrapper
 } from './styles';
 
-import {getAllCars} from '../../redux/allCars/allCarsActions';
 import MenuItems from '../MenuItems';
 import ButtonPrimary from '../Buttons/ButtonPrimary';
-import { data } from '../../mockData/index';
 
-const MenuCars = () => {
-  const { carsDataMenu } = data;
-
+const MenuCars = (allCars) => {
   return (
     <Container>
       <Heading>
           Выберите Автомобиль в Рассрочку
       </Heading>
       <Row>
-        { carsDataMenu.map(({id, ...otherProps}) =>
+        { allCars.map(({id, ...otherProps}) =>
           (<MenuItems key={id} {...otherProps} />)
         )}
       </Row>
-      <BtnWrapper> 
+      <BtnWrapper>
         <ButtonPrimary primary>Все aвтомобили</ButtonPrimary>
       </BtnWrapper>
     </Container>
   );
 };
 
+// MenuCars.defaultProps = {
+//   loading: false,
+//   error: false,
+//   allCars: []
+// };
+
+// MenuCars.propTypes = {
+//   loading: PropTypes.bool,
+//   error: PropTypes.bool,
+//   getAllCars: PropTypes.func.isRequired
+// };
 
 
-export default MenuCars;
+const mapStateToProps = (state) => ({
+  loading: state.getAllCarsReducer,
+  error: state.getAllCarsReducer,
+  allCars: state.getAllCarsReducer
+});
+
+
+export default connect(mapStateToProps, null)(MenuCars);
