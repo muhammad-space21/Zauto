@@ -1,5 +1,5 @@
 import React, { lazy, Suspense } from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, useParams } from 'react-router-dom';
 
 import { Container } from './App.styles';
 
@@ -13,14 +13,15 @@ const FormPage = lazy(() => import('./pages/FormPage'));
 const CarsCatalogPage = lazy(() => import('./pages/CarsCatalogPage'));
 
 
-const App = () => {
+const App = ({match}) => {
+  let { sluggable } = useParams();
   return (
     <Container>
       <Switch>
         <ErrorBoundary>
           <Suspense fallback={<Spinner />}>
             <Route exact path='/' component={Homepage} />
-            <Route exact path='/description' component={DescriptionPage} />
+            <Route exact path='/description/:sluggable' component={DescriptionPage} />
             <Route exact path='/calculator' component={CalculatorPage} />
             <Route exact path='/form' component={FormPage} />
             <Route exact path='/cars-catalog' component={CarsCatalogPage} />

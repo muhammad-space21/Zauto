@@ -9,15 +9,17 @@ import {
 
 import ButtonPrimary from '../Buttons/ButtonPrimary';
 
-const MenuItems = ({name, image, price}) => (
-  <Container>
-    <ImageContainer>
-      <img src={`https://admin.zauto.uz/${image}`} alt='cars' />
-    </ImageContainer>
-    <Model>{name}</Model>
-    <Price>ОТ {price} сум / ДЕНЬ</Price>
-    <ButtonPrimary orderBtn>Подробнее</ButtonPrimary>
-  </Container>
-);
+const MenuItems = ({name, image, price}) => {
+  return (
+    <Container>
+      <ImageContainer>
+        <img src={`https://admin.zauto.uz/${image}`} alt='cars' />
+      </ImageContainer>
+      <Model>{name}</Model>
+      <Price>ОТ {price} сум / ДЕНЬ</Price>
+      <ButtonPrimary orderBtn>Подробнее</ButtonPrimary>
+    </Container>
+  )
+};
 
 export default MenuItems;
