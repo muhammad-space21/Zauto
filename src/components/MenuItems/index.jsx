@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { 
+import {
   Container, 
   ImageContainer, 
   Model, 
@@ -12,10 +12,10 @@ import ButtonPrimary from '../Buttons/ButtonPrimary';
 const MenuItems = ({name, image, price}) => (
   <Container>
     <ImageContainer>
-      <img src={image} alt='cars' />
+      <img src={`https://admin.zauto.uz/${image}`} alt='cars' />
     </ImageContainer>
     <Model>{name}</Model>
-    <Price>{price}</Price>
+    <Price>ОТ {price} сум / ДЕНЬ</Price>
     <ButtonPrimary orderBtn>Подробнее</ButtonPrimary>
   </Container>
 );

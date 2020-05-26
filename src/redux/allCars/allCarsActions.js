@@ -2,7 +2,7 @@ import axios from 'axios';
 
 import actionTypes from '../../constants/actionTypes';
 
-// import { API_URL } from '../../config';
+import { API_URL } from '../../config';
 
 
 export const getAllCars = () => (dispatch) => {
@@ -10,7 +10,7 @@ export const getAllCars = () => (dispatch) => {
     type: actionTypes.GET_ALL_CARS,
     payload: axios({
       method: 'GET',
-      url: 'https://admin.zauto.uz/api/cars'
+      url: `${API_URL}/cars`
     })
   })
 };

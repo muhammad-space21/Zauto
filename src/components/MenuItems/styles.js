@@ -17,9 +17,9 @@ export const Container = styled.div`
 export const ImageContainer = styled.div`
   width: 100%;
   height: 50%;
-  overflow: hidden;
   &:hover {
-    box-shadow: 0 7px 30px -10px rgba(150, 170, 180, 0.5);
+    box-shadow: 
+      0 7px 30px -10px rgba(150, 170, 180, 0.5);
   }
   img {
     width: 100%;
@@ -30,7 +30,6 @@ export const ImageContainer = styled.div`
     width: 100%;
     height: fit-content;
   }
-  
 `;
 
 export const Model = styled.span`
