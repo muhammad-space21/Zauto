@@ -45,7 +45,7 @@ const MenuCars = (allCars) => {
 const mapStateToProps = (state) => ({
   loading: state.getAllCarsReducer,
   error: state.getAllCarsReducer,
-  allCars: state.getAllCarsReducer
+  allCars: state.getAllCarsReducer.allCars,
 });
 
 
