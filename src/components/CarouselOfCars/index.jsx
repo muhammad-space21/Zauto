@@ -3,7 +3,7 @@ import React from 'react';
 import { 
   Container, 
   SliderStyled, 
-  ButtonWrapper,
+  // ButtonWrapper,
   Wrapper
 } from './styles';
 
@@ -82,9 +82,9 @@ class CarouselOfCars extends React.Component {
             <img src={Img5} alt='car'/>
           </Wrapper>
         </SliderStyled>
-        <ButtonWrapper>
+        {/* <ButtonWrapper>
           <ButtonPrimary primary >Оставить Заявку</ButtonPrimary>
-        </ButtonWrapper>
+        </ButtonWrapper> */}
       </Container>
     );
   }
