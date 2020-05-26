@@ -25,7 +25,7 @@ class MenuCars extends React.Component {
   }
 
   routeChange() {
-    let path = `cars-catalog`;
+    let path = `catalog`;
     this.props.history.push(path);
   }
 

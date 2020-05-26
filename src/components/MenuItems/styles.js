@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const Container = styled.div`
   width: 30%;
@@ -32,7 +33,7 @@ export const ImageContainer = styled.div`
   }
 `;
 
-export const Model = styled.span`
+export const Model = styled(Link)`
   font-size: 20px;
   line-height: 20px;
   font-weight: 700;
@@ -46,6 +47,9 @@ export const Model = styled.span`
   }
   @media screen and (max-width: 460px) {
     font-size: 15px;
+  }
+  &:hover {
+    text-decoration: none;
   }
 `;
 
