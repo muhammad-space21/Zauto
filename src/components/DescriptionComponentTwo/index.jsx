@@ -18,9 +18,9 @@ import {
 
 import ButtonPrimary from '../Buttons/ButtonPrimary';
 
-import IconEngine from '../../assets/icons/engine.jpg';
-import IconSpeed from '../../assets/icons/speed.jpg';
-import IconBag from '../../assets/icons/bag.jpg';
+import IconEngine from '../../assets/icons/engine.black.png';
+import IconSpeed from '../../assets/icons/speed.black.png';
+import IconBag from '../../assets/icons/bag.black.png';
 
 const images = [
   {
@@ -72,7 +72,7 @@ const DescriptionComponentTwo = () => (
               <Details>149 <span>л.с</span></Details>
             </IconsWrapper><IconsWrapper> 
               <img src={IconBag} alt="icon"/>
-              <Details>8,2<span> л/100</span></Details>
+              <Details>8,2<span> л/100km</span></Details>
             </IconsWrapper>
         </Wrapper>
         <ButtonsWrapper>

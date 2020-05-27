@@ -14,7 +14,7 @@ import ButtonPrimary from '../Buttons/ButtonPrimary';
 import ImageHeaderMalibu from '../../assets/images/header-malibu.jpg';
 import ImageHeaderMerc from '../../assets/images/mers1.png';
 
-function HeaderCarousel() {
+const HeaderCarousel = () => {
   const [index, setIndex] = useState(0);
 
   const handleSelect = (selectedIndex, e) => {
@@ -23,10 +23,15 @@ function HeaderCarousel() {
 
   return (
     <Container>
-      <Carousel indicators={false} interval={1000} activeIndex={index} onSelect={handleSelect}>
+      <Carousel 
+        indicators={false} 
+        interval={1000} 
+        activeIndex={index} 
+        onSelect={handleSelect}
+      >
         <CarouselItem>
           <img
-            className="d-block w-100"
+            className="w-100"
             src={ImageHeaderMalibu}
             alt="First slide"
           />
@@ -41,7 +46,7 @@ function HeaderCarousel() {
         </CarouselItem>
         <CarouselItem>
           <img
-            className="d-block w-100"
+            className="w-100"
             src={ImageHeaderMerc}
             alt="Second slide"
           />

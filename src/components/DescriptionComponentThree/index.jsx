@@ -18,9 +18,9 @@ import {
 
 import ButtonPrimary from '../Buttons/ButtonPrimary';
 
-import IconEngine from '../../assets/icons/engine.white.JPG';
-import IconSpeed from '../../assets/icons/speed.white.JPG';
-import IconBag from '../../assets/icons/bag.white.JPG';
+import IconEngine from '../../assets/icons/engine.white.png';
+import IconSpeed from '../../assets/icons/speed.white.png';
+import IconBag from '../../assets/icons/bag.white.png';
 
 const images = [
   {
@@ -72,7 +72,7 @@ const DescriptionComponentThree = () => (
               <Details>128 <span>л.с</span></Details>
             </IconsWrapper><IconsWrapper> 
               <img src={IconBag} alt="icon"/>
-              <Details>6,6<span> л/100</span></Details>
+              <Details>6,6<span> л/100km</span></Details>
             </IconsWrapper>
         </Wrapper>
         <ButtonsWrapper>

@@ -12,11 +12,16 @@ export const Container = styled.div`
   margin-top: -40px;
   margin-bottom: 50px;
   position: relative;
-    @media screen and ( max-width: 1300px) {
+    @media screen and ( min-width: 1500px) {
       width: 90vw;
+      height: 30vh; 
+    }
+    @media screen and ( max-width: 1500px) {
+      width: 90vw;
+      height: 35vh; 
     }
     @media screen and ( max-width: 769px ) {
-      width: 80%;
+      width: 90%;
       height: fit-content;
       display: flex;
       flex-wrap: wrap;
@@ -43,11 +48,48 @@ export const Card = styled.div`
 
     span {
       font-size: 16px;
-      line-height: 25px;
+      line-height: 20px;
       margin-left: 40px;
       margin-right: 40px;
-      margin-top: 20px;
       margin-bottom: 50px;
+    }
+    @media screen and (min-width: 1300px) {
+      span {
+        font-size: 18px;
+        line-height: 25px;
+        margin-left: 40px;
+        margin-right: 40px;
+      }
+    }
+    @media screen and (max-width: 991px) {
+      span {
+        margin-left: 30px;
+        margin-right: 30px;
+      }
+    }
+    @media screen and (max-width: 768px) {
+      span {
+        font-size: 20px;
+        line-height: 22px;
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+    }
+    @media screen and (max-width: 550px) {
+      span {
+        font-size: 18px;
+        line-height: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+    }
+    @media screen and (max-width: 460px) {
+      span {
+        font-size: 13px;
+        line-height: 15px;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
     }
     &:hover {
       background-color: #00AF66;
@@ -56,31 +98,28 @@ export const Card = styled.div`
         color: white;
       }
     }
-    @media screen and (max-width: 550px) {
-      span {
-        font-size: 15px;
-        line-height: 18px;
-        margin-left: 20px;
-        margin-right: 20px;
-      }
-    }
-    @media screen and (max-width: 460px) {
-      span {
-        font-size: 13px;
-        line-height: 18px;
-        margin-left: 10px;
-        margin-right: 10px;
-      }
-    }
 `;
 
 export const ImageContainer = styled.div`
   margin-top: 30px;
+  margin-bottom: 20px;
   width: 40px;
   height: 40px;
   img {
     width: 100%;
     height: 100%;
+  }
+  @media screen and ( min-width: 1500px) {
+    width: 60px;
+    height: 60px;
+  }
+  @media screen and ( max-width: 768px) {
+    width: 60px;
+    height: 60px;
+  }
+  @media screen and (max-width: 550px) {
+    width: 40px;
+    height: 40px;
   }
 `;
 

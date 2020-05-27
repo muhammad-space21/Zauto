@@ -4,7 +4,6 @@ export const Container = styled.div`
   width: 100vw;
   height: 98vh;
   background-color: black;
-  position: relative;
   @media screen and (max-width: 1100px) {
     height: fit-content;
   }
@@ -151,7 +150,7 @@ export const ButtonsWrapper = styled.div`
   }
   @media screen and (max-width: 768px) {
     display: flex;
-    height: 150px;
+    height: 130px;
     flex-direction: column;
     justify-content: space-between;
     margin-top: 50px;
@@ -165,9 +164,16 @@ export const IconsWrapper = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-    img {
-      width: 80px;
-      height: 80px;
+  margin-top: 30px;
+  img {
+      width: 60px;
+      height: 60px;
+    }
+    @media screen and (min-width: 1500px) {
+      img {
+        width:  80px;
+        height: 80px;
+      }
     }
     @media screen and (min-width: 1500px) {
       img {

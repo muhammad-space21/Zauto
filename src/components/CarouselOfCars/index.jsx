@@ -7,7 +7,7 @@ import {
   Wrapper
 } from './styles';
 
-import ButtonPrimary from '../Buttons/ButtonPrimary';
+// import ButtonPrimary from '../Buttons/ButtonPrimary';
 
 import  Img1 from '../../assets/images/1-2.jpg';
 import Img2 from '../../assets/images/1-3.jpg';

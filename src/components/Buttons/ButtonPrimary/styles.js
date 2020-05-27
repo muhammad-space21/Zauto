@@ -156,7 +156,7 @@ export const OrderBtn = css`
   font-weight: 600;
   outline: none;
   background-color: #254971;
-  border-radius: 15px;
+  border-radius: 13px;
   text-transform: none;
   font-style: normal;
     &:hover {
@@ -167,16 +167,10 @@ export const OrderBtn = css`
     &:focus {
       outline: none;
     }
-    @media screen and (max-width: 768px) {
-      width: 130px;
+    @media screen and (max-width: 550px) {
+      width: 80%;
       height: 45px;
+      border-radius: 10px;
       font-size: 13px;
-      border-radius: 13px;
-    }
-    @media screen and (max-width: 768px) {
-      width: 100px;
-      height: 40px;
-      font-size: 13px;
-      border-radius: 13px;
     }
 `;

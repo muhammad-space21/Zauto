@@ -27,7 +27,7 @@ export const LogoWrapper = styled.div`
   justify-content: flex-start;
   margin-right: auto;
   img {
-    width: 80%;
+    width: 60%;
     height: 25px;
     margin-left: 50px;
   }
@@ -94,7 +94,7 @@ export const H6 = styled.span`
   margin-left: 80px;
   margin-top: 30px;
   @media screen and (max-width: 768px) {
-    color: black;
+    color: white;
     margin-left: 50px;
 
   }

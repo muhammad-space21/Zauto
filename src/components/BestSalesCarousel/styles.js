@@ -7,7 +7,10 @@ export const  Container = styled.div`
   background-color: white;
   position: relative;
   text-align: center;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
+  @media screen and (max-width: 550px)  {
+    margin-bottom: 30px;
+  }
 
 `;
 

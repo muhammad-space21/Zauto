@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 export const Container = styled.div`
-  width: 30%;
+  width: 23%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11,7 +11,7 @@ export const Container = styled.div`
     width: 45%;
   }
   @media screen and (max-width: 768px) {
-    width: 40%;
+    width: 45%;
   }
 `;
 
@@ -34,15 +34,16 @@ export const ImageContainer = styled.div`
 `;
 
 export const Model = styled(Link)`
+  width: 100%;
+  height: 43px;
   font-size: 20px;
   line-height: 20px;
   font-weight: 700;
   color: #254971;
-  margin-bottom: 30px;
-  margin-top: 30px;
+  margin-top: 20px;
+  text-transform: uppercase;
   @media screen and (max-width: 768px) {
     font-size: 18px;
-    margin-bottom: 20px;
     margin-top: 20px;
   }
   @media screen and (max-width: 460px) {
@@ -54,16 +55,16 @@ export const Model = styled(Link)`
 `;
 
 export const Price = styled.span`
-  font-size: 23px;
+  font-size: 20px;
   line-height: 24px;
   font-weight: 700;
   color: black;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   @media screen and (max-width: 768px) {
     font-size: 18px;
   }
   @media screen and (max-width: 460px) {
-    font-size: 15px;
+    font-size: 13px;
     line-height: 18px;
   }
 `;

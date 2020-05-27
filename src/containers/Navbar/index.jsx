@@ -8,7 +8,8 @@ import {
   NavItemStyled,
   HR,
   NavbarBrand,
-  NavbarToggle
+  NavbarToggle,
+  NavLinkStyledLogin
 } from './styles';
 
 import './styles.scss';
@@ -17,10 +18,11 @@ import { Navbar } from 'react-bootstrap';
 import IconPhone from '../../assets/icons/phone-icon.png';
 import IconMenu from '../../assets/icons/menu-icon.png';
 import BrandLogo from '../../assets/images/logo@2x-1.png';
+import IconLogin from '../../assets/icons/login.png';
 
 export const NavbarMain = () => (
     <NavbarStyled bg='default' variant='default' expand="lg">
-      <NavbarBrand href="#home"> 
+      <NavbarBrand href="/"> 
         <img src={BrandLogo} alt="Brand-logo"/> 
       </NavbarBrand>
       <NavbarToggle aria-controls="responsive-navbar-nav"> <img src={IconMenu} alt='icon' /> </NavbarToggle>
@@ -41,6 +43,10 @@ export const NavbarMain = () => (
             <img src={IconPhone} alt='icon-phone' /> 
             <span>+99895-479-0770</span>
           </NavItemStyled>
+          <NavLinkStyledLogin href="#link">
+            <span>Логин</span>
+            <img src={IconLogin} alt="icon-login"/> 
+          </NavLinkStyledLogin>
         </NavStyled>
       </Navbar.Collapse>
     </NavbarStyled>

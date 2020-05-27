@@ -7,7 +7,6 @@ export const NavbarStyled = styled(Navbar)`
   height: 100px;
   background-color: #000000;
   font-family: 'Varela Round', sans-serif;
-  position: relative;
   @media screen and (max-width: 550px) {
     height: 80px;
   }
@@ -28,7 +27,6 @@ export const NavStyled = styled(Nav)`
       margin-left: 0;
       margin-right: 20px;
       padding-left: 0;
-      z-index: 100px;
     }
 `;
 
@@ -39,7 +37,7 @@ export const NavLinkStyledBlack = styled(Nav.Link)`
   color: black;
   margin-right: 30px;
     &:hover {
-      curosr: pointer;
+      cursor: pointer;
       color: #00AF66; 
     }
   @media screen and (max-width: 1100px) {
@@ -81,10 +79,44 @@ export const NavLinkStyled = styled(Nav.Link)`
       color: black;
       &:hover {
         color: #00AF66;
-        curosr: pointer;
+        cursor: pointer;
       }
   }
-  
+  img {
+    width: 40px;
+    height: 40px;
+  }
+`;
+
+export const NavLinkStyledLogin = styled(Nav.Link)`
+  margin-right: 30px;
+  margin-left: -20px;
+  &:hover {
+    cursor: pointer;
+  }
+  span {
+    display: none;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 300;
+    &:hover {
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+  @media screen and (max-width: 991px) {
+    span {
+      display: block;
+      color: black;
+    }
+    img {
+      display: none;
+    }
+  }
+  img {
+    width: 40px;
+    height: 40px;
+  }
 `;
 
 export const NavItemStyled = styled(Nav.Item)`
