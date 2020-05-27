@@ -19,21 +19,28 @@ export const Heading = styled.h1`
   font-weight: 600;
   line-height: 55px;
   color: #4D4D4D;
-  margin-top: 50px;
   margin-right: 50px;
   margin-left: 50px;
+  margin-top: 50px;
+  @media screen and (max-width: 768px) {
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 45px;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
   @media screen and (max-width: 600px) {
-    font-size: 28px;
+    font-size: 25px;
     line-height: 35px;
     margin-right: 20px;
     margin-left: 20px;
   }
   @media screen and (max-width: 500px) {
-    font-size: 25px;
+    font-size: 22px;
     line-height: 30px;
-    margin-top: 30px;
   }
-`;
+  `;
+
 
 export const Row = styled.div`
   width: 90vw;
