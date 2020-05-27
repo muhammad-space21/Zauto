@@ -42,6 +42,11 @@ export const Primary = css`
     height: 50px;
     font-size: 15px;
   }
+  @media screen and (max-width: 550px) {
+    width: 230px;
+    height: 60px;
+    font-size: 20px;
+  }
 `;
 export const Container = styled.button`
   width: 220px;

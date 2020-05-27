@@ -12,18 +12,15 @@
   line-height: 20px;
   font-weight: 300;
   color: white;
-  margin-right: 30px;
   text-decoration: none;
+  margin-right: 30px;
   font-family: 'Varela Round', sans-serif;
     &:hover {
       color: white;
       text-decoration: none;
     }
     @media screen and (max-width: 991px) {
-      color: black;
-      &:hover {
-        color:  #00AF66;
-      }
+      display: none;
     }
 }
 
@@ -31,7 +28,7 @@ ul.sub-menu {
   position: absolute;
   width: 180px;
   height: 100px;
-  background: white;
+  background: black;
   top: 80%;
   visibility: hidden;
   opacity: 0;
@@ -39,17 +36,18 @@ ul.sub-menu {
   padding: 17px 0;
   @include transition(.3s);
   @media screen and (max-width: 991px) {
-    width: fit-content;
-    height: fit-content;
-    position: relative;
-    visibility: visible;
-    box-shadow: none;
-    opacity: 1;
-    top: 0;
-    transition: none;
-    margin-right: -50px;
-    margin-bottom: -80px;
-    display: block;
+    // width: fit-content;
+    // height: fit-content;
+    // position: relative;
+    // visibility: visible;
+    // box-shadow: none;
+    // opacity: 1;
+    // top: -20px;
+    // transition: none;
+    // padding: 0;
+    // display: block;
+    // margin-right: -38px;
+    display: none;
   }
 }
 
@@ -57,7 +55,4 @@ li:hover > ul.sub-menu {
 	visibility: visible;
   opacity: 1;
   top: 100%;
-    @media screen and (max-width: 991px) {
-      top: 0;
-    }
 }

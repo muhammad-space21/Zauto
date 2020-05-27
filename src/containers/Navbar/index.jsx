@@ -4,17 +4,19 @@ import {
   NavbarStyled, 
   NavStyled, 
   NavLinkStyled,
-  NavLinkStyledBlack,
+  NavLinkStyledDropdown,
   NavItemStyled,
   HR,
   NavbarBrand,
   NavbarToggle,
-  NavLinkStyledLogin
+  NavbarCollapse,
+  NavLinkStyledLogin,
+  NavLinkHide,
+  NavLinkCustom
 } from './styles';
 
 import './styles.scss';
 
-import { Navbar } from 'react-bootstrap';
 import IconPhone from '../../assets/icons/phone-icon.png';
 import IconMenu from '../../assets/icons/menu-icon.png';
 import BrandLogo from '../../assets/images/logo@2x-1.png';
@@ -25,16 +27,21 @@ export const NavbarMain = () => (
       <NavbarBrand href="/"> 
         <img src={BrandLogo} alt="Brand-logo"/> 
       </NavbarBrand>
-      <NavbarToggle aria-controls="responsive-navbar-nav"> <img src={IconMenu} alt='icon' /> </NavbarToggle>
-      <Navbar.Collapse id="responsive-navbar-nav">
+      <NavbarToggle aria-controls="responsive-navbar-nav">
+        <img src={IconMenu} alt='icon' /> 
+      </NavbarToggle>
+      <NavbarCollapse id="responsive-navbar-nav">
         <NavStyled className="ml-auto">
-          <NavLinkStyled href="#home">Главная</NavLinkStyled>
-          <li><a className='nav-item' href="Автомобили">Автомобили</a>
+          <NavLinkCustom href="#home">Главная</NavLinkCustom>
+          <li>
+            <a className='nav-item' href="Автомобили">Автомобили</a>
             <ul className="sub-menu">
-              <NavLinkStyledBlack href="#link">Новые автомобили</NavLinkStyledBlack>
-              <NavLinkStyledBlack href="#link">С пробегом</NavLinkStyledBlack>
+              <NavLinkStyledDropdown href="#link">Новые автомобили</NavLinkStyledDropdown>
+              <NavLinkStyledDropdown href="#link">С пробегом</NavLinkStyledDropdown>
             </ul>
-          </li>        
+          </li>
+            <NavLinkHide href="#link">Новые автомобили</NavLinkHide>
+            <NavLinkHide href="#link">С пробегом</NavLinkHide>
           <NavLinkStyled href="#link">Как купить</NavLinkStyled>
           <NavLinkStyled href="#link">Партнеры</NavLinkStyled>
           <NavLinkStyled href="#Контакты">Контакты</NavLinkStyled>
@@ -44,11 +51,11 @@ export const NavbarMain = () => (
             <span>+99895-479-0770</span>
           </NavItemStyled>
           <NavLinkStyledLogin href="#link">
-            <span>Логин</span>
             <img src={IconLogin} alt="icon-login"/> 
+            <span>Логин</span>
           </NavLinkStyledLogin>
         </NavStyled>
-      </Navbar.Collapse>
+      </NavbarCollapse>
     </NavbarStyled>
 );
 

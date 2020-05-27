@@ -10,6 +10,7 @@ export const Container = styled.div`
   background-color: white;
   position: relative;
   text-align: center;
+  background-color: #F1F1F1;
 `;
 
 export const Row = styled.div`
@@ -20,7 +21,7 @@ export const Row = styled.div`
   justify-content: space-evenly;
   align-items: center;
   margin-top: 100px;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
   margin-left: -30px;
   @media screen and (max-width: 650px) {
     margin-top: 50px;
@@ -38,6 +39,10 @@ export const ImgChevrolet = styled.div`
     &:hover {
       cursor: pointer;
     }
+    @media screen and (max-width: 550px) {
+    width: 23%;
+    height: 23%;
+  }
 `;
 
 export const ImgHyundai = styled.div`
@@ -49,6 +54,10 @@ export const ImgHyundai = styled.div`
     }
   &:hover {
     cursor: pointer;
+  }
+  @media screen and (max-width: 550px) {
+    width: 23%;
+    height: 18%;
   }
 `;
 
@@ -62,6 +71,10 @@ export const ImgLada = styled.div`
   &:hover {
     cursor: pointer;
   }
+  @media screen and (max-width: 550px) {
+    width: 15%;
+    height: 15%;
+  }
 `;
 
 
@@ -72,6 +85,7 @@ export const Heading = styled.h1`
   color: #4D4D4D;
   margin-right: 50px;
   margin-left: 50px;
+  margin-top: 50px;
   @media screen and (max-width: 768px) {
     font-size: 30px;
     font-weight: 600;

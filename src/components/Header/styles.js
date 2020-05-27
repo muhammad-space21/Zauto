@@ -7,20 +7,17 @@ export const Container = styled.div`
   width: 100vw;
   height: 100vh;
   height: fit-content;
-  border: 4px solid red;
 `;
 
 
 export const CarouselItem = styled(Carousel.Item)`
   width: 100vw;
   height: 90vh;
-  border: 2px solid yellow;
   img {
     height: 100%;
     top: 0;
     left: 0;
     object-fit: cover;
-    position: static;
   }
 `;
 
@@ -31,7 +28,6 @@ export const CarouselCaption = styled(Carousel.Caption)`
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  border: 2px solid blue;
   position: absolute;
 
 

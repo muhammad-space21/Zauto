@@ -6,7 +6,6 @@ import axios from 'axios';
 
 import {
   Container, 
-  Heading,  
   Row,
   BtnWrapper
 } from './styles';
@@ -42,9 +41,6 @@ class MenuCars extends React.Component {
     const {allCars} = this.state;
     return(
       <Container>
-        <Heading>
-            Выберите Автомобиль в Рассрочку
-        </Heading>
           <Row>
             { allCars.length ? ( allCars
             .filter((item, idx) => idx < 9)

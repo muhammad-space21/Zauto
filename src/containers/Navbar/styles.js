@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 import { Navbar, Nav } from 'react-bootstrap';
 
+
 export const NavbarStyled = styled(Navbar)`
   width: 100vw;
   height: 100px;
@@ -16,25 +17,83 @@ export const NavStyled = styled(Nav)`
   display: flex;
   flex-direction: row;
   align-items: center;
+  z-index: 888;
     @media screen and (max-width: 991px) {
       display: flex;
       flex-direction: column;
-      align-items: center;
       justify-content: space-evenly;
-      background-color: white;
-      height: 400px;
-      width: 98%;
-      margin-left: 0;
-      margin-right: 20px;
-      padding-left: 0;
+      background-color: black;
+      width: 100vw;
+      height: 91vh;
+      margin: 0;
+      padding: 0;
     }
 `;
 
-export const NavLinkStyledBlack = styled(Nav.Link)`
+export const NavbarCollapse = styled(Navbar.Collapse)`
+  z-index: 888;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+
+`;
+
+export const NavLinkHide = styled(Nav.Link)`
+  display: none;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 300;
+  color: white;
+  &:hover {
+    color: #00AF66;
+    cursor: pointer; 
+  }
+  @media screen and (max-width: 991px) {
+    display: block;
+  }
+`;
+
+export const NavLinkCustom = styled(Nav.Link)`
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 300;
+  color: white;
+  margin-right: 30px;
+  &:hover {
+    color: white;
+    cursor: pointer;
+    &::before {
+      width: 70px;
+    }
+  }
+  &::before {
+    position: absolute;
+    content: "";
+    bottom: 20px;
+    background-color: #00AF66;
+    height: 5px;
+    width: 0;
+    transition: .3s;
+    border-radius: 5px;
+    @media screen and (max-width: 991px) {
+      display: none;
+    }
+  }
+  @media screen and (max-width: 991px) {
+    margin-right: 0;
+    margin-bottom: -32px;
+    &:hover {
+      color: #00AF66;
+      cursor: pointer;
+    }
+  }
+`;
+
+export const NavLinkStyledDropdown = styled(Nav.Link)`
   font-size: 15px;
   line-height: 20px;
   font-weight: 300;
-  color: black;
+  color: white;
   margin-right: 30px;
     &:hover {
       cursor: pointer;
@@ -44,8 +103,8 @@ export const NavLinkStyledBlack = styled(Nav.Link)`
     padding-right: 20px;
   }
   @media screen and (max-width: 991px) {
-    color: #00AF66;
-    margin-right: 0px;
+    margin-right: 0;
+    display: none;
   }
 `;
 
@@ -76,11 +135,11 @@ export const NavLinkStyled = styled(Nav.Link)`
     }
   }
   @media screen and (max-width: 991px) {
-      color: black;
-      &:hover {
-        color: #00AF66;
-        cursor: pointer;
-      }
+    margin-right: 0;
+    &:hover {
+      color: #00AF66;
+      cursor: pointer;
+    }
   }
   img {
     width: 40px;
@@ -89,10 +148,14 @@ export const NavLinkStyled = styled(Nav.Link)`
 `;
 
 export const NavLinkStyledLogin = styled(Nav.Link)`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   margin-right: 30px;
-  margin-left: -20px;
+  color: white;
   &:hover {
     cursor: pointer;
+    color: #00AF66;
   }
   span {
     display: none;
@@ -104,19 +167,21 @@ export const NavLinkStyledLogin = styled(Nav.Link)`
       cursor: pointer;
     }
   }
-  @media screen and (max-width: 991px) {
-    span {
-      display: block;
-      color: black;
-    }
-    img {
-      display: none;
-    }
-  }
   img {
     width: 40px;
     height: 40px;
   }
+  @media screen and (max-width: 991px) {
+    span {
+      display: block;
+    }
+    img {
+      width: 30px;
+      height: 30px;
+      margin-right: 5px;
+    }
+  }
+
 `;
 
 export const NavItemStyled = styled(Nav.Item)`
@@ -134,11 +199,14 @@ export const NavItemStyled = styled(Nav.Item)`
     color: #ffffff;
     margin-left: 15px;
     font-family: 'Montserrat', sans-serif;
-      @media screen and (max-width: 991px) {
-        margin-left: 0px;
-        color: black;
-        &:hover {
-          color: #00AF66;
+    @media screen and (max-width: 991px) {
+      margin-left: 10px;
+      &:hover {
+        color: #00AF66;
+      }
+        img {
+          width: 30px;
+          height: 30px;
         }
       }
   }
@@ -148,6 +216,9 @@ export const HR = styled.div`
   height: 50px;
   border-left: 1px solid white;
   margin-right: 10px;
+  @media screen and (max-width: 991px) {
+    display: none;
+  }
 `;
 
 export const NavbarBrand = styled(Navbar.Brand)`
@@ -156,7 +227,6 @@ export const NavbarBrand = styled(Navbar.Brand)`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 13px;
   img {
     width: 80%;
     height: 25px;
