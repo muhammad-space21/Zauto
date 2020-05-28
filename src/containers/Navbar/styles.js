@@ -35,7 +35,6 @@ export const NavbarCollapse = styled(Navbar.Collapse)`
   width: 100vw;
   margin: 0;
   padding: 0;
-
 `;
 
 export const NavLinkHide = styled(Nav.Link)`

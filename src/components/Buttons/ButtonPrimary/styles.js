@@ -38,11 +38,6 @@ export const Primary = css`
     outline: none;
   }
   @media screen and (max-width: 768px) {
-    width: 150px;
-    height: 50px;
-    font-size: 15px;
-  }
-  @media screen and (max-width: 550px) {
     width: 230px;
     height: 60px;
     font-size: 20px;

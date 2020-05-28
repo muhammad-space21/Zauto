@@ -15,12 +15,13 @@ export const Container = styled.div`
   }
 `;
 
-export const ImageContainer = styled.div`
+export const ImageContainer = styled(Link)`
   width: 100%;
   height: 50%;
   &:hover {
     box-shadow: 
       0 7px 30px -10px rgba(150, 170, 180, 0.5);
+      cursor: pointer;
   }
   img {
     width: 100%;
@@ -54,7 +55,7 @@ export const Model = styled(Link)`
   }
 `;
 
-export const Price = styled.span`
+export const Price = styled(Link)`
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
@@ -66,5 +67,9 @@ export const Price = styled.span`
   @media screen and (max-width: 460px) {
     font-size: 13px;
     line-height: 18px;
+  }
+  &:hover {
+    cursor: pointer;
+    text-decoration: none;
   }
 `;

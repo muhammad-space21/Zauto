@@ -11,22 +11,24 @@ const ProductPage = lazy(() => import('./pages/ProductPage'));
 const CalculatorPage = lazy(() => import('./pages/CalculatorPage'));
 const FormPage = lazy(() => import('./pages/FormPage'));
 
-const App = () => {
+class App extends React.Component {
 
-  return (
-    <Container>
-      <Switch>
-        <ErrorBoundary>
-          <Suspense fallback={<Spinner />}>
-            <Route exact path='/' component={Homepage} />
-            <Route path='/product' component={ProductPage} />
-            <Route exact path='/calculator' component={CalculatorPage} />
-            <Route exact path='/form' component={FormPage} />
-          </Suspense>
-        </ErrorBoundary>
-      </Switch>
-    </Container>
-  )
+  render() {
+    return (
+      <Container>
+        <Switch>
+          <ErrorBoundary>
+            <Suspense fallback={<Spinner />}>
+              <Route exact path='/' component={Homepage} />
+              <Route path='/product/:sluggable' component={ProductPage} />
+              <Route exact path='/calculator' component={CalculatorPage} />
+              <Route exact path='/form' component={FormPage} />
+            </Suspense>
+          </ErrorBoundary>
+        </Switch>
+      </Container>
+    )
+  }
 };
 
 export default App;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { 
+import {
   Container,
   Row,
   Wrapper, 
@@ -22,7 +22,7 @@ import Logo from '../../assets/images/logo@2x-1.png';
 
 const Footer = () => (
   <Container>
-    <LogoWrapper>
+    <LogoWrapper to='/'>
       <img src={Logo} alt="logo"/>
     </LogoWrapper>
     <Row>

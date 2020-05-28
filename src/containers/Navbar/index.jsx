@@ -34,7 +34,7 @@ export const NavbarMain = () => (
         <NavStyled className="ml-auto">
           <NavLinkCustom href="#home">Главная</NavLinkCustom>
           <li>
-            <a className='nav-item' href="Автомобили">Автомобили</a>
+            <a className='nav-item' href="#">Автомобили</a>
             <ul className="sub-menu">
               <NavLinkStyledDropdown href="#link">Новые автомобили</NavLinkStyledDropdown>
               <NavLinkStyledDropdown href="#link">С пробегом</NavLinkStyledDropdown>

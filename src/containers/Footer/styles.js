@@ -19,7 +19,7 @@ export const Container = styled.div`
   }
 `;
 
-export const LogoWrapper = styled.div`
+export const LogoWrapper = styled(Link)`
   width: fit-content;
   height: fit-content;
   display: flex;

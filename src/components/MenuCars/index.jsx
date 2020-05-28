@@ -34,7 +34,7 @@ class MenuCars extends React.Component {
           allCars: res.data
         })
       })
-  }
+  };
 
   showMore() {
     const { allCars, itemsToShow, expanded } = this.state;
@@ -70,9 +70,9 @@ class MenuCars extends React.Component {
             onClick={this.showMore}
           >
             {
-              expanded ? <span>Show less</span>
+              expanded ? <span>Показывай меньше</span>
               : 
-              <span>Show more</span>
+              <span>Показать больше</span>
             }
           </ButtonPrimary>
         </BtnWrapper>

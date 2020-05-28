@@ -1,5 +1,6 @@
 import React from 'react';
 import ImageGallery from 'react-image-gallery';
+import axios from 'axios';
 
 import {
   Container,
@@ -47,43 +48,66 @@ const images = [
 ];
 
 
-const DescriptionComponentOne = (props) => (
-  <Container {...props}>
-    <Row>
-      <Col1>
-      <ModelHide>Accent MPI 1.4</ModelHide>
-        <ImageGallery 
-          showFullscreenButton={false} 
-          showPlayButton={false}  
-          items={images}
-          showNav={false}
-        />
-      </Col1>
-      <Col2>
-        <Title>АВТОМОБИЛЬ В КРЕДИТ</Title>
-        <Model>Accent MPI 1.4</Model>
-        <Type>УДОБНЫЙ ГОРОДСКОЙ АВТОМОБИЛЬ</Type>
-        <Wrapper>
-            <IconsWrapperCustom marginRight35> 
-              <img src={IconEngine} alt="icon"/>
-              <Details>1,4 <span>cm3</span></Details>
-            </IconsWrapperCustom>
-            <IconsWrapperCustom> 
-              <img src={IconSpeed} alt="icon"/>
-              <Details>123 <span>л.с</span></Details>
-            </IconsWrapperCustom>
-            <IconsWrapper> 
-              <img src={IconBag} alt="icon"/>
-              <Details>6,6<span> л/100km</span></Details>
-            </IconsWrapper>
-        </Wrapper>
-        <ButtonsWrapper>
-            <ButtonPrimary applyBtnWhite>Предоплата 35%</ButtonPrimary>
-            <ButtonPrimary applyBtnWhite>Предоплата 50%</ButtonPrimary>
-        </ButtonsWrapper>
-      </Col2>
-    </Row>
-  </Container>
-);
+class DescriptionComponentOne extends React.Component {
+  constructor() {
+    super()
+    this.state = {
+      allCars: []
+    }
+  };
+
+
+  componentDidMount() {    
+    axios.get(`https://admin.zauto.uz/api/cars`)
+      .then(res => {
+        console.log(res);
+        this.setState({
+          allCars: res.data
+        })
+      })
+  };
+
+  render() {
+    const { allCars } = this.state; 
+    return (
+    <Container>
+      <Row>
+        <Col1>
+          <ModelHide>{allCars.name}</ModelHide>
+          <ImageGallery 
+            showFullscreenButton={false} 
+            showPlayButton={false}  
+            items={images}
+            showNav={false}
+          />
+        </Col1>
+        <Col2>
+          <Title>АВТОМОБИЛЬ В КРЕДИТ</Title>
+          <Model>{allCars.name}</Model>
+          <Type>УДОБНЫЙ ГОРОДСКОЙ АВТОМОБИЛЬ</Type>
+          <Wrapper>
+              <IconsWrapperCustom marginRight35> 
+                <img src={IconEngine} alt="icon"/>
+                <Details>{allCars.engine} <span>cm3</span></Details>
+              </IconsWrapperCustom>
+              <IconsWrapperCustom> 
+                <img src={IconSpeed} alt="icon"/>
+                <Details>{allCars.speed} <span>л.с</span></Details>
+              </IconsWrapperCustom>
+              <IconsWrapper> 
+                <img src={IconBag} alt="icon"/>
+                <Details>{allCars.petrol}<span> л/100km</span></Details>
+              </IconsWrapper>
+          </Wrapper>
+          <ButtonsWrapper>
+              <ButtonPrimary applyBtnWhite>Предоплата 35%</ButtonPrimary>
+              <ButtonPrimary applyBtnWhite>Предоплата 50%</ButtonPrimary>
+          </ButtonsWrapper>
+        </Col2>
+      </Row>
+    </Container>
+    )
+  }
+};
 
 export default DescriptionComponentOne;
