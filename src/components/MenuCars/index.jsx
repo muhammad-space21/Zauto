@@ -18,15 +18,13 @@ class MenuCars extends React.Component {
   constructor() {
     super()
     this.state = {
-      allCars: []
+      allCars: [],
+      itemsToShow: 12,
+      expanded: false
     }
-    this.routeChange = this.routeChange.bind(this);
+    this.showMore = this.showMore.bind(this);
   }
 
-  routeChange() {
-    let path = `catalog`;
-    this.props.history.push(path);
-  }
 
   componentDidMount() {
     axios.get('https://admin.zauto.uz/api/cars')
@@ -37,20 +35,46 @@ class MenuCars extends React.Component {
         })
       })
   }
+
+  showMore() {
+    const { allCars, itemsToShow, expanded } = this.state;
+    itemsToShow === 12 ? (
+      this.setState({ 
+        itemsToShow: allCars.length, 
+        expanded: true 
+      })
+    ) : (
+      this.setState({
+        itemsToShow: 12, 
+        expanded: false
+      })
+    )
+  };
+
   render() {
-    const {allCars} = this.state;
+    const { allCars, itemsToShow, expanded } = this.state;
     return(
       <Container>
           <Row>
-            { allCars.length ? ( allCars
-            .filter((item, idx) => idx < 9)
-            .map(({id, ...otherProps}) =>
-                (<MenuItems key={id} {...otherProps} />)
-              )) : (<Spinner />)
+            { 
+              allCars.length ? ( allCars
+                .slice(0, itemsToShow)
+                .map(({id, ...otherProps}) =>
+                    (<MenuItems key={id} {...otherProps} />)
+                  )) : (<Spinner />)
             }
           </Row>        
         <BtnWrapper>
-          <ButtonPrimary onClick={this.routeChange} primary>Все aвтомобили</ButtonPrimary>
+          <ButtonPrimary 
+            primary
+            onClick={this.showMore}
+          >
+            {
+              expanded ? <span>Show less</span>
+              : 
+              <span>Show more</span>
+            }
+          </ButtonPrimary>
         </BtnWrapper>
       </Container>
     )
