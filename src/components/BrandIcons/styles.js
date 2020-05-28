@@ -31,6 +31,7 @@ export const Row = styled.div`
 export const ImgChevrolet = styled.div`
   width: 20%;
   height: 20%;
+  margin-left: -30px;
   img {
       width: 100%;
       height: 100%;
