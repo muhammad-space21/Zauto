@@ -13,7 +13,8 @@ import {
   Details,
   Type,
   ModelHide,
-  ButtonsWrapper
+  ButtonsWrapper,
+  IconsWrapperCustom
 } from './styles';
 
 import ButtonPrimary from '../Buttons/ButtonPrimary';
@@ -63,14 +64,15 @@ const DescriptionComponentOne = (props) => (
         <Model>Accent MPI 1.4</Model>
         <Type>УДОБНЫЙ ГОРОДСКОЙ АВТОМОБИЛЬ</Type>
         <Wrapper>
-            <IconsWrapper> 
+            <IconsWrapperCustom marginRight35> 
               <img src={IconEngine} alt="icon"/>
               <Details>1,4 <span>cm3</span></Details>
-            </IconsWrapper>
-            <IconsWrapper> 
+            </IconsWrapperCustom>
+            <IconsWrapperCustom> 
               <img src={IconSpeed} alt="icon"/>
               <Details>123 <span>л.с</span></Details>
-            </IconsWrapper><IconsWrapper> 
+            </IconsWrapperCustom>
+            <IconsWrapper> 
               <img src={IconBag} alt="icon"/>
               <Details>6,6<span> л/100km</span></Details>
             </IconsWrapper>

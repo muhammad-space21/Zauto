@@ -14,18 +14,17 @@ export const Container = styled.div`
 `;
 
 export const Row = styled.div`
-  width: 100%;
+  width: 80%;
   height: fit-content;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  margin-top: 100px;
-  margin-bottom: 50px;
+  margin-top: 80px;
+  margin-bottom: 20px;
   margin-left: -30px;
   @media screen and (max-width: 650px) {
     margin-top: 50px;
-    margin-bottom: 50px;
   } 
 `;
 

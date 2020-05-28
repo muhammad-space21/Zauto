@@ -78,6 +78,7 @@ export const Type = styled.h1`
   color: black;
   text-transform: uppercase;
   text-align: center;
+  margin-top: 20px;
   @media screen and (min-width: 1500px) {
     font-size: 20px;
     font-weight: 400;
@@ -126,11 +127,13 @@ export const ModelHide = styled.span`
 `;
 
 export const Wrapper = styled.div`
-  width: 70%;
+  width: 80%;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
   @media screen and (max-width: 1100px) {
     width: 100%;
     justify-content: space-evenly;
@@ -177,6 +180,40 @@ export const IconsWrapper = styled.div`
         height: 80px;
       }
     }
+    @media screen and (max-width: 550px) {
+      img {
+        width: 50px;
+        height: 50px;
+      }
+    }
+`;
+
+export const IconsWrapperCustom = styled.div`
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+  margin-left: 35px;
+  margin-right: ${(props) => props.marginRight35 ? '-20px' : '0'};
+    img {
+      width: 60px;
+      height: 60px;
+    }
+    @media screen and (min-width: 1500px) {
+      img {
+        width:  80px;
+        height: 80px;
+      }
+      @media screen and (max-width: 550px) {
+        img {
+          width: 50px;
+          height: 50px;
+        }
+      }
+    }
 `;
 
 export const Details = styled.div`
@@ -189,5 +226,14 @@ export const Details = styled.div`
       font-size: 19px;
       color: black;
       margin-left: 3px;
+    }
+    @media screen and (max-width: 550px) {
+      font-size: 20px;
+      line-height: 20px;
+      font-weight: 500;
+      span {
+        font-size: 16px;
+        margin-left: 3px;
+      }
     }
 `;

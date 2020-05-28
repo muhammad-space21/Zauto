@@ -13,7 +13,8 @@ import {
   Details,
   Type,
   ModelHide,
-  ButtonsWrapper
+  ButtonsWrapper,
+  IconsWrapperCustom
 } from './styles';
 
 import ButtonPrimary from '../Buttons/ButtonPrimary';
@@ -46,8 +47,8 @@ const images = [
 ];
 
 
-const DescriptionComponentThree = () => (
-  <Container>
+const DescriptionComponentThree = (props) => (
+  <Container {...props}>
     <Row>
       <Col1>
       <ModelHide>Elantra MPI 1.6</ModelHide>
@@ -63,14 +64,15 @@ const DescriptionComponentThree = () => (
         <Model>Elantra MPI 1.6</Model>
         <Type>УДОБНЫЙ ГОРОДСКОЙ АВТОМОБИЛЬ</Type>
         <Wrapper>
-            <IconsWrapper> 
+            <IconsWrapperCustom marginRight35> 
               <img src={IconEngine} alt="icon"/>
               <Details>1,6 <span>cm3</span></Details>
-            </IconsWrapper>
-            <IconsWrapper> 
+            </IconsWrapperCustom>
+            <IconsWrapperCustom> 
               <img src={IconSpeed} alt="icon"/>
               <Details>128 <span>л.с</span></Details>
-            </IconsWrapper><IconsWrapper> 
+            </IconsWrapperCustom>
+            <IconsWrapper> 
               <img src={IconBag} alt="icon"/>
               <Details>6,6<span> л/100km</span></Details>
             </IconsWrapper>
