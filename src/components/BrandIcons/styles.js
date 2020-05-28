@@ -24,7 +24,8 @@ export const Row = styled.div`
   margin-bottom: 20px;
   margin-left: -30px;
   @media screen and (max-width: 650px) {
-    margin-top: 50px;
+    margin-top: 30px;
+    margin-bottom: 0;
   } 
 `;
 
@@ -42,6 +43,7 @@ export const ImgChevrolet = styled.div`
     @media screen and (max-width: 550px) {
     width: 23%;
     height: 23%;
+    margin-left: 0px;
   }
 `;
 

@@ -137,6 +137,9 @@ export const Wrapper = styled.div`
     justify-content: space-evenly;
     margin-top: 50px;
   }
+  @media screen and (max-width: 550px) {
+    margin-top: 0;
+  }
 `;
 
 export const ButtonsWrapper = styled.div`
@@ -181,8 +184,8 @@ export const IconsWrapper = styled.div`
     }
     @media screen and (max-width: 550px) {
       img {
-        width: 50px;
-        height: 50px;
+        width: 40px;
+        height: 40px;
       }
     }
 `;
@@ -208,8 +211,8 @@ export const IconsWrapperCustom = styled.div`
       }
       @media screen and (max-width: 550px) {
         img {
-          width: 50px;
-          height: 50px;
+          width: 40px;
+          height: 40px;
         }
       }
     }
