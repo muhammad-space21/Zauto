@@ -10,9 +10,9 @@ import {
   BtnWrapper
 } from './styles';
 
-import Spinner from '../Spinner';
-import MenuItems from '../MenuItems';
-import ButtonPrimary from '../Buttons/ButtonPrimary';
+import Spinner from '../../components/Spinner';
+import MenuItems from '../../containers/MenuItems';
+import ButtonPrimary from '../../components/Buttons/ButtonPrimary';
 
 class MenuCars extends React.Component {
   constructor() {

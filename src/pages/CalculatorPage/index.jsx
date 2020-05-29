@@ -2,11 +2,13 @@ import React from 'react';
 
 import { Container } from './styles';
 
-import PricesInfo from '../../components/PricesInfo';
-import SalesTable from '../../components/PricesTable';
+import NavbarMain from '../../containers/Navbar';
+import PricesInfo from '../../containers/PricesInfo';
+import SalesTable from '../../containers/PricesTable';
 
 const CalculatorPage = () => (
   <Container>
+    <NavbarMain />
     <PricesInfo />
     <SalesTable />
   </Container>

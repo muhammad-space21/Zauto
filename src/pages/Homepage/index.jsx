@@ -7,7 +7,7 @@ import HeaderCarousel from '../../components/Header';
 import MarketingCards from '../../components/MarketingCards';
 import BestSalesCarousel from '../../components/BestSalesCarousel';
 import BrandIcons from '../../components/BrandIcons';
-import MenuCars from '../../components/MenuCars';
+import MenuCars from '../../containers/MenuCars';
 import CarouselOfCars from '../../components/CarouselOfCars';
 import CarsDescriptionsOverview from '../../components/CarsDescriptionsOverview';
 import SalesInstruction from '../../components/SalesInstruction';

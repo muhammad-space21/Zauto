@@ -7,7 +7,7 @@ import {
   Price
 } from './styles';
 
-import ButtonPrimary from '../Buttons/ButtonPrimary';
+import ButtonPrimary from '../../components/Buttons/ButtonPrimary';
 
 const MenuItems = ({name, image, price, sluggable }) => {
 
