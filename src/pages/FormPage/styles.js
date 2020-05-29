@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 
-import ImageBackground from '../../assets/images/malibu.3.png';
 
 export const Container = styled.div`
   width: 100vw;
@@ -8,14 +7,42 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(${ImageBackground});
-  background-size: cover;
+`;
+
+export const Row = styled.div`
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const Col1 = styled.div`
+  width: 45%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-position: center; */
+  /* background-size: cover; */
+  overflow: hidden;
     @media screen and (max-width: 800px) {
-      object-fit: cover;
-      background-position: center;
+      display: none;
     }
-    @media screen and (max-width: 768px) {
-      background-image: 
-        linear-gradient(to top, #523fdc, #3437a6, #222b71, #191d3d, #0b0b0c);
-    }
+`;
+
+export const Col2 = styled.div`
+  width: 55%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FEFEFE;
+  @media screen and (max-width: 800px) {
+    width: 100%;
+  }
+  @media screen and (max-width: 550px) {
+    width: 60%;
+  }
 `;

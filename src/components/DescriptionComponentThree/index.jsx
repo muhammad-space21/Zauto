@@ -53,8 +53,8 @@ const DescriptionComponentThree = (props) => (
       <Col1>
       <ModelHide>Elantra MPI 1.6</ModelHide>
         <ImageGallery 
-          showFullscreenButton={false} 
-          showPlayButton={false}  
+          // showFullscreenButton={false} 
+          // showPlayButton={false}  
           items={images} 
           showNav={false}
         />

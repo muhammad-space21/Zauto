@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import ImageGallery from 'react-image-gallery';
+import { useHistory } from 'react-router-dom';
 
 import {
   Container,
@@ -42,6 +43,12 @@ const images = [
 
 const SalesInfo = () => {
   const [state, setState] = useState(true);
+  const history = useHistory();
+
+  const routeChange = () =>{ 
+    let path = `/form`; 
+    history.push(path);
+  }
 
   function toggle () {
     setState(!state);
@@ -53,8 +60,8 @@ const SalesInfo = () => {
         <Row>
           <Col1>
             <ImageGallery 
-              showFullscreenButton={false} 
-              showPlayButton={false}  
+              // showFullscreenButton={false} 
+              // showPlayButton={false}  
               items={images}
               showNav={false}
             />
@@ -110,7 +117,7 @@ const SalesInfo = () => {
             </Text>
           <ButtonsWrapper>
               <ButtonPrimary onClick={toggle} applyBtn>Калькулятор</ButtonPrimary>
-              <ButtonPrimary applyBtn>ОСТАВИТЬ ЗАЯВКУ</ButtonPrimary>
+              <ButtonPrimary onClick={routeChange} applyBtn>ОСТАВИТЬ ЗАЯВКУ</ButtonPrimary>
           </ButtonsWrapper>
         </Col2>
         </Row>

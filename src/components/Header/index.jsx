@@ -14,7 +14,7 @@ import ButtonPrimary from '../Buttons/ButtonPrimary';
 import ImageHeaderMalibu from '../../assets/images/header-malibu.jpg';
 import ImageHeaderMerc from '../../assets/images/mers1.png';
 
-const HeaderCarousel = () => {
+const Header = () => {
   const [index, setIndex] = useState(0);
 
   const handleSelect = (selectedIndex, e) => {
@@ -64,4 +64,4 @@ const HeaderCarousel = () => {
   );
 };
 
-export default HeaderCarousel;
+export default Header;

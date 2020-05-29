@@ -53,8 +53,8 @@ const DescriptionComponentTwo = (props) => (
       <Col1>
       <ModelHide>Tucson MPI 2.0</ModelHide>
         <ImageGallery 
-          showFullscreenButton={false} 
-          showPlayButton={false}  
+          // showFullscreenButton={false} 
+          // showPlayButton={false}  
           items={images} 
           showNav={false}
         />;

@@ -1,6 +1,6 @@
 import React from 'react';
 import ImageGallery from 'react-image-gallery';
-import { useParams } from 'react-router-dom';
+import { useParams, useHistory } from 'react-router-dom';
 
 import {
   Container,
@@ -49,15 +49,21 @@ const images = [
 
 
 const ProductComponent = ({ name, engine, petrol, speed }) => {
-  let { sluggable } = useParams();
+  // let { sluggable } = useParams();
+  const history = useHistory();
+
+  const routeChange = () =>{ 
+    let path = `/calculator`; 
+    history.push(path);
+  }
     return (
     <Container>
       <Row>
         <Col1>
           <ModelHide>{name}</ModelHide>
           <ImageGallery 
-            showFullscreenButton={false} 
-            showPlayButton={false}  
+            // showFullscreenButton={false} 
+            // showPlayButton={false}  
             items={images}
             showNav={false}
           />
@@ -81,7 +87,7 @@ const ProductComponent = ({ name, engine, petrol, speed }) => {
               </IconsWrapper>
           </Wrapper>
           <ButtonsWrapper>
-              <ButtonPrimary applyBtnWhite>Предоплата 35%</ButtonPrimary>
+              <ButtonPrimary onClick={routeChange} applyBtnWhite>Предоплата 35%</ButtonPrimary>
               <ButtonPrimary applyBtnWhite>Предоплата 50%</ButtonPrimary>
           </ButtonsWrapper>
         </Col2>
