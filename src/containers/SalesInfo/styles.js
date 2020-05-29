@@ -22,11 +22,13 @@ export const Row = styled.div`
       flex-direction: column;
       align-items: center;
       justify-content: space-between;
+      padding-bottom: 20px;
+      padding-top: 20px;
     }
 `;
 
 export const Col1 = styled.div`
-  width: 30%;
+  width: 40%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -35,6 +37,14 @@ export const Col1 = styled.div`
   @media screen and (max-width: 1100px) {
     width: 90%;
     margin-bottom: 30px;
+  }
+  @media screen and (min-width: 1500px) {
+    width: 45%;
+  }
+  @media screen and (max-width: 550px) {
+    width: 80%;
+    margin-left: 10px;
+    margin-right: 10px;
   }
 `;
 
@@ -46,7 +56,11 @@ export const Col2 = styled.div`
   justify-content: space-around;
   align-items: center;
   @media screen and (max-width: 1100px) {
-    width: 95%;
+    width: 90%;
+    height: 80%;
+  }
+  @media screen and (min-width: 1500px) {
+    width: 45%;
   }
 `;
 
@@ -58,7 +72,10 @@ export const Text = styled.div`
   align-items: center;
   justify-content: space-between;
   border-bottom: 2px solid #dfe6e9;
-  `;
+  @media screen and (max-width: 1100px) {
+    height: 50px;
+  }
+`;
 
 export const Option = styled.div`
   font-size: 20px;
@@ -66,10 +83,15 @@ export const Option = styled.div`
   font-weight: 500;
   font-family: 'Montserrat' sans-serif;
   color: ${(props) => props.active ? '#3FDD6F' : '#1a1a1a'};
-  @media screen and (max-width: 460px) {
-      font-size: 18px;
-      line-height: 20px; 
-    }
+  @media screen and (max-width: 550px) {
+    font-size: 17px;
+    line-height: 17px;
+  }
+
+  @media screen and (max-width: 400px) {
+    font-size: 15px;
+    line-height: 17px; 
+  }
 `;
 
 export const Value = styled.div`
@@ -77,32 +99,15 @@ export const Value = styled.div`
   line-height: 24px;
   font-weight: 500;
   color: ${(props) => props.active ? '#3FDD6F' : '#8E8E8E'};
-    @media screen and (max-width: 460px) {
+    @media screen and (max-width: 550px) {
       font-size: 15px;
-      line-height: 20px; 
+      line-height: 18px; 
     }
-`;
 
-export const ModelHide = styled.span`
-  font-size: 65px;
-  font-weight: 700;
-  line-height: 65px;
-  color: white;
-  display: none;
-  font-family: 'Roboto', sans-serif;
-  @media screen and (max-width: 1100px) {
-    display: block;
-    font-size: 45px;
-    line-height: 45px;
-    margin-bottom: 30px;
-  }
-  @media screen and (max-width: 768px) {
-    font-size: 25px;
-  }
-  @media screen and (min-width: 1500px) {
-    font-size: 85px;
-    line-height: 45px;
-  }
+    @media screen and (max-width: 400px) {
+      font-size: 13px;
+      line-height: 15px; 
+    }
 `;
 
 export const ButtonsWrapper = styled.div`
@@ -113,16 +118,10 @@ export const ButtonsWrapper = styled.div`
   align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
-  margin-top: 50px;
+  margin-top: 40px;
   @media screen and (max-width: 1100px) {
-    width: 60%;
-    margin-top: 50px;
-  }
-  @media screen and (max-width: 768px) {
-    display: flex;
-    height: 130px;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-top: 50px;
+    width: 100%;
+    margin-top: 30px;
+    height: 150px;
   }
 `;

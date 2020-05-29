@@ -3,14 +3,12 @@ import React from 'react';
 import { Container } from './styles';
 
 import NavbarMain from '../../containers/Navbar';
-import PricesInfo from '../../containers/PricesInfo';
-import SalesTable from '../../containers/PricesTable';
+import SalesInfo from '../../containers/SalesInfo';
 
 const CalculatorPage = () => (
   <Container>
     <NavbarMain />
-    <PricesInfo />
-    <SalesTable />
+    <SalesInfo />
   </Container>
 );
 

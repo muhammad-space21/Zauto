@@ -1,22 +1,42 @@
 import React from 'react';
 import { Container } from './styles';
+import axios from 'axios';
 
 import NavbarMain from '../../containers/Navbar';
-import CarsDescriptionComponent from '../../components/DescriptionComponentOne';
+import ProductComponent from '../../components/ProductComponent';
 import CarouselOfCars from '../../components/CarouselOfCars';
 import SalesInstruction from '../../components/SalesInstruction';
 import Footer from '../../containers/Footer';
 
-const ProductPage = () => {
+class ProductPage extends React.Component {
+  constructor() {
+    super()
+    this.state = {
+      allCars: []
+    }
+  };
+
+  componentDidMount() {
+    axios.get('https://admin.zauto.uz/api/cars')
+      .then(res => {
+        console.log(res);
+        this.setState({
+          allCars: res.data
+        })
+      })
+  };
+
+  render() {
     return (
       <Container>
         <NavbarMain />
-        <CarsDescriptionComponent />
+        <ProductComponent />
         <CarouselOfCars />
         <SalesInstruction />
         <Footer />
       </Container>
     )
+  }
 };
 
 

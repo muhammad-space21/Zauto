@@ -150,7 +150,7 @@ export const NavLinkStyledLogin = styled(Nav.Link)`
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-right: 30px;
+  margin-right: 20px;
   color: white;
   &:hover {
     cursor: pointer;

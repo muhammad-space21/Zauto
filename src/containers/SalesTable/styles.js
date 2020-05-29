@@ -9,8 +9,10 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
   padding: 50px;
+  padding-top: 20px;
   @media screen and (max-width: 991px) {
     padding: 20px;
+    padding-top: 0;
   }
 `;
 

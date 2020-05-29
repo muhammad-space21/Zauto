@@ -1,6 +1,6 @@
 import React from 'react';
 import ImageGallery from 'react-image-gallery';
-import axios from 'axios';
+import { useParams } from 'react-router-dom';
 
 import {
   Container,
@@ -48,32 +48,13 @@ const images = [
 ];
 
 
-class DescriptionComponentOne extends React.Component {
-  constructor() {
-    super()
-    this.state = {
-      allCars: []
-    }
-  };
-
-
-  componentDidMount() {    
-    axios.get(`https://admin.zauto.uz/api/cars`)
-      .then(res => {
-        console.log(res);
-        this.setState({
-          allCars: res.data
-        })
-      })
-  };
-
-  render() {
-    const { allCars } = this.state; 
+const ProductComponent = ({ name, engine, petrol, speed }) => {
+  let { sluggable } = useParams();
     return (
     <Container>
       <Row>
         <Col1>
-          <ModelHide>{allCars.name}</ModelHide>
+          <ModelHide>{name}</ModelHide>
           <ImageGallery 
             showFullscreenButton={false} 
             showPlayButton={false}  
@@ -83,20 +64,20 @@ class DescriptionComponentOne extends React.Component {
         </Col1>
         <Col2>
           <Title>АВТОМОБИЛЬ В КРЕДИТ</Title>
-          <Model>{allCars.name}</Model>
+          <Model>{name}</Model>
           <Type>УДОБНЫЙ ГОРОДСКОЙ АВТОМОБИЛЬ</Type>
           <Wrapper>
               <IconsWrapperCustom marginRight35> 
                 <img src={IconEngine} alt="icon"/>
-                <Details>{allCars.engine} <span>cm3</span></Details>
+                <Details>{engine} <span>cm3</span></Details>
               </IconsWrapperCustom>
               <IconsWrapperCustom> 
                 <img src={IconSpeed} alt="icon"/>
-                <Details>{allCars.speed} <span>л.с</span></Details>
+                <Details>{speed} <span>л.с</span></Details>
               </IconsWrapperCustom>
               <IconsWrapper> 
                 <img src={IconBag} alt="icon"/>
-                <Details>{allCars.petrol}<span> л/100km</span></Details>
+                <Details>{petrol}<span> л/100km</span></Details>
               </IconsWrapper>
           </Wrapper>
           <ButtonsWrapper>
@@ -107,7 +88,6 @@ class DescriptionComponentOne extends React.Component {
       </Row>
     </Container>
     )
-  }
 };
 
-export default DescriptionComponentOne;
+export default ProductComponent;
