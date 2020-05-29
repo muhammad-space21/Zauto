@@ -77,7 +77,7 @@ class Form extends React.Component {
 
     axios({
       method: 'post',
-      url: 'http://admin.zauto.uz/api/orders',
+      url: 'https://admin.zauto.uz/api/orders',
       data: payload,
       headers: {
         "Access-Control-Allow-Origin": "*",
