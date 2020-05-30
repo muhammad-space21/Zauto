@@ -60,8 +60,8 @@ const SalesInfo = () => {
         <Row>
           <Col1>
             <ImageGallery 
-              // showFullscreenButton={false} 
-              // showPlayButton={false}  
+              showFullscreenButton={false} 
+              showPlayButton={false}  
               items={images}
               showNav={false}
             />

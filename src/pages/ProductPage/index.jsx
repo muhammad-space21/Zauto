@@ -3,7 +3,7 @@ import { Container } from './styles';
 import axios from 'axios';
 
 import NavbarMain from '../../containers/Navbar';
-import ProductComponent from '../../components/ProductComponent';
+import ProductComponent from '../../containers/ProductComponent';
 import CarouselOfCars from '../../components/CarouselOfCars';
 import SalesInstruction from '../../components/SalesInstruction';
 import Footer from '../../containers/Footer';

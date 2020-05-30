@@ -6,15 +6,13 @@ import {
   Row, 
   Col1, 
   Col2, 
-  Title, 
   Model, 
   IconsWrapper, 
   Wrapper,
   Details,
   Type,
   ModelHide,
-  ButtonsWrapper,
-  IconsWrapperCustom
+  ButtonsWrapper
 } from './styles';
 
 import ButtonPrimary from '../Buttons/ButtonPrimary';
@@ -53,25 +51,24 @@ const DescriptionComponentTwo = (props) => (
       <Col1>
       <ModelHide>Tucson MPI 2.0</ModelHide>
         <ImageGallery 
-          // showFullscreenButton={false} 
-          // showPlayButton={false}  
+          showFullscreenButton={false} 
+          showPlayButton={false}  
           items={images} 
           showNav={false}
         />;
       </Col1>
       <Col2>
-        <Title>АВТОМОБИЛЬ В КРЕДИТ</Title>
         <Model>Tucson MPI 2.0</Model>
         <Type>ГОРОДСКОЙ КРОССОВЕР АВТОМОБИЛЬ</Type>
         <Wrapper>
-            <IconsWrapperCustom marginRight35> 
+            <IconsWrapper marginRight35> 
               <img src={IconEngine} alt="icon"/>
               <Details>2,0 <span>cm3</span></Details>
-            </IconsWrapperCustom>
-            <IconsWrapperCustom> 
+            </IconsWrapper>
+            <IconsWrapper> 
               <img src={IconSpeed} alt="icon"/>
               <Details>149 <span>л.с</span></Details>
-            </IconsWrapperCustom>
+            </IconsWrapper>
             <IconsWrapper> 
               <img src={IconBag} alt="icon"/>
               <Details>8,2<span> л/100km</span></Details>

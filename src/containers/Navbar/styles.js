@@ -227,15 +227,12 @@ export const NavbarBrand = styled(Navbar.Brand)`
   align-items: center;
   justify-content: center;
   img {
-    width: 80%;
+    width: auto;
     height: 25px;
     @media screen and (max-width: 550px) {
-      width: 70%;
+      width: auto;
       height: 20px;
     }
-  }
-  @media screen and (max-width: 991px) {
-    margin-left: -20px;
   }
 `;
 

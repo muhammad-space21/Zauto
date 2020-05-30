@@ -20,7 +20,7 @@ class App extends React.Component {
           <ErrorBoundary>
             <Suspense fallback={<Spinner />}>
               <Route exact path='/' component={Homepage} />
-              <Route path='/product/:sluggable' 
+              <Route path='/product' 
                 render={({match}) => <ProductPage match={match} />}
               />
               <Route exact path='/calculator' component={CalculatorPage} />

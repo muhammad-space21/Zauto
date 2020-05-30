@@ -34,17 +34,13 @@ export const Col1 = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
   @media screen and (max-width: 1100px) {
     width: 90%;
     margin-bottom: 30px;
   }
   @media screen and (min-width: 1500px) {
     width: 45%;
-  }
-  @media screen and (max-width: 550px) {
-    width: 80%;
-    margin-left: 10px;
-    margin-right: 10px;
   }
 `;
 

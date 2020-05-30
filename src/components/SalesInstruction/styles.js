@@ -6,8 +6,8 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
   background-color: white;
+  margin-top: 100px;
 `;
 
 export const Heading = styled.h1`
@@ -15,7 +15,6 @@ export const Heading = styled.h1`
   font-weight: 700;
   line-height: 55px;
   color: #000000;
-  margin-top: 100px;
   margin-right: 50px;
   margin-left: 50px;
   @media screen and (max-width: 1000px) {
@@ -42,7 +41,6 @@ export const Row = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-top: 100px;
-  position: relative;
   @media screen and (max-width: 900px) {
     width: 90vw;
     display: flex;
