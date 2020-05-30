@@ -288,30 +288,12 @@ export const OptionRed = styled.option`
 	}
 `;
 
-
-
-
 export const TextWrapper = styled.div`
 	width: fit-content;
 	height: fit-content;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin-bottom: 20px;
-`;
-
-export const Title = styled.span`
-	font-size: 18px;
-	font-weight: 400;
-	padding-left: 10px;
-	color: #2d3436;
-	span {
-		color: #77D89E;
-		font-weight: 500;
-		&:hover {
-			cursor: pointer;
-		}
-	}
 `;
 
 export const Heading = styled.span`
@@ -326,11 +308,13 @@ export const Heading = styled.span`
 `;
 
 export const ErrorMessage = styled.div`
-	width: 350px;
+	width: fit-content;
 	font-size: 14px;
 	line-height: 16px;
 	color: red;
 	text-align: left;
+	border: 2px solid red;
+	border-radius: 3px;
 `;
 
 export const MessageOptional = styled.h1`

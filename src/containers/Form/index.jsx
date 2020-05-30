@@ -88,7 +88,7 @@ class Form extends React.Component {
       console.log(response)
     }).catch(function (error) {
       console.log(error);
-    })
+    });
 
     this.setState({ submitted: true })
     // clear form
