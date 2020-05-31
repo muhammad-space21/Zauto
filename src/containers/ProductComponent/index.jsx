@@ -1,6 +1,6 @@
 import React from 'react';
 import ImageGallery from 'react-image-gallery';
-import { useParams, useHistory } from 'react-router-dom';
+import { useParams, useHistory, useLocation } from 'react-router-dom';
 
 import {
   Container,
@@ -47,7 +47,8 @@ const images = [
 
 
 const ProductComponent = ({ name, engine, petrol, speed }) => {
-  // let { sluggable } = useParams();
+  const location = useLocation();
+  console.log('locationOfProductCom', location);
   const history = useHistory();
 
   const routeChange = () => { 

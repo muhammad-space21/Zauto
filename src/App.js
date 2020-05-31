@@ -7,9 +7,10 @@ import Spinner from './components/Spinner';
 import ErrorBoundary from './components/ErrorBoundary';
 
 const Homepage = lazy(() => import('./pages/Homepage'));
-const ProductPage = lazy(() => import('./pages/ProductPage'));
+// const ProductPage = lazy(() => import('./pages/ProductPage'));
 const CalculatorPage = lazy(() => import('./pages/CalculatorPage'));
 const FormPage = lazy(() => import('./pages/FormPage'));
+const ProductComponent = lazy(() => import('./containers/ProductComponent'));
 
 class App extends React.Component {
 
@@ -20,9 +21,7 @@ class App extends React.Component {
           <ErrorBoundary>
             <Suspense fallback={<Spinner />}>
               <Route exact path='/' component={Homepage} />
-              <Route path='/product' 
-                render={({match}) => <ProductPage match={match} />}
-              />
+              <Route path='/product' component={ProductComponent} />
               <Route exact path='/calculator' component={CalculatorPage} />
               <Route exact path='/form' component={FormPage} />
             </Suspense>

@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {useLocation} from 'react-router-dom';
 import {
   Container, 
   ImageContainer, 
@@ -10,6 +10,8 @@ import {
 import ButtonPrimary from '../../components/Buttons/ButtonPrimary';
 
 const MenuItems = ({name, image, price, sluggable }) => {
+  const location = useLocation();
+  console.log('locationOfMenuItem', location);
 
   return (
     <Container>
