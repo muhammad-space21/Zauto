@@ -3,7 +3,7 @@ import actionTypes from "../../constants/actionTypes";
 const defaultState = {
   loading: false,
   error: false,
-  allCars: null
+  allCars: []
 };
 
 const map = {

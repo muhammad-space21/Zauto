@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-export const Container = styled.div`
+export const Container = styled(Link)`
   width: 23%;
   display: flex;
   flex-direction: column;
@@ -15,7 +15,7 @@ export const Container = styled.div`
   }
 `;
 
-export const ImageContainer = styled(Link)`
+export const ImageContainer = styled.div`
   width: 100%;
   height: 50%;
   &:hover {
@@ -34,7 +34,7 @@ export const ImageContainer = styled(Link)`
   }
 `;
 
-export const Model = styled(Link)`
+export const Model = styled.div`
   width: 100%;
   height: 43px;
   font-size: 20px;
@@ -55,7 +55,7 @@ export const Model = styled(Link)`
   }
 `;
 
-export const Price = styled(Link)`
+export const Price = styled.div`
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;

@@ -1,7 +1,5 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-// import { connect } from 'react-redux';
-// import PropTypes from 'prop-types';
 import axios from 'axios';
 
 import {
@@ -53,7 +51,7 @@ class MenuCars extends React.Component {
 
   render() {
     const { allCars, itemsToShow, expanded } = this.state;
-    return(
+    return (
       <Container>
           <Row>
             { 
@@ -80,26 +78,5 @@ class MenuCars extends React.Component {
     )
   }
 };
-
-// MenuCars.defaultProps = {
-//   loading: false,
-//   error: false,
-//   allCars: []
-// };
-
-// MenuCars.propTypes = {
-//   loading: PropTypes.bool,
-//   error: PropTypes.bool,
-//   getAllCars: PropTypes.func.isRequired
-// };
-
-
-// const mapStateToProps = (state) => ({
-//   loading: state.getAllCarsReducer,
-//   error: state.getAllCarsReducer,
-//   allCars: state.getAllCarsReducer,
-// });
-
-// export default connect(mapStateToProps, null)(MenuCars);
 
 export default withRouter(MenuCars);
