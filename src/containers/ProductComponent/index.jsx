@@ -28,11 +28,14 @@ const ProductComponent = () => {
   
   console.log('product com id', id)
 
-  useEffect( async () => {
-    const response = await fetch(`https://admin.zauto.uz/api/car/${id}`)
-    const res = await response.json();
-    setData(res)
-    console.log(res)
+  useEffect(() => {
+    async function fetchData() {
+      const response = await fetch(`https://admin.zauto.uz/api/car/${id}`)
+      const res = await response.json();
+      setData(res)
+      console.log(res)
+    }
+    fetchData()
   }, [id]);
 
 
