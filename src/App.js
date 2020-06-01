@@ -41,9 +41,11 @@ class App extends React.Component {
           <ErrorBoundary>
             <Suspense fallback={<Spinner />}>
               <Route exact path='/' component={Homepage} />
-              <Route path='/items/:sluggable' component={MenuItems} />
               <Route exact path='/calculator' component={CalculatorPage} />
               <Route exact path='/form' component={FormPage} />
+              <Route path='/' component={MenuItems}>
+                <Route path='/:sluggable' component={ProductComponent} />
+              </Route>
             </Suspense>
           </ErrorBoundary>
         </Switch>

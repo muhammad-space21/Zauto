@@ -8,12 +8,12 @@ import {
 } from './styles';
 
 import ButtonPrimary from '../../components/Buttons/ButtonPrimary';
-import ProductComponent from '../ProductComponent';
+
 
 const MenuItems = ( { name, image, price, sluggable } ) => {
 
   return (
-    <Container to={`/items/${sluggable}`}>
+    <Container to={`${sluggable}`}>
       <ImageContainer>
         <img src={`https://admin.zauto.uz/${image}`} alt='cars' />
       </ImageContainer>

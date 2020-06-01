@@ -22,8 +22,9 @@ import IconSpeed from '../../assets/icons/speed.black.png';
 import IconBag from '../../assets/icons/bag.black.png';
 
 
-const ProductComponent = ({match, allCars}) => {
+const ProductComponent = () => {
   const { sluggable } = useParams();
+  console.log(sluggable);
   // const routeChange = () => { 
   //   let path = `/calculator`; 
   //   history.push(path);
@@ -56,7 +57,7 @@ const ProductComponent = ({match, allCars}) => {
     <Container>
       <Row>
         <Col1>
-          <ModelHide> {allCars.name} </ModelHide>
+          <ModelHide> {} </ModelHide>
           <ImageGallery 
             showFullscreenButton={false} 
             showPlayButton={false}  
@@ -69,7 +70,7 @@ const ProductComponent = ({match, allCars}) => {
           />
         </Col1>
         <Col2>
-          <Model>{sluggable.name}</Model>
+          <Model>{sluggable}</Model>
           <Type>УДОБНЫЙ ГОРОДСКОЙ АВТОМОБИЛЬ</Type>
           <Wrapper>
               <IconsWrapper marginRight35> 
@@ -95,4 +96,4 @@ const ProductComponent = ({match, allCars}) => {
     )
   };
 
-  export default ProductComponent;
+  export default withRouter(ProductComponent);
