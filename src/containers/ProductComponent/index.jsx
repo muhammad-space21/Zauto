@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import ImageGallery from 'react-image-gallery';
 import { withRouter, useParams } from 'react-router-dom';
+import axios from 'axios';
 
 import {
   Container,
@@ -23,12 +24,16 @@ import IconBag from '../../assets/icons/bag.black.png';
 
 
 const ProductComponent = () => {
-  const { sluggable } = useParams();
-  console.log(sluggable);
-  // const routeChange = () => { 
-  //   let path = `/calculator`; 
-  //   history.push(path);
-  // }
+  const [data, setData] = useState({ hits: [] });
+  const { id } = useParams();
+
+  useEffect(async () => {
+    const result = await axios(
+      `https://admin.zauto.uz/api/cars/${id}`,
+    );
+
+    setData(result.data);
+  });
 
     const images = [
       {
@@ -57,7 +62,7 @@ const ProductComponent = () => {
     <Container>
       <Row>
         <Col1>
-          <ModelHide> {} </ModelHide>
+          <ModelHide> {data.hits.name} </ModelHide>
           <ImageGallery 
             showFullscreenButton={false} 
             showPlayButton={false}  
@@ -70,20 +75,20 @@ const ProductComponent = () => {
           />
         </Col1>
         <Col2>
-          <Model>{sluggable}</Model>
+          <Model>{data.hits.name}</Model>
           <Type>УДОБНЫЙ ГОРОДСКОЙ АВТОМОБИЛЬ</Type>
           <Wrapper>
               <IconsWrapper marginRight35> 
                 <img src={IconEngine} alt="icon"/>
-                <Details>{} <span>cm3</span></Details>
+                <Details>{data.hits.engine} <span>cm3</span></Details>
               </IconsWrapper>
               <IconsWrapper> 
                 <img src={IconSpeed} alt="icon"/>
-                <Details>{} <span>л.с</span></Details>
+                <Details>{data.hits.speed} <span>л.с</span></Details>
               </IconsWrapper>
               <IconsWrapper> 
                 <img src={IconBag} alt="icon"/>
-                <Details>{} <span> л/100km</span></Details>
+                <Details>{data.hits.fuel} <span> л/100km</span></Details>
               </IconsWrapper>
           </Wrapper>
           <ButtonsWrapper>

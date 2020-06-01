@@ -78,12 +78,7 @@ class Form extends React.Component {
     axios({
       method: 'post',
       url: 'https://admin.zauto.uz/api/orders',
-      data: payload,
-      headers: {
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods": "GET, POST, OPTIONS, PUT, DELETE",
-        "Access-Control-Allow-Headers": "Authorization"
-      }
+      data: payload
     }).then(function (response) {
       console.log(response)
     }).catch(function (error) {

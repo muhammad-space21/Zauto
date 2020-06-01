@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { useHistory,useParams } from 'react-router-dom';
 import { 
   Container, 
   ImageContainer, 
@@ -10,10 +10,16 @@ import {
 import ButtonPrimary from '../../components/Buttons/ButtonPrimary';
 
 
-const MenuItems = ( { name, image, price, sluggable } ) => {
+const MenuItems = ( { item, name, image, price } ) => {
+  const { id } = useParams();
+
+  const history = useHistory()
+  const routeChange = (id) => {
+    history.push(`/${item.id}`)
+  };
 
   return (
-    <Container to={`${sluggable}`}>
+    <Container onClick={routeChange}>
       <ImageContainer>
         <img src={`https://admin.zauto.uz/${image}`} alt='cars' />
       </ImageContainer>

@@ -43,9 +43,7 @@ class App extends React.Component {
               <Route exact path='/' component={Homepage} />
               <Route exact path='/calculator' component={CalculatorPage} />
               <Route exact path='/form' component={FormPage} />
-              <Route path='/' component={MenuItems}>
-                <Route path='/:sluggable' component={ProductComponent} />
-              </Route>
+              <Route path='/:id' component={ProductComponent} />
             </Suspense>
           </ErrorBoundary>
         </Switch>
