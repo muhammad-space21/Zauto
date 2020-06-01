@@ -10,9 +10,8 @@ import {
 import ButtonPrimary from '../../components/Buttons/ButtonPrimary';
 
 
-const MenuItems = ( { id, name, image, price } ) => {
+const MenuItems = ( { item, name, image, price, id } ) => {
   const history = useHistory();
-  // const { id } = useParams();
   const routeChange = () => {
     console.log('id of menu', id)
     history.push(`/${id}`)
