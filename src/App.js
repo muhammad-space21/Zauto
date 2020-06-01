@@ -12,8 +12,8 @@ const Homepage = lazy(() => import('./pages/Homepage'));
 const CalculatorPage = lazy(() => import('./pages/CalculatorPage'));
 const FormPage = lazy(() => import('./pages/FormPage'));
 const ProductComponent = lazy(() => import('./containers/ProductComponent'));
-const MenuItems = lazy(() => import('./containers/MenuItems'));
-const MenuCars = lazy(() => import('./containers/MenuCars'));
+// const MenuItems = lazy(() => import('./containers/MenuItems'));
+// const MenuCars = lazy(() => import('./containers/MenuCars'));
 
 class App extends React.Component {
   constructor() {
