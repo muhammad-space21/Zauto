@@ -1,5 +1,5 @@
 import React from 'react';
-import { useHistory,useParams } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
 import { 
   Container, 
   ImageContainer, 
@@ -10,10 +10,12 @@ import {
 import ButtonPrimary from '../../components/Buttons/ButtonPrimary';
 
 
-const MenuItems = ( { id, item, name, image, price } ) => {
-  const history = useHistory()
-  const routeChange = (id) => {
-    history.push(`/${item.id}`)
+const MenuItems = ( { item, name, image, price } ) => {
+  const history = useHistory();
+  const { id } = useParams();
+  const routeChange = () => {
+    console.log('id of menu', id)
+    history.push(`/${id}`)
   };
 
   return (

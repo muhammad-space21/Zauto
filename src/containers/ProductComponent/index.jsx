@@ -24,16 +24,15 @@ import IconBag from '../../assets/icons/bag.black.png';
 
 
 const ProductComponent = () => {
-  const [data, setData] = useState({ hits: [] });
+  const [data, setData] = useState({});
   const { id } = useParams();
+  console.log('product com id', id)
+  useEffect(() => {
+    axios.get(`https://admin.zauto.uz/api/car/${id}`)
+    .then(res => setData({ data: res }))
+    console.log(data);
+  }, [id]);
 
-  useEffect(async () => {
-    const result = await axios(
-      `https://admin.zauto.uz/api/cars/${id}`,
-    );
-
-    setData(result.data);
-  });
 
     const images = [
       {
@@ -62,7 +61,7 @@ const ProductComponent = () => {
     <Container>
       <Row>
         <Col1>
-          <ModelHide> {data.hits.name} </ModelHide>
+          <ModelHide> {data.name} </ModelHide>
           <ImageGallery 
             showFullscreenButton={false} 
             showPlayButton={false}  
@@ -75,20 +74,20 @@ const ProductComponent = () => {
           />
         </Col1>
         <Col2>
-          <Model>{data.hits.name}</Model>
+          <Model>{data.name}</Model>
           <Type>УДОБНЫЙ ГОРОДСКОЙ АВТОМОБИЛЬ</Type>
           <Wrapper>
               <IconsWrapper marginRight35> 
                 <img src={IconEngine} alt="icon"/>
-                <Details>{data.hits.engine} <span>cm3</span></Details>
+                <Details>{data.engine} <span>cm3</span></Details>
               </IconsWrapper>
               <IconsWrapper> 
                 <img src={IconSpeed} alt="icon"/>
-                <Details>{data.hits.speed} <span>л.с</span></Details>
+                <Details>{data.speed} <span>л.с</span></Details>
               </IconsWrapper>
               <IconsWrapper> 
                 <img src={IconBag} alt="icon"/>
-                <Details>{data.hits.fuel} <span> л/100km</span></Details>
+                <Details>{data.fuel} <span> л/100km</span></Details>
               </IconsWrapper>
           </Wrapper>
           <ButtonsWrapper>
@@ -99,6 +98,6 @@ const ProductComponent = () => {
       </Row>
     </Container>
     )
-  };
+};
 
-  export default withRouter(ProductComponent);
+export default withRouter(ProductComponent);
