@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import ImageGallery from 'react-image-gallery';
 import { withRouter, useParams } from 'react-router-dom';
-import axios from 'axios';
 
 import {
   Container,
-  Row, 
+  Row,
   Col1, 
   Col2, 
   Model, 
@@ -24,20 +23,23 @@ import IconBag from '../../assets/icons/bag.black.png';
 
 
 const ProductComponent = () => {
-  const [data, setData] = useState({});
   const { id } = useParams();
+  const [data, setData] = useState({});
+  
   console.log('product com id', id)
-  useEffect(() => {
-    axios.get(`https://admin.zauto.uz/api/car/${id}`)
-    .then(res => setData({ data: res }))
-    console.log(data);
+
+  useEffect( async () => {
+    const response = await fetch(`https://admin.zauto.uz/api/car/${id}`)
+    const res = await response.json();
+    setData(res)
+    console.log(res)
   }, [id]);
 
 
     const images = [
       {
-        original: 'https://hosty.xxx/i/2ea5404e4f30d46f163ab1640ec25cde3c2077c2.jpg',
-        thumbnail: 'https://hosty.xxx/i/2ea5404e4f30d46f163ab1640ec25cde3c2077c2.jpg'
+        original: `https://admin.zauto.uz/${data.image}`,
+        thumbnail: `https://admin.zauto.uz/${data.image}`
       },
       {
         original: 'https://hosty.xxx/i/77c4fd4049fddfadc2734075cc56a8c2f034b4f2.jpg',
@@ -87,7 +89,7 @@ const ProductComponent = () => {
               </IconsWrapper>
               <IconsWrapper> 
                 <img src={IconBag} alt="icon"/>
-                <Details>{data.fuel} <span> л/100km</span></Details>
+                <Details>{data.petrol} <span> л/100km</span></Details>
               </IconsWrapper>
           </Wrapper>
           <ButtonsWrapper>
