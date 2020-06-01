@@ -1,6 +1,6 @@
 import React from 'react';
-import {use
-import { Location, useParams, withRouter, Route} from 'react-router-dom';
+
+import { 
   Container, 
   ImageContainer, 
   Model, 
@@ -13,7 +13,7 @@ import ProductComponent from '../ProductComponent';
 const MenuItems = ( { name, image, price, sluggable } ) => {
 
   return (
-    <Container to={`/item/${sluggable}`} >
+    <Container to={`/items/${sluggable}`}>
       <ImageContainer>
         <img src={`https://admin.zauto.uz/${image}`} alt='cars' />
       </ImageContainer>
