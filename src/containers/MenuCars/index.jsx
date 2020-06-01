@@ -55,6 +55,13 @@ class MenuCars extends React.Component {
       <Container>
           <Row>
             { 
+              /*
+                allCars.length ? ( allCars
+                .slice(0, itemsToShow)
+                .map(({id, ...otherProps}) =>
+                    (<MenuItems key={id} id={id} {...otherProps} />)
+                  )) : (<Spinner />)
+              */
               allCars.length ? ( allCars
                 .slice(0, itemsToShow)
                 .map(({id, ...otherProps}) =>
