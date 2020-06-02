@@ -5,7 +5,7 @@ const getButtonStyles = props => {
         return Secondary;
     } else if (props.primary) {
       return Primary;
-    } else if (props.applyBtn) {
+    }  else if (props.applyBtn) {
         return ApplyBtn;
     } else if (props.applyBtnWhite) {
         return ApplyBtnWhite;
@@ -18,7 +18,7 @@ const getButtonStyles = props => {
 
 
 export const Primary = css`
-  width: 250px;
+  width: ${(props) => props.primaryLong ? '300px' : '250px'};
   height: 60px;
   outline: none;
   border-radius: 14px;
@@ -38,9 +38,10 @@ export const Primary = css`
     outline: none;
   }
   @media screen and (max-width: 768px) {
-    width: 230px;
-    height: 60px;
-    font-size: 20px;
+    width: ${(props) => props.primaryLong ? '250px' : '270'};
+    height: ${(props) => props.primaryLong ? '45px' : '60px'};
+    font-size: ${(props) => props.primaryLong ? '14px' : '20px'};
+    border-radius: ${(props) => props.primaryLong ? '10px' : '14px'};
   }
 `;
 export const Container = styled.button`
@@ -139,7 +140,7 @@ export const ApplyBtnWhite = css`
     &:focus {
       outline: none;
     }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 769px) {
       width: 180px;
       height: 50px;
       font-size: 13px;
