@@ -39,6 +39,7 @@ import IconMoney2 from '../../assets/icons/money(1).svg';
 const ProductComponent = () => {
   const { id } = useParams();
   const [data, setData] = useState({});
+  const [open, setOpen] = useState(false);
   
   console.log('product com id', id)
 
@@ -163,14 +164,20 @@ const ProductComponent = () => {
                 </IconsWrapper>
               </Wrapper>
               <ButtonWrapper>
-                <ButtonPrimary primaryLong primary>Связаться с консультантом</ButtonPrimary>
+                <ButtonPrimary 
+                  primaryLong 
+                  primary
+                  onClick={() => setOpen(true)}
+                >
+                  Связаться с консультантом
+                </ButtonPrimary>
               </ButtonWrapper>
             </Col2>
           </Row>
         </Container>)
         : (<Spinner />)
       }
-      <FormPage /> 
+      {open && <FormPage />}
       <CarouselOfCars />
       <SalesInstruction />
       <Footer />

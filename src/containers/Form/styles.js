@@ -11,21 +11,6 @@ export const ContainerStyled = styled.div`
 	padding-bottom: 30px;
 `;
 
-export const IconWrapper = styled.div`
-	width: fit-content;
-	height: fit-content;
-	margin-left: auto;
-	margin-right: 10px;
-	margin-top: 10px;
-		img {
-			width: 30px;
-			height: 30px;
-			&:hover {
-				cursor: pointer;
-			}
-		}
-`;
-
 export const FormStyled = styled.form`
 	width: 80%;
 	margin-top: 30px;

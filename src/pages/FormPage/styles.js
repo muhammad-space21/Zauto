@@ -66,10 +66,26 @@ export const Col2 = styled.div`
   width: 55%;
   height: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: #FEFEFE;
   @media screen and (max-width: 900px) {
     width: 100%;
   }
+`;
+
+export const IconWrapper = styled.div`
+	width: fit-content;
+	height: fit-content;
+	margin-left: auto;
+	margin-right: 10px;
+	margin-top: 10px;
+		img {
+			width: 30px;
+			height: 30px;
+			&:hover {
+				cursor: pointer;
+			}
+		}
 `;
