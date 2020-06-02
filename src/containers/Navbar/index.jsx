@@ -32,25 +32,25 @@ export const NavbarMain = () => (
       </NavbarToggle>
       <NavbarCollapse id="responsive-navbar-nav">
         <NavStyled className="ml-auto">
-          <NavLinkCustom href="#home">Главная</NavLinkCustom>
+          <NavLinkCustom href="/">Главная</NavLinkCustom>
           <li>
             <a className='nav-item' href="#">Автомобили</a>
             <ul className="sub-menu">
-              <NavLinkStyledDropdown href="#link">Новые автомобили</NavLinkStyledDropdown>
-              <NavLinkStyledDropdown href="#link">С пробегом</NavLinkStyledDropdown>
+              <NavLinkStyledDropdown href="#Новые-автомобили">Новые автомобили</NavLinkStyledDropdown>
+              <NavLinkStyledDropdown href="#С-пробегом">С пробегом</NavLinkStyledDropdown>
             </ul>
           </li>
-            <NavLinkHide href="#link">Новые автомобили</NavLinkHide>
-            <NavLinkHide href="#link">С пробегом</NavLinkHide>
-          <NavLinkStyled href="#link">Как купить</NavLinkStyled>
-          <NavLinkStyled href="#link">Партнеры</NavLinkStyled>
+            <NavLinkHide href="#Новые-автомобили">Новые автомобили</NavLinkHide>
+            <NavLinkHide href="#С-пробегом">С пробегом</NavLinkHide>
+          <NavLinkStyled href="#Как-купить">Как купить</NavLinkStyled>
+          <NavLinkStyled href="#Партнеры">Партнеры</NavLinkStyled>
           <NavLinkStyled href="#Контакты">Контакты</NavLinkStyled>
           <NavItemStyled> 
             <HR />
             <img src={IconPhone} alt='icon-phone' /> 
             <span>+99895-479-0770</span>
           </NavItemStyled>
-          <NavLinkStyledLogin href="#link">
+          <NavLinkStyledLogin href="https://login.zauto.uz">
             <img src={IconLogin} alt="icon-login"/> 
             <span>Логин</span>
           </NavLinkStyledLogin>
