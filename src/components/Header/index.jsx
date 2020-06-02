@@ -11,8 +11,8 @@ import {
 import { Carousel } from 'react-bootstrap';
 import ButtonPrimary from '../Buttons/ButtonPrimary';
 
-import ImageHeaderMalibu from '../../assets/images/header-malibu.jpg';
-import ImageHeaderMerc from '../../assets/images/mers1.png';
+import ImageHeader1 from '../../assets/images/hyundai.header.jpg';
+import ImageHeader2 from '../../assets/images/merc.header.jpg';
 
 const Header = () => {
   const [index, setIndex] = useState(0);
@@ -32,7 +32,7 @@ const Header = () => {
         <CarouselItem>
           <img
             className="w-100"
-            src={ImageHeaderMalibu}
+            src={ImageHeader1}
             alt="First slide"
           />
           <CarouselCaption>
@@ -47,7 +47,7 @@ const Header = () => {
         <CarouselItem>
           <img
             className="w-100"
-            src={ImageHeaderMerc}
+            src={ImageHeader2}
             alt="Second slide"
           />
           <CarouselCaption>

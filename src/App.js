@@ -5,6 +5,7 @@ import { Container } from './App.styles';
 
 import Spinner from './components/Spinner';
 import ErrorBoundary from './components/ErrorBoundary';
+import ScrollTop from './hooks/useScrollToTop';
 
 const Homepage = lazy(() => import('./pages/Homepage'));
 const CalculatorPage = lazy(() => import('./pages/CalculatorPage'));
@@ -17,16 +18,18 @@ class App extends React.Component {
   render() {
     return (
       <Container>
-        <Switch>
-          <ErrorBoundary>
-            <Suspense fallback={<Spinner />}>
-              <Route exact path='/' component={Homepage} />
-              <Route exact path='/calculator' component={CalculatorPage} />
-              <Route exact path='/form' component={FormPage} />
-              <Route path='/:id' component={ProductComponent} />
-            </Suspense>
-          </ErrorBoundary>
-        </Switch>
+        <ScrollTop>
+          <Switch>
+            <ErrorBoundary>
+              <Suspense fallback={<Spinner />}>
+                <Route exact path='/' component={Homepage} />
+                <Route path='/:id' component={ProductComponent} />
+                <Route exact path='/calculator' component={CalculatorPage} />
+                <Route exact path='/form' component={FormPage} />
+              </Suspense>
+            </ErrorBoundary>
+          </Switch>
+        </ScrollTop>
       </Container>
     )
   }
