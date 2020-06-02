@@ -7,6 +7,8 @@ export const NavbarStyled = styled(Navbar)`
   width: 100vw;
   height: 100px;
   background-color: #000000;
+  position: fixed;
+  z-index: 100;
   font-family: 'Varela Round', sans-serif;
   @media screen and (max-width: 550px) {
     height: 80px;
@@ -226,6 +228,7 @@ export const NavbarBrand = styled(Navbar.Brand)`
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-left: 10px;
   img {
     width: auto;
     height: 25px;
