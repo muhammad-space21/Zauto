@@ -23,6 +23,7 @@ import CarouselOfCars from '../../components/CarouselOfCars';
 import SalesInstruction from '../../components/SalesInstruction';
 import Footer from '../../containers/Footer';
 import Spinner from '../../components/Spinner';
+import FormPage from '../../pages/FormPage';
 
 import ButtonPrimary from '../../components/Buttons/ButtonPrimary';
 
@@ -168,7 +169,8 @@ const ProductComponent = () => {
           </Row>
         </Container>)
         : (<Spinner />)
-      } 
+      }
+      <FormPage /> 
       <CarouselOfCars />
       <SalesInstruction />
       <Footer />

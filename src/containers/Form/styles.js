@@ -4,21 +4,38 @@ import InputMask from 'react-input-mask';
 
 
 export const ContainerStyled = styled.div`
-	width: fit-content;
-	height: fit-content;
+	width: 100%;
+	height: 100%;
 	font-family: 'Poppins', sans-serif;
 	font-weight: 400;
 	padding-bottom: 30px;
 `;
 
+export const IconWrapper = styled.div`
+	width: fit-content;
+	height: fit-content;
+	margin-left: auto;
+	margin-right: 10px;
+	margin-top: 10px;
+		img {
+			width: 30px;
+			height: 30px;
+			&:hover {
+				cursor: pointer;
+			}
+		}
+`;
+
 export const FormStyled = styled.form`
-	width: 100%;
+	width: 80%;
 	margin-top: 30px;
 	height: fit-content;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
 	margin-bottom: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
 `;
 
 export const ButtonWrapper = styled.div`
@@ -27,14 +44,12 @@ export const ButtonWrapper = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	margin-top: 30px;
+	margin-top: 20px;
 `;
 
 export const Checkbox = styled.input`
-  width: 20px;
-  height: 20px;
-  margin-right: auto;
-	margin-left: 5px;
+	width: 50px;
+	height: 20px;
 		&:hover {
 			cursor: pointer;
 		}
@@ -43,8 +58,6 @@ export const Checkbox = styled.input`
 export const LinkToPolicy = styled(Link)`
 	font-size: 15px;
 	font-weight: 500;
-	margin-right: auto;
-	margin-left: -195px;
 	color: grey;
 	&:hover {
 		color: black;
@@ -54,14 +67,15 @@ export const LinkToPolicy = styled(Link)`
 `;
 
 export const Input = styled.input`
-	width: 350px;
+	width: 80%;
 	height: 45px;
 	border: 2px solid #b2bec3;
 	margin-top: 12px;
 	margin-bottom: 12px;
 	border-radius: 8px;
 	outline: none;
-
+	margin-left: auto;
+	margin-right: auto;
 	&::placeholder {
 		font-size: 15px;
 		color: #CCCCCC;
@@ -75,18 +89,22 @@ export const Input = styled.input`
 		&::placeholder {
 			color: #00AF66;
 		}
+	}
+	@media screen and (max-width: 450px) {
+		width: 100%;
 	}
 `;
 
 export const InputTel = styled(InputMask)`
-	width: 350px;
+	width: 80%;
 	height: 45px;
 	border: 2px solid #b2bec3;
 	margin-top: 12px;
 	margin-bottom: 12px;
 	border-radius: 8px;
 	outline: none;
-
+	margin-left: auto;
+	margin-right: auto;
 	&::placeholder {
 		font-size: 15px;
 		color: #CCCCCC;
@@ -101,205 +119,29 @@ export const InputTel = styled(InputMask)`
 			color: #00AF66;
 		}
 	}
+	@media screen and (max-width: 450px) {
+		width: 100%;
+	}
 `;
 
-export const InputWrapper = styled.div`
-	width: 350px;
+export const Wrapper = styled.div`
+	width: 80%;
 	height: fit-content;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	justify-content: space-between;
-`;
-
-export const Wrapper = styled.div`
-	width: 170px;
-	height: fit-content;
-	display: flex;
-	flex-direction: column;
-`;
-
-export const Select = styled.select`
-	width: 170px;
-	height: 40px;
-	border: 2px solid #b2bec3;
-	border-radius: 8px;
-	outline: none;
-	font-size: 15px;
-	color: #CCCCCC;
-	font-weight: 400;
-	line-height: normal;
-	text-indent: 10px;
-	margin-top: 12px;
-	margin-bottom: 12px;
-
-	&:hover {
-		cursor: pointer;
-		background-color: white;
-		color: #00AF66;
-		border-color: #00AF66;
-		&::placeholder {
-			color: #00AF66;
-		}
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	@media screen and (max-width: 450px) {
+		width: 100%;
 	}
-`;
-
-export const SelectLong = styled.select`
-	width: 350px;
-	height: 45px;
-	border: 2px solid #b2bec3;
-	border-radius: 8px;
-	outline: none;
-	font-size: 15px;
-	color: #CCCCCC;
-	font-weight: 400;
-	line-height: normal;
-	text-indent: 10px;
-	margin-top: 12px;
-	margin-bottom: 12px;
-	&:hover {
-		cursor: pointer;
-		background-color: white;
-		color: #00AF66;
-		border-color: #00AF66;
-		&::placeholder {
-			color: #00AF66;
-		}
-	}
-`;
-
-export const Option = styled.option`
-	width: 350px;
-	height: 40px;
-	border: none;
-	border-radius: 3px;
-	outline: none;
-	font-size: 16px;
-	padding: 20px;
-	color: black;
-	font-weight: 400;
-	line-height: normal;
-	text-indent: 10px;
-	background-color: white;
-	
-	&:hover {
-		cursor: pointer;
-		outline: none;
-		background-color: white;
-		&::placeholder {
-			color: #00AF66;
-		}
-	}
-`;
-
-export const OptionWhite = styled.option`
-	width: 170px;
-	height: 40px;
-	border: none;
-	border-radius: 3px;
-	outline: none;
-	font-size: 16px;
-	padding: 20px;
-	color: black;
-	font-weight: 400;
-	line-height: normal;
-	text-indent: 10px;
-	background-color: white;
-	
-	&:hover {
-		cursor: pointer;
-		outline: none;
-		background-color: white;
-		&::placeholder {
-			color: #00AF66;
-		}
-	}
-`;
-
-export const OptionBlack = styled.option`
-	width: 170px;
-	height: 40px;
-	border: none;
-	border-radius: 3px;
-	outline: none;
-	font-size: 16px;
-	padding: 20px;
-	color: white;
-	font-weight: 400;
-	line-height: normal;
-	text-indent: 10px;
-	background-color: black;
-	
-	&:hover {
-		cursor: pointer;
-		outline: none;
-		background-color: black;
-		&::placeholder {
-			color: white;
-		}
-	}
-`;
-
-export const OptionGrey = styled.option`
-	width: 170px;
-	height: 40px;
-	border: none;
-	border-radius: 3px;
-	outline: none;
-	font-size: 16px;
-	padding: 20px;
-	color: black;
-	font-weight: 400;
-	line-height: normal;
-	text-indent: 10px;
-	background-color: grey;
-	
-	&:hover {
-		cursor: pointer;
-		outline: none;
-		background-color: grey;
-		&::placeholder {
-			color: black;
-		}
-	}
-`;
-
-export const OptionRed = styled.option`
-	width: 170px;
-	height: 40px;
-	border: none;
-	border-radius: 3px;
-	outline: none;
-	font-size: 16px;
-	padding: 20px;
-	color: black;
-	font-weight: 400;
-	line-height: normal;
-	text-indent: 10px;
-	background-color: red;
-	
-	&:hover {
-		cursor: pointer;
-		outline: none;
-		background-color: red;
-		&::placeholder {
-			color: black;
-		}
-	}
-`;
-
-export const TextWrapper = styled.div`
-	width: fit-content;
-	height: fit-content;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
 `;
 
 export const Heading = styled.span`
 	font-size: 25px;
 	font-weight: 600;
-	margin-bottom: 10px;
+	margin-bottom: 30px;
 	color: #2d3436;
 	@media screen and ( max-width: 710px ) {
 		font-size: 20px;
@@ -308,13 +150,24 @@ export const Heading = styled.span`
 `;
 
 export const ErrorMessage = styled.div`
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	@media screen and (max-width: 450px) {
+		width: 100%;
+	}
+
+`;
+
+export const Error = styled.div`
 	width: fit-content;
-	font-size: 14px;
-	line-height: 16px;
-	color: red;
-	text-align: left;
-	border: 2px solid red;
-	border-radius: 3px;
+	font-size: 12px;
+	line-height: 14px;
+	color: #FC573B;
+	border-radius: 5px;
+	background-color: #FFE6E2;
+	padding: 4px;
+	margin-right: auto;
 `;
 
 export const MessageOptional = styled.h1`

@@ -11,9 +11,13 @@ import {
   ButtonWrapper,
   Checkbox,
   LinkToPolicy,
-  InputTel
+  InputTel,
+  IconWrapper,
+  Wrapper,
+  Error
 } from './styles';
 
+import IconClose from '../../assets/icons/close.svg';
 import ButtonPrimary from '../../components/Buttons/ButtonPrimary';
 
 
@@ -81,24 +85,29 @@ class Form extends React.Component {
     } = this.state;
     return (
       <ContainerStyled>
+        <IconWrapper>
+          <img src={IconClose} alt="close"/>
+        </IconWrapper>
         <FormStyled onSubmit={this.handleSubmit}>
-          <TextWrapper>
-            <Heading>Заполнить форму</Heading>
-          </TextWrapper>
+          <Heading>Заполнить форму</Heading>
           <Input
             type="text"
             name="fullname"
-            placeholder="Имя"
+            placeholder="Ф. И. О"
             value={fullname}
             onChange={this.handleChange}
           />
           { 
             submitted && !fullname &&
-            <ErrorMessage>Имя отсутствует!</ErrorMessage>
+            <ErrorMessage>
+              <Error>Ф. И. О отсутствует!</Error>  
+            </ErrorMessage>
           }
           {
             fullname !== '' && fullname.length < 3 ?
-            <ErrorMessage>Имя должно быть более 3 символов!</ErrorMessage>
+            <ErrorMessage>
+              <Error>Ф. И. О должно быть более 15 символов!</Error>
+            </ErrorMessage>
             : null
           }
           <InputTel
@@ -111,10 +120,14 @@ class Form extends React.Component {
           />
           { 
             submitted && !phone &&
-            <ErrorMessage>Номер телефона отсутствует!</ErrorMessage>
+            <ErrorMessage>
+              <Error>Номер телефона отсутствует!</Error>
+            </ErrorMessage>
           }
-              <Checkbox type="checkbox" id="terms" name="terms" />
-              <LinkToPolicy to='/policy'>Agree to all terms</LinkToPolicy>            
+          <Wrapper>
+            <Checkbox type="checkbox" id="terms" name="terms" />
+            <LinkToPolicy to='/policy'>Agree to all terms</LinkToPolicy>            
+          </Wrapper>
           <ButtonWrapper>
             <ButtonPrimary orderBtn>Отправить</ButtonPrimary>
           </ButtonWrapper>
