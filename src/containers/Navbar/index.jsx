@@ -36,15 +36,15 @@ export const NavbarMain = () => (
           <li>
             <a className='nav-item' href="#">Автомобили</a>
             <ul className="sub-menu">
-              <NavLinkStyledDropdown href="#Новые-автомобили">Новые автомобили</NavLinkStyledDropdown>
-              <NavLinkStyledDropdown href="#С-пробегом">С пробегом</NavLinkStyledDropdown>
+              <NavLinkStyledDropdown href="Новые-автомобили">Новые автомобили</NavLinkStyledDropdown>
+              <NavLinkStyledDropdown href="С-пробегом">С пробегом</NavLinkStyledDropdown>
             </ul>
           </li>
-            <NavLinkHide href="#Новые-автомобили">Новые автомобили</NavLinkHide>
-            <NavLinkHide href="#С-пробегом">С пробегом</NavLinkHide>
-          <NavLinkStyled href="#Как-купить">Как купить</NavLinkStyled>
-          <NavLinkStyled href="#Партнеры">Партнеры</NavLinkStyled>
-          <NavLinkStyled href="#Контакты">Контакты</NavLinkStyled>
+            <NavLinkHide href="Новые-автомобили">Новые автомобили</NavLinkHide>
+            <NavLinkHide href="С-пробегом">С пробегом</NavLinkHide>
+          <NavLinkStyled href="Как-купить">Как купить</NavLinkStyled>
+          <NavLinkStyled href="Партнеры">Партнеры</NavLinkStyled>
+          <NavLinkStyled href="Контакты">Контакты</NavLinkStyled>
           <NavItemStyled> 
             <HR />
             <img src={IconPhone} alt='icon-phone' /> 
