@@ -14,7 +14,6 @@ const ProductComponent = lazy(() => import('./pages/ProductPage'));
 
 
 class App extends React.Component {
-
   render() {
     return (
       <Container>
@@ -22,10 +21,10 @@ class App extends React.Component {
           <Switch>
             <ErrorBoundary>
               <Suspense fallback={<Spinner />}>
-                <Route exact path='/' component={Homepage} />
-                <Route path='/:id' component={ProductComponent} />
-                <Route exact path='/calculator' component={CalculatorPage} />
-                <Route exact path='/form' component={FormPage} />
+                <Route exact key='r-1' path='/' component={Homepage} />
+                <Route exact key='r-2' path='/:id' component={ProductComponent} />
+                <Route exact key='r-3' path='/calculator' component={CalculatorPage} />
+                <Route exact key='r-4' path='/form' component={FormPage} />
               </Suspense>
             </ErrorBoundary>
           </Switch>

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   width: 100vw;
-  height: 100vh;
+  height: 95vh;
   background-color: black;
   @media screen and (max-width: 1100px) {
     height: fit-content;
@@ -67,7 +67,7 @@ export const Type = styled.h1`
 `;
 
 export const Model = styled.div`
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 700;
   color: white;
   text-align: center;
@@ -76,31 +76,31 @@ export const Model = styled.div`
     display: none;
   }
   @media screen and (min-width: 1500px) {
-    font-size: 60px;
+    font-size: 40px;
     line-height: 45px;
   }
 `;
 
 export const ModelHide = styled.div`
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 700;
-  line-height: 60px;
+  line-height: 35px;
   color: white;
   display: none;
   text-align: center;
   font-family: 'Roboto', sans-serif;
   @media screen and (max-width: 1100px) {
     display: block;
-    font-size: 35px;
-    line-height: 35px;
+    font-size: 25px;
+    line-height: 25px;
     margin-bottom: 20px;
     margin-top: 20px;
   }
   @media screen and (max-width: 768px) {
-    font-size: 25px;
+    font-size: 20px;
   }
   @media screen and (min-width: 1500px) {
-    font-size: 60px;
+    font-size: 40px;
     line-height: 45px;
   }
 `;
@@ -111,7 +111,6 @@ export const Wrapper = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  /* border: 2px solid yellow; */
   @media screen and (max-width: 1100px) {
     justify-content: space-between;
     margin-top: 50px;
@@ -151,7 +150,6 @@ export const IconsWrapper = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  /* border: 2px solid red; */
   margin-top: 30px;
     img {
       width: 60px;

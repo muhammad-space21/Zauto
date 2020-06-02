@@ -20,6 +20,7 @@ import NavbarMain from '../../containers/Navbar';
 import CarouselOfCars from '../../components/CarouselOfCars';
 import SalesInstruction from '../../components/SalesInstruction';
 import Footer from '../../containers/Footer';
+import Spinner from '../../components/Spinner';
 
 import ButtonPrimary from '../../components/Buttons/ButtonPrimary';
 import IconEngine from '../../assets/icons/engine.black.png';
@@ -70,45 +71,48 @@ const ProductComponent = () => {
     return (
     <Fragment>
       <NavbarMain />
-      <Container>
-        <Row>
-          <Col1>
-            <ModelHide> {data.name} </ModelHide>
-            <ImageGallery 
-              showFullscreenButton={false} 
-              showPlayButton={false}  
-              items={images}
-              showNav={false}
-              useBrowserFullscreen={false}
-              autoPlay={true}
-              originalClass='image-custom-class'
-              thumbnailClass ='image-custom-class'
-            />
-          </Col1>
-          <Col2>
-            <Model>{data.name}</Model>
-            <Type>УДОБНЫЙ ГОРОДСКОЙ АВТОМОБИЛЬ</Type>
-            <Wrapper>
-                <IconsWrapper marginRight35> 
-                  <img src={IconEngine} alt="icon"/>
-                  <Details>{data.engine} <span>cm3</span></Details>
-                </IconsWrapper>
-                <IconsWrapper> 
-                  <img src={IconSpeed} alt="icon"/>
-                  <Details>{data.speed} <span>л.с</span></Details>
-                </IconsWrapper>
-                <IconsWrapper> 
-                  <img src={IconBag} alt="icon"/>
-                  <Details>{data.petrol} <span> л/100km</span></Details>
-                </IconsWrapper>
-            </Wrapper>
-            <ButtonsWrapper>
-                <ButtonPrimary applyBtnWhite>Предоплата 35%</ButtonPrimary>
-                <ButtonPrimary applyBtnWhite>Предоплата 50%</ButtonPrimary>
-            </ButtonsWrapper>
-          </Col2>
-        </Row>
-      </Container>
+      {data ? 
+        (<Container>
+          <Row>
+            <Col1>
+              <ModelHide> {data.name} </ModelHide>
+              <ImageGallery 
+                showFullscreenButton={false} 
+                showPlayButton={false}  
+                items={images}
+                showNav={false}
+                useBrowserFullscreen={false}
+                autoPlay={true}
+                originalClass='image-custom-class'
+                thumbnailClass ='image-custom-class'
+              />
+            </Col1>
+            <Col2>
+              <Model>{data.name}</Model>
+              <Type>УДОБНЫЙ ГОРОДСКОЙ АВТОМОБИЛЬ</Type>
+              <Wrapper>
+                  <IconsWrapper marginRight35> 
+                    <img src={IconEngine} alt="icon"/>
+                    <Details>{data.engine} <span>cm3</span></Details>
+                  </IconsWrapper>
+                  <IconsWrapper> 
+                    <img src={IconSpeed} alt="icon"/>
+                    <Details>{data.speed} <span>л.с</span></Details>
+                  </IconsWrapper>
+                  <IconsWrapper> 
+                    <img src={IconBag} alt="icon"/>
+                    <Details>{data.petrol} <span> л/100km</span></Details>
+                  </IconsWrapper>
+              </Wrapper>
+              <ButtonsWrapper>
+                  <ButtonPrimary applyBtnWhite>Предоплата 35%</ButtonPrimary>
+                  <ButtonPrimary applyBtnWhite>Предоплата 50%</ButtonPrimary>
+              </ButtonsWrapper>
+            </Col2>
+          </Row>
+        </Container>)
+        : (<Spinner />)
+      } 
       <CarouselOfCars />
       <SalesInstruction />
       <Footer />
