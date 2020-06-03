@@ -59,22 +59,22 @@ const ProductComponent = () => {
         original: `https://admin.zauto.uz/${data.image}`,
         thumbnail: `https://admin.zauto.uz/${data.image}`
       },
-      {
-        original: 'https://hosty.xxx/i/77c4fd4049fddfadc2734075cc56a8c2f034b4f2.jpg',
-        thumbnail: 'https://hosty.xxx/i/77c4fd4049fddfadc2734075cc56a8c2f034b4f2.jpg'
-      },
-      {
-        original: 'https://hosty.xxx/i/1b7d1c49a8531b89d8071c3295a098691ea166ac.jpg',
-        thumbnail: 'https://hosty.xxx/i/1b7d1c49a8531b89d8071c3295a098691ea166ac.jpg'
-      },
-      {
-        original: 'https://hosty.xxx/i/dc02d89e3f23d7c60c393aee11972e1e58ac2cff.jpg',
-        thumbnail: 'https://hosty.xxx/i/dc02d89e3f23d7c60c393aee11972e1e58ac2cff.jpg'
-      },
-      {
-        original: 'https://hosty.xxx/i/90f2669b0fc3b8ac71d0f2439021d1a0ea66271c.jpg',
-        thumbnail: 'https://hosty.xxx/i/90f2669b0fc3b8ac71d0f2439021d1a0ea66271c.jpg'
-      }
+      // {
+      //   original: `https://admin.zauto.uz/${data.gallery.[0].gallery_image}`,
+      //   thumbnail: `https://admin.zauto.uz/${data.gallery.[0].gallery_image}`
+      // },
+      // {
+      //   original: `https://admin.zauto.uz/${data.gallery[1]["gallery_image"]}`,
+      //   thumbnail: `https://admin.zauto.uz/${data.gallery[1]["gallery_image"]}`
+      // },
+      // {
+      //   original: `https://admin.zauto.uz/${data.gallery[2]["gallery_image"]}`,
+      //   thumbnail: `https://admin.zauto.uz/${data.gallery[2]["gallery_image"]}`
+      // },
+      // {
+      //   original: `https://admin.zauto.uz/${data.gallery[3]["gallery_image"]}`,
+      //   thumbnail: `https://admin.zauto.uz/${data.gallery[3]["gallery_image"]}`
+      // }
     ];
     
     return (
@@ -136,14 +136,14 @@ const ProductComponent = () => {
                   <img src={IconCalendar} alt="icon"/>
                   <TextWrapper>
                     <Title>Период</Title>
-                    <Details>{data.petrol} 12 <span> месяцев</span></Details>
+                    <Details> 36 <span> месяцев</span></Details>
                   </TextWrapper>
                 </IconsWrapper>
                 <IconsWrapper>
                   <img src={IconInvoice} alt="icon"/>
                   <TextWrapper>
                     <Title>Общая сумма</Title>
-                    <Details>{data.petrol}111, 111 <span> сум</span></Details>
+                    <Details>{data.price}<span> сум</span></Details>
                   </TextWrapper>
                 </IconsWrapper>
               </Wrapper>
@@ -152,14 +152,14 @@ const ProductComponent = () => {
                   <img src={IconMoney} alt="icon"/>
                   <TextWrapper>
                     <Title>Первоначальный взнос​</Title>
-                    <Details>{data.petrol}111, 111 <span> сум</span></Details>
+                    <Details>{data.primary_price} <span> сум</span></Details>
                   </TextWrapper>
                 </IconsWrapper>
                 <IconsWrapper> 
                   <img src={IconMoney2} alt="icon"/>
                   <TextWrapper>
                     <Title>Ежемесячный взнос</Title>
-                    <Details>{data.petrol}111, 111 <span> сум</span></Details>
+                    <Details>{data.price_per_month}<span> сум</span></Details>
                   </TextWrapper>
                 </IconsWrapper>
               </Wrapper>

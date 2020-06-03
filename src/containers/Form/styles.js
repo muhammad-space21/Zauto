@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import InputMask from 'react-input-mask';
+import MaskedInput from 'react-text-mask';
 
 
 export const ContainerStyled = styled.div`
@@ -80,7 +80,7 @@ export const Input = styled.input`
 	}
 `;
 
-export const InputTel = styled(InputMask)`
+export const InputTel = styled(MaskedInput)`
 	width: 80%;
 	height: 45px;
 	border: 2px solid #b2bec3;

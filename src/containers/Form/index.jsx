@@ -24,7 +24,8 @@ const Form = () => {
     handleChange, 
     handleSubmit, 
     inputs, 
-    submit 
+    submit,
+    error
   } = useForm();
 
     return (
@@ -44,20 +45,22 @@ const Form = () => {
               <Error>Ф. И. О отсутствует!</Error>  
             </ErrorMessage>
           }
-          {/* {
-            inputs.fullname !== '' && inputs.fullname.length < 3 ?
-            <ErrorMessage>
-              <Error>Ф. И. О должно быть более 15 символов!</Error>
-            </ErrorMessage>
-            : null
+          {/* { error ? 
+            (
+              <ErrorMessage>
+                <Error>Полное имя должно быть более 15 символов!</Error>
+              </ErrorMessage>
+            ) : null
           } */}
           <InputTel
             type="tel"
             name="phone"
-            placeholder="Ваш номер телефона"
+            placeholder="(+998) 90 123-45-67"
             value={inputs.phone}
             onChange={handleChange}
-            maskChar=""
+            mask={['(',/[+]/, /[9]/, /[9]/, /[8]/, ')', ' ', /\d/, /\d/, /\d/, /\d/, /\d/, '-', /\d/, /\d/, '-', /\d/, /\d/, ]}
+            guide={true}
+            // showMask={true}
           />
           { 
             submit && !inputs.phone &&
