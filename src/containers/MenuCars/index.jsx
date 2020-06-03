@@ -10,6 +10,7 @@ import {
 
 import Spinner from '../../components/Spinner';
 import MenuItems from '../../containers/MenuItems';
+import BrandIcons from '../../components/BrandIcons';
 import ButtonPrimary from '../../components/Buttons/ButtonPrimary';
 
 class MenuCars extends React.Component {
@@ -35,7 +36,7 @@ class MenuCars extends React.Component {
   };
 
   showMore() {
-    const { allCars, itemsToShow, expanded } = this.state;
+    const { allCars, itemsToShow } = this.state;
     itemsToShow === 12 ? (
       this.setState({ 
         itemsToShow: allCars.length, 
@@ -52,29 +53,32 @@ class MenuCars extends React.Component {
   render() {
     const { allCars, itemsToShow, expanded } = this.state;
     return (
-      <Container>
-          <Row>
-            { 
-              allCars.length ? ( allCars
-                .slice(0, itemsToShow)
-                .map(({id, ...otherProps}) =>
-                    (<MenuItems key={id} id={id} {...otherProps} />)
-                  )) : (<Spinner />)
-            }
-          </Row>        
-        <BtnWrapper>
-          <ButtonPrimary 
-            primary
-            onClick={this.showMore}
-          >
-            {
-              expanded ? <span>Показывай меньше</span>
-              : 
-              <span>Показать больше</span>
-            }
-          </ButtonPrimary>
-        </BtnWrapper>
-      </Container>
+      <>
+      <BrandIcons />
+        <Container>
+            <Row>
+              { 
+                allCars.length ? ( allCars
+                  .slice(0, itemsToShow)
+                  .map(({id, ...otherProps}) =>
+                      (<MenuItems key={id} id={id} {...otherProps} />)
+                    )) : (<Spinner />)
+              }
+            </Row>        
+          <BtnWrapper>
+            <ButtonPrimary 
+              primary
+              onClick={this.showMore}
+            >
+              {
+                expanded ? <span>Показывай меньше</span>
+                : 
+                <span>Показать больше</span>
+              }
+            </ButtonPrimary>
+          </BtnWrapper>
+        </Container>
+      </>
     )
   }
 };

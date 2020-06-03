@@ -25,7 +25,7 @@ const Header = () => {
     <Container>
       <Carousel 
         indicators={false} 
-        interval={1000} 
+        interval={2000} 
         activeIndex={index} 
         onSelect={handleSelect}
       >

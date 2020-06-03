@@ -80,7 +80,7 @@ const ProductComponent = () => {
     return (
     <Fragment>
       <NavbarMain />
-      {data ? 
+      {data.image ? 
         (<Container>
           <Row>
             <Col1>
@@ -126,7 +126,7 @@ const ProductComponent = () => {
                   <img src={IconAutomatic} alt="icon"/>
                   <TextWrapper>
                     <Title>Тип КПП:</Title>
-                    <Details>{data.petrol}</Details>
+                    <Details>{data.typekpp === 1 ? 'АКПП' : 'МКПП'}</Details>
                   </TextWrapper>
                 </IconsWrapper>
               </Wrapper>

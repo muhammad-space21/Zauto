@@ -1,10 +1,12 @@
 import {useState} from 'react';
 import axios from 'axios';
-
+import { useParams } from 'react-router-dom';
 
 const useForm = (callback) => {
+  const {id} = useParams();
+  // console.log('in hook', id);
   const [inputs, setInputs] = useState({
-    fullname: '', phone: ''
+    fullname: '', phone: '', car_id: id
   });
   const [submit, setSubmit] = useState(false);
   // const [error, setError] = useState(false);
