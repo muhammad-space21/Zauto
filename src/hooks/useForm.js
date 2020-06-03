@@ -1,7 +1,11 @@
 import {useState} from 'react';
+import axios from 'axios';
+
 
 const useForm = (callback) => {
-  const [inputs, setInputs] = useState({});
+  const [inputs, setInputs] = useState({
+    fullname: '', phone: ''
+  });
   const [submit, setSubmit] = useState(false);
   // const [error, setError] = useState(false);
 
@@ -9,6 +13,14 @@ const useForm = (callback) => {
     if (event) event.preventDefault();
     // callback();
     setSubmit(true);
+    // send data to API
+    axios.post('https://admin.zauto.uz/api/orders', inputs)
+    .then(function (response) {
+        console.log(response)
+    })
+    .catch(function (error) {
+        console.log(error)
+    }) 
     console.log(inputs);
 
     // clear form
@@ -38,7 +50,7 @@ const useForm = (callback) => {
     handleSubmit,
     handleChange,
     inputs,
-    submit,
+    submit
     // error
   };
 };

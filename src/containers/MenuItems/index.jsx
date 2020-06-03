@@ -10,7 +10,7 @@ import {
 import ButtonPrimary from '../../components/Buttons/ButtonPrimary';
 
 
-const MenuItems = ( { id, name, image, price } ) => {
+const MenuItems = ( { id, name, image, price_per_month } ) => {
   const history = useHistory();
   // const { id } = useParams();
   const routeChange = () => {
@@ -24,7 +24,7 @@ const MenuItems = ( { id, name, image, price } ) => {
         <img src={`https://admin.zauto.uz/${image}`} alt='cars' />
       </ImageContainer>
       <Model>{name}</Model>
-      <Price>ОТ {price} сум / ДЕНЬ</Price>
+      <Price>ОТ {price_per_month} сум / месяц</Price>
       <ButtonPrimary orderBtn>Подробнее</ButtonPrimary>
     </Container>
   )
