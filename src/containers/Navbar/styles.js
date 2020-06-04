@@ -26,7 +26,7 @@ export const NavStyled = styled(Nav)`
       justify-content: space-evenly;
       background-color: black;
       width: 100vw;
-      height: 91vh;
+      height: 75vh;
       margin: 0;
       padding: 0;
     }
@@ -237,9 +237,34 @@ export const NavbarBrand = styled(Navbar.Brand)`
       height: 20px;
     }
   }
+  @media screen and (max-width: 991px) {
+    display: none;
+  }
+`;
+
+export const MenuToggleBrand = styled(Navbar.Brand)`
+  display: none;
+  img {
+    width: auto;
+    height: 25px;
+  }
+  @media screen and (max-width: 991px) {
+    display: block;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    margin-bottom: 20px;
+  }
 `;
 
 export const NavbarToggle = styled(Navbar.Toggle)`
+  margin-left: auto;
+  margin-right: 5px;
+  margin-top: auto;
+  margin-bottom: auto;
   &:focus {
     outline: none;
   }

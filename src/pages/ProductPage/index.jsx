@@ -41,8 +41,7 @@ const ProductComponent = () => {
   const [data, setData] = useState({});
   const [open, setOpen] = useState(false);
   
-  console.log('product com id', id)
-
+  // fetch data from API
   useEffect(() => {
     async function fetchData() {
       const response = await fetch(`https://admin.zauto.uz/api/car/${id}`);
@@ -53,15 +52,15 @@ const ProductComponent = () => {
     fetchData()
   }, [id]);
 
-    console.log('data in product page', data)
+
     const images = [
       {
         original: `https://admin.zauto.uz/${data.image}`,
         thumbnail: `https://admin.zauto.uz/${data.image}`
       },
       // {
-      //   original: `https://admin.zauto.uz/${data['gallery']['0']}`,
-      //   thumbnail: `https://admin.zauto.uz/${data['gallery']['0']}`
+      //   original: `https://admin.zauto.uz/${data.gallery[0]}`,
+      //   thumbnail: `https://admin.zauto.uz/${data.gallery[0]}`
       // },
       // {
       //   original: `https://admin.zauto.uz/${data.gallery[1]["gallery_image"]}`,

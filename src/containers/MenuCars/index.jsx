@@ -47,7 +47,7 @@ const MenuCars = (props) => {
   
 
   // showMore function
-  function showMore (data) {
+  function showMore () {
     if (itemsToShow === 12) {
       setItemsToShow(data.length);
       setExpanded(true);
