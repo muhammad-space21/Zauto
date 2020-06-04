@@ -4,21 +4,30 @@ import { withRouter } from 'react-router-dom';
 import {
   Container, 
   Row,
-  BtnWrapper
+  BtnWrapper,
+  ContainerBrandIcons, 
+  RowBrandIcons, 
+  Heading, 
+  ImgChevrolet, 
+  ImgHyundai,
+  ImgLada
 } from './styles';
 
 import Spinner from '../../components/Spinner';
 import MenuItems from '../../containers/MenuItems';
-import BrandIcons from '../../components/BrandIcons';
 import ButtonPrimary from '../../components/Buttons/ButtonPrimary';
 
-const MenuCars = () => {
+import LogoHyndai from '../../assets/icons/hyunda.png';
+import LogoLada from '../../assets/icons/lada.png';
+import LogoChevrolet from '../../assets/icons/chevrolet.png';
+
+const MenuCars = (props) => {
   const [data, setData] = useState({});
   const [itemsToShow, setItemsToShow] = useState({itemsToShow: 12});
   const [expanded, setExpanded] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
- 
+  const [catId, setCatId] = useState(1);
 
   //fetching data
   const url = 'https://admin.zauto.uz/api/newcars';
@@ -35,18 +44,6 @@ const MenuCars = () => {
       setError('Fetch Failed!');
     })
   }, [url]);
-
-  function getAllData (data) {
-    for (data of category) {
-      showData(category.car)
-    }
-  }
- 
-  function showData (category) {
-   for (category of car) {
-
-   }
-  }
   
 
   // showMore function
@@ -60,22 +57,47 @@ const MenuCars = () => {
     }
   };
 
-  console.log(data);
+  // filter function of categories
+  const found = Object.keys(data).find(key => data[key].id === catId);
+  const carList = found ? data[found].car : [];
+
     return (
       <>
-      <BrandIcons />
-      {/* <h1 onClick={showHyundai}>Hyundai</h1>
-      <h1 onClick={showChevrolet}>Chevrolet</h1>
-      <h1 onClick={showLada}>Lada</h1> */}
+        <ContainerBrandIcons>
+          <Heading> Выберите модель автомобиля </Heading>
+          <RowBrandIcons>
+            <ImgHyundai>
+              <img 
+                src={LogoHyndai} 
+                onClick={() => setCatId(2)} 
+                alt="logo-hyundai"
+              />
+            </ImgHyundai>
+            <ImgChevrolet>
+              <img 
+                src={LogoChevrolet} 
+                onClick={() => setCatId(3)} 
+                alt="logo-gm"
+              />
+            </ImgChevrolet>
+            <ImgLada>
+              <img 
+                src={LogoLada} 
+                onClick={() => setCatId(1)} 
+                alt="logo-lada"
+              />
+            </ImgLada>
+          </RowBrandIcons>
+        </ContainerBrandIcons>
         <Container>
             <Row>
-              {/* { 
-                !loading && data.length ? (data
+              { 
+                !loading && carList.length ? (carList
                   .slice(0, 12)
                   .map(({id, ...otherProps}) =>
                       (<MenuItems key={id} id={id} {...otherProps} />))
                 ):(<Spinner />)
-              } */}
+              }
             </Row>        
           <BtnWrapper>
             <ButtonPrimary 

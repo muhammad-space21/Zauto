@@ -1,8 +1,8 @@
 import React from 'react';
 
 import { 
-  Container, 
-  Row, 
+  ContainerBrandIcons, 
+  RowBrandIcons, 
   Heading, 
   ImgChevrolet, 
   ImgHyundai,
@@ -15,19 +15,19 @@ import LogoChevrolet from '../../assets/icons/chevrolet.png';
 
 
 
-const BrandIcons = () => {
+const BrandIcons = (props) => {
   return (
     <Container>
       <Heading> Выберите модель автомобиля </Heading>
       <Row>
         <ImgHyundai>
-          <img src={LogoHyndai} alt="logo-hyundai"/>
+          <img src={LogoHyndai} onClick={() => props.handleHyundai()} alt="logo-hyundai"/>
         </ImgHyundai>
         <ImgChevrolet>
-          <img src={LogoChevrolet} alt="logo-gm"/>
+          <img src={LogoChevrolet} onClick={() => props.handleChevrolet()} alt="logo-gm"/>
         </ImgChevrolet>
         <ImgLada>
-          <img src={LogoLada} alt=""/>
+          <img src={LogoLada} onClick={() => props.handleLada()} alt=""/>
         </ImgLada>
       </Row>
     </Container>

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 
-export const Container = styled.div`
+export const ContainerBrandIcons = styled.div`
   width: 100vw;
   height: fit-content;
   display: flex;
@@ -13,7 +13,7 @@ export const Container = styled.div`
   background-color: #F1F1F1;
 `;
 
-export const Row = styled.div`
+export const RowBrandIcons = styled.div`
   width: 80%;
   height: fit-content;
   display: flex;
