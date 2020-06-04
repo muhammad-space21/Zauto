@@ -53,15 +53,15 @@ const ProductComponent = () => {
     fetchData()
   }, [id]);
 
-
+    console.log('data in product page', data)
     const images = [
       {
         original: `https://admin.zauto.uz/${data.image}`,
         thumbnail: `https://admin.zauto.uz/${data.image}`
       },
       // {
-      //   original: `https://admin.zauto.uz/${data.gallery.[0].gallery_image}`,
-      //   thumbnail: `https://admin.zauto.uz/${data.gallery.[0].gallery_image}`
+      //   original: `https://admin.zauto.uz/${data['gallery']['0']}`,
+      //   thumbnail: `https://admin.zauto.uz/${data['gallery']['0']}`
       // },
       // {
       //   original: `https://admin.zauto.uz/${data.gallery[1]["gallery_image"]}`,
@@ -92,8 +92,6 @@ const ProductComponent = () => {
                 showNav={false}
                 useBrowserFullscreen={false}
                 autoPlay={true}
-                originalClass='image-custom-class'
-                thumbnailClass ='image-custom-class'
               />
             </Col1>
             <Col2>
