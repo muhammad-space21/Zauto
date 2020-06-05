@@ -56,12 +56,12 @@ const ProductComponent = () => {
     const images = [
       {
         original: `https://admin.zauto.uz/${data.image}`,
-        thumbnail: `https://admin.zauto.uz/${data.image}`
+        thumbnail: `https://admin.zauto.uz/${data.image}`,
       },
-      // {
-      //   original: `https://admin.zauto.uz/${data.gallery[0]}`,
-      //   thumbnail: `https://admin.zauto.uz/${data.gallery[0]}`
-      // },
+      {
+        original: `https://admin.zauto.uz/${data.gallery}`,
+        thumbnail: `https://admin.zauto.uz/${data.gallery},`
+      },
       // {
       //   original: `https://admin.zauto.uz/${data.gallery[1]["gallery_image"]}`,
       //   thumbnail: `https://admin.zauto.uz/${data.gallery[1]["gallery_image"]}`

@@ -21,13 +21,13 @@ import LogoHyndai from '../../assets/icons/hyunda.png';
 import LogoLada from '../../assets/icons/lada.png';
 import LogoChevrolet from '../../assets/icons/chevrolet.png';
 
-const MenuCars = (props) => {
+const MenuCars = () => {
   const [data, setData] = useState({});
   const [itemsToShow, setItemsToShow] = useState({itemsToShow: 12});
   const [expanded, setExpanded] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
-  const [catId, setCatId] = useState(1);
+  const [catId, setCatId] = useState(3);
 
   //fetching data
   const url = 'https://admin.zauto.uz/api/newcars';
@@ -38,7 +38,6 @@ const MenuCars = (props) => {
     .then((data) => {
       setLoading(false);
       setData(data);
-      console.log(data)
     }).catch((err) => {
       setLoading(false);
       setError('Fetch Failed!');

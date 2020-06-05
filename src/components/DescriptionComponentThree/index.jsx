@@ -1,5 +1,6 @@
 import React from 'react';
 import ImageGallery from 'react-image-gallery';
+import { useHistory } from 'react-router-dom';
 
 import {
   Container,
@@ -10,7 +11,6 @@ import {
   IconsWrapper, 
   Wrapper,
   Details,
-  Type,
   ModelHide,
   ButtonsWrapper
 } from './styles';
@@ -21,66 +21,86 @@ import IconEngine from '../../assets/icons/engine.white.png';
 import IconSpeed from '../../assets/icons/speed.white.png';
 import IconBag from '../../assets/icons/bag.white.png';
 
-const images = [
-  {
-    original: 'https://hosty.xxx/i/313dd308deab8e15d2f36ec008f69587e0d9f553.jpg',
-    thumbnail: 'https://hosty.xxx/i/313dd308deab8e15d2f36ec008f69587e0d9f553.jpg'
-  },
-  {
-    original:  'https://hosty.xxx/i/9c65fe60f6fd887f4651167d6cbfa9a6665045d5.jpg',
-    thumbnail:  'https://hosty.xxx/i/9c65fe60f6fd887f4651167d6cbfa9a6665045d5.jpg'
-  },
-  {
-    original: 'https://hosty.xxx/i/360625a60bd262a5ef6c792433e4a6e7a26296c0.jpg',
-    thumbnail: 'https://hosty.xxx/i/360625a60bd262a5ef6c792433e4a6e7a26296c0.jpg'
-  },
-  {
-    original: 'https://hosty.xxx/i/6d5a98a4eb7b673eedc5d20ec130f08752b65872.jpg',
-    thumbnail: 'https://hosty.xxx/i/6d5a98a4eb7b673eedc5d20ec130f08752b65872.jpg'
-  },
-  {
-    original: 'https://hosty.xxx/i/96c4c6371c659fcd8b93ab1815f70de713ca5c4e.jpg',
-    thumbnail: 'https://hosty.xxx/i/96c4c6371c659fcd8b93ab1815f70de713ca5c4e.jpg'
-  }
-];
+
+const DescriptionComponentThree = ({
+  props, 
+  name, 
+  petrol, 
+  engine, 
+  speed,
+  image,
+  id
+}) => {
+
+  const images = [
+    {
+      original: `https://admin.zauto.uz/${image}`,
+      thumbnail: `https://admin.zauto.uz/${image}`
+    },
+    {
+      original:  'https://hosty.xxx/i/fd29e6764e5be276c3ee05bae5bca81227679718.jpg',
+      thumbnail:  'https://hosty.xxx/i/fd29e6764e5be276c3ee05bae5bca81227679718.jpg'
+    },
+    {
+      original: 'https://hosty.xxx/i/57221533061a8b36cb157abdc64884cd8c697a15.jpg',
+      thumbnail: 'https://hosty.xxx/i/57221533061a8b36cb157abdc64884cd8c697a15.jpg'
+    },
+    {
+      original: 'https://hosty.xxx/i/469e647ce93c581b779da040a3817cb01ac53dae.jpg',
+      thumbnail: 'https://hosty.xxx/i/469e647ce93c581b779da040a3817cb01ac53dae.jpg'
+    },
+    {
+      original: 'https://hosty.xxx/i/1fbe205631194102a05065c27861c0f05d3f889c.jpg',
+      thumbnail: 'https://hosty.xxx/i/1fbe205631194102a05065c27861c0f05d3f889c.jpg'
+    }
+  ];
 
 
-const DescriptionComponentThree = (props) => (
+  const history = useHistory();
+  const routeChange = () => {
+    history.push(`/${id}`)
+  };
+
+  return (
   <Container {...props}>
     <Row>
       <Col1>
-      <ModelHide>Elantra MPI 1.6</ModelHide>
+      <ModelHide>{name}</ModelHide>
         <ImageGallery 
           showFullscreenButton={false} 
           showPlayButton={false}  
           items={images} 
           showNav={false}
-        />
+        />;
       </Col1>
       <Col2>
-        <Model>Elantra MPI 1.6</Model>
-        <Type>УДОБНЫЙ ГОРОДСКОЙ АВТОМОБИЛЬ</Type>
+        <Model>{name}</Model>
         <Wrapper>
             <IconsWrapper marginRight35> 
               <img src={IconEngine} alt="icon"/>
-              <Details>1,6 <span>cm3</span></Details>
+              <Details>{engine}<span>cm3</span></Details>
             </IconsWrapper>
             <IconsWrapper> 
               <img src={IconSpeed} alt="icon"/>
-              <Details>128 <span>л.с</span></Details>
+              <Details>{speed}<span>л.с</span></Details>
             </IconsWrapper>
             <IconsWrapper> 
               <img src={IconBag} alt="icon"/>
-              <Details>6,6<span> л/100km</span></Details>
+              <Details>{petrol}<span> л/100km</span></Details>
             </IconsWrapper>
         </Wrapper>
         <ButtonsWrapper>
-            <ButtonPrimary applyBtn>Предоплата 35%</ButtonPrimary>
-            <ButtonPrimary applyBtn>Предоплата 50%</ButtonPrimary>
+            <ButtonPrimary 
+              applyBtn
+              onClick={routeChange}
+            >
+              Связаться с консультантом
+            </ButtonPrimary>
         </ButtonsWrapper>
       </Col2>
     </Row>
   </Container>
-);
+  );
+};
 
 export default DescriptionComponentThree;

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
   width: 100vw;
   height: 90vh;
-  background-color: white;
+  background-color: black;
   /* border: 2px solid red; */
   @media screen and (max-width: 1100px) {
     height: fit-content;
@@ -55,24 +55,10 @@ export const Col2 = styled.div`
   }
 `;
 
-export const Type = styled.h1`
-  font-size: 15px;
-  font-weight: 300;
-  line-height: 15px;
-  font-family: 'Roboto', sans-serif;
-  color: black;
-  text-transform: uppercase;
-  text-align: center;
-  @media screen and (min-width: 1500px) {
-    font-size: 20px;
-    font-weight: 400;
-  }
-`;
-
 export const Model = styled.div`
   font-size: 30px;
   font-weight: 700;
-  color: black;
+  color: white;
   text-align: center;
   font-family: 'Roboto', sans-serif;
   @media screen and (max-width: 1200px) {
@@ -88,7 +74,7 @@ export const ModelHide = styled.span`
   font-size: 60px;
   font-weight: 700;
   line-height: 60px;
-  color: black;
+  color: white;
   display: none;
   font-family: 'Roboto', sans-serif;
   @media screen and (max-width: 1100px) {
@@ -128,7 +114,7 @@ export const ButtonsWrapper = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
   margin-top: -30px;
   @media screen and (max-width: 1100px) {
@@ -175,11 +161,11 @@ export const Details = styled.div`
   font-size: 22px;
   line-height: 22px;
   font-weight: 600;
-  color: black;
+  color: white;
   margin-top: 40px;
     span {
       font-size: 19px;
-      color: black;
+      color: white;
       margin-left: 2px;
     }
     @media screen and (max-width: 550px) {
@@ -188,7 +174,7 @@ export const Details = styled.div`
       font-weight: 500;
       span {
         font-size: 14px;
-        color: black;
+        color: white;
         margin-left: 2px;
       }
     }

@@ -92,12 +92,12 @@ export const Secondary = css`
 `;
 
 export const ApplyBtn = css`
-  width: 230px;
+  width: 250px;
   height: 60px;
   border: none;
   text-align: center;
   color: white;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 700;
   outline: none;
   background-color: black;
@@ -113,19 +113,19 @@ export const ApplyBtn = css`
       outline: none;
     }
     @media screen and (max-width: 768px) {
-      width: 180px;
+      width: 230px;
       height: 50px;
-      font-size: 13px;
+      font-size: 12px;
     }
 `;
 
 export const ApplyBtnWhite = css`
-  width: 230px;
+  width: 250px;
   height: 60px;
   border: none;
   text-align: center;
   color: black;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 700;
   outline: none;
   background-color: white;
@@ -141,9 +141,9 @@ export const ApplyBtnWhite = css`
       outline: none;
     }
     @media screen and (max-width: 769px) {
-      width: 180px;
+      width: 230px;
       height: 50px;
-      font-size: 13px;
+      font-size: 12px;
     }
 `;
 

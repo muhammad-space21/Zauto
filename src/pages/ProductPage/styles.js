@@ -55,6 +55,7 @@ export const Col2 = styled.div`
 export const HR = styled.div`
   width: 100%;
   border-bottom: 1.5px solid #eeeeee;
+  margin-top: 20px;
 `;
 
 export const Model = styled.div`

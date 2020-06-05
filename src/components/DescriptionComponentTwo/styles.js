@@ -69,17 +69,17 @@ export const Type = styled.h1`
   }
 `;
 
-export const Model = styled.span`
-  font-size: 60px;
+export const Model = styled.div`
+  font-size: 30px;
   font-weight: 700;
-  /* line-height: 60px; */
   color: white;
+  text-align: center;
   font-family: 'Roboto', sans-serif;
-  @media screen and (max-width: 1100px) {
+  @media screen and (max-width: 1200px) {
     display: none;
   }
   @media screen and (min-width: 1500px) {
-    font-size: 85px;
+    font-size: 40px;
     line-height: 45px;
   }
 `;
@@ -116,10 +116,8 @@ export const Wrapper = styled.div`
   /* border: 2px solid yellow; */
   @media screen and (max-width: 1100px) {
     justify-content: space-between;
-    margin-top: 50px;
   }
   @media screen and (max-width: 768px) {
-    margin-top: 0;
     width: 100%;
   }
 `;

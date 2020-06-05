@@ -22,7 +22,7 @@ import IconSpeed from '../../assets/icons/speed.black.png';
 import IconBag from '../../assets/icons/bag.black.png';
 
 
-const DescriptionComponentTwo = ({
+const DescriptionComponentOne = ({
   props, 
   name, 
   petrol, 
@@ -54,7 +54,6 @@ const DescriptionComponentTwo = ({
       thumbnail: 'https://hosty.xxx/i/1fbe205631194102a05065c27861c0f05d3f889c.jpg'
     }
   ];
-
 
   const history = useHistory();
   const routeChange = () => {
@@ -103,4 +102,4 @@ const DescriptionComponentTwo = ({
   );
 };
 
-export default DescriptionComponentTwo;
+export default DescriptionComponentOne;
