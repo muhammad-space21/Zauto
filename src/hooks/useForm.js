@@ -26,14 +26,15 @@ const useForm = (callback) => {
         setSuccess(true)
         setLoading(false)
         setInstruction(false)
-        setSubmit(true)
+        setSubmit(false)
+        console.log('response in success', response)
       } else {
         setError(true)
         setLoading(false)
         setInstruction(false)
         setSubmit(true)
       }
-      console.log(response)
+      console.log('response in error', response)
     })
     .catch(function (error) {
         setError(true)

@@ -25,7 +25,7 @@ export const NavStyled = styled(Nav)`
       flex-direction: column;
       justify-content: space-evenly;
       background-color: black;
-      width: 100vw;
+      /* width: 120vw; */
       height: 75vh;
       margin: 0;
       padding: 0;
@@ -34,7 +34,7 @@ export const NavStyled = styled(Nav)`
 
 export const NavbarCollapse = styled(Navbar.Collapse)`
   z-index: 888;
-  width: 100vw;
+  /* width: 100vw; */
   margin: 0;
   padding: 0;
 `;
@@ -236,27 +236,6 @@ export const NavbarBrand = styled(Navbar.Brand)`
       width: auto;
       height: 20px;
     }
-  }
-  /* @media screen and (max-width: 991px) {
-    display: none;
-  } */
-`;
-
-export const MenuToggleBrand = styled(Navbar.Brand)`
-  display: none;
-  img {
-    width: auto;
-    height: 25px;
-  }
-  @media screen and (max-width: 991px) {
-    display: block;
-    width: fit-content;
-    height: fit-content;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 10px;
-    margin-bottom: 20px;
   }
 `;
 

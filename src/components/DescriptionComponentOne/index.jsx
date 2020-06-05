@@ -29,9 +29,13 @@ const DescriptionComponentOne = ({
   engine, 
   speed,
   image,
-  id
+  id,
+  gallery
 }) => {
 
+  // const parsed = gallery.JSON.parse();
+  // console.log(parsed)
+  
   const images = [
     {
       original: `https://admin.zauto.uz/${image}`,

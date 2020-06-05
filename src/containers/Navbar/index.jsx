@@ -12,8 +12,7 @@ import {
   NavbarCollapse,
   NavLinkStyledLogin,
   NavLinkHide,
-  NavLinkCustom,
-  MenuToggleBrand
+  NavLinkCustom
 } from './styles';
 
 import './styles.scss';
@@ -33,9 +32,6 @@ export const NavbarMain = () => (
       </NavbarToggle>
       <NavbarCollapse id="responsive-navbar-nav">
         <NavStyled className="ml-auto">
-        <MenuToggleBrand href="/"> 
-          <img src={BrandLogo} alt="Brand-logo"/> 
-        </MenuToggleBrand>
           <NavLinkCustom href="/">Главная</NavLinkCustom>
           <li>
             <a className='nav-item' href="#">Автомобили</a>

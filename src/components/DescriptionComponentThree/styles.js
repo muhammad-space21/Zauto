@@ -124,22 +124,16 @@ export const Wrapper = styled.div`
 
 export const ButtonsWrapper = styled.div`
   width: 90%;
-  height: 170px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
   margin-top: -30px;
   @media screen and (max-width: 1100px) {
-    width: 60%;
     margin-top: 20px;
   }
   @media screen and (max-width: 768px) {
-    display: flex;
-    height: 130px;
-    flex-direction: column;
-    justify-content: space-between;
     margin-top: 50px;
   }
 `;
