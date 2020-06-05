@@ -5,32 +5,51 @@ import {
   Heading,
   FormStyled,
   Input,
-  ErrorMessage,
+  ErrorMsg,
   ButtonWrapper,
   Checkbox,
   LinkToPolicy,
   InputTel,
   Wrapper,
-  Error
+  Error,
+  AlertStyled
 } from './styles';
 
 import useForm from '../../hooks/useForm';
-
+import SpinnerSmall from '../../components/SpinnerSmall';
 import ButtonPrimary from '../../components/Buttons/ButtonPrimary';
 
 
 const Form = () => {
   const { 
-    handleChange, 
-    handleSubmit, 
-    inputs, 
+    handleSubmit,
+    handleChange,
+    inputs,
     submit,
-    // error
+    error,
+    loading,
+    success,
+    instruction
   } = useForm();
-
     return (
+    <>
       <ContainerStyled>
         <FormStyled onSubmit={handleSubmit}>
+          { instruction && 
+            (<AlertStyled variant='info'>
+              Пожалуйста, заполните обязательные поля!
+            </AlertStyled>)
+          }
+          { success && 
+            (<AlertStyled variant='success'>
+              Заявка принята!
+            </AlertStyled>)
+          }
+          { error &&
+            (<AlertStyled variant="danger">
+              Упс! Что-то пошло не так!
+            </AlertStyled>)
+          }
           <Heading>Заполнить форму</Heading>
           <Input
             type="text"
@@ -41,17 +60,17 @@ const Form = () => {
           />
           { 
             submit && !inputs.fullname &&
-            <ErrorMessage>
+            <ErrorMsg>
               <Error>Ф. И. О отсутствует!</Error>  
-            </ErrorMessage>
+            </ErrorMsg>
           }
-          {/* { error ? 
+          { submit && inputs.fullname !== '' && inputs.fullname.length < 15 ?
             (
-              <ErrorMessage>
+              <ErrorMsg>
                 <Error>Полное имя должно быть более 15 символов!</Error>
-              </ErrorMessage>
+              </ErrorMsg>
             ) : null
-          } */}
+          }
           <InputTel
             type="tel"
             name="phone"
@@ -64,19 +83,22 @@ const Form = () => {
           />
           { 
             submit && !inputs.phone &&
-            <ErrorMessage>
+            <ErrorMsg>
               <Error>Номер телефона отсутствует!</Error>
-            </ErrorMessage>
+            </ErrorMsg>
           }
           <Wrapper>
             <Checkbox type="checkbox" id="terms" name="terms" />
             <LinkToPolicy to='/policy'>Agree to all terms</LinkToPolicy>            
           </Wrapper>
           <ButtonWrapper>
-            <ButtonPrimary orderBtn>Отправить</ButtonPrimary>
+            <ButtonPrimary orderBtn>
+              { loading ? (<SpinnerSmall />) : ('Отправить')}
+            </ButtonPrimary>
           </ButtonWrapper>
         </FormStyled>
       </ContainerStyled>
+      </>
     );
 };
 

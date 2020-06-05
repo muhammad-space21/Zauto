@@ -237,9 +237,9 @@ export const NavbarBrand = styled(Navbar.Brand)`
       height: 20px;
     }
   }
-  @media screen and (max-width: 991px) {
+  /* @media screen and (max-width: 991px) {
     display: none;
-  }
+  } */
 `;
 
 export const MenuToggleBrand = styled(Navbar.Brand)`

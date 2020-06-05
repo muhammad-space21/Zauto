@@ -1,7 +1,12 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import MaskedInput from 'react-text-mask';
+import { Alert } from 'react-bootstrap';
 
+export const AlertStyled = styled(Alert)`
+	width: 100%;
+	/* margin-bottom: -70px; */
+`;
 
 export const ContainerStyled = styled.div`
 	width: 100%;
@@ -126,7 +131,7 @@ export const Wrapper = styled.div`
 export const Heading = styled.span`
 	font-size: 25px;
 	font-weight: 600;
-	margin-bottom: 30px;
+	margin-bottom: 10px;
 	color: #2d3436;
 	@media screen and ( max-width: 710px ) {
 		font-size: 20px;
@@ -134,7 +139,7 @@ export const Heading = styled.span`
 	}
 `;
 
-export const ErrorMessage = styled.div`
+export const ErrorMsg = styled.div`
 	width: 80%;
 	margin-left: auto;
 	margin-right: auto;

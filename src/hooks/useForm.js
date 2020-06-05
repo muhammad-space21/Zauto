@@ -5,28 +5,50 @@ import { useParams } from 'react-router-dom';
 const useForm = (callback) => {
   const {id} = useParams();
   const [submit, setSubmit] = useState(false);
+  const [error, setError] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [instruction, setInstruction] = useState(true);
   const [inputs, setInputs] = useState({
     fullname: '', phone: '', car_id: id
   });
 
-  // const [error, setError] = useState(false);
 
   const handleSubmit = (event) => {
     if (event) event.preventDefault();
     // callback();
-    setSubmit(true);
+    setLoading(true)
+    setSubmit(true)
     // send data to API
     axios.post('https://admin.zauto.uz/api/orders', inputs)
     .then(function (response) {
-        console.log(response)
+      if (response.status === 200) {
+        setSuccess(true)
+        setLoading(false)
+        setInstruction(false)
+        setSubmit(true)
+      } else {
+        setError(true)
+        setLoading(false)
+        setInstruction(false)
+        setSubmit(true)
+      }
+      console.log(response)
     })
     .catch(function (error) {
+        setError(true)
+        setLoading(false)
+        setSuccess(false)
+        setInstruction(false)
         console.log(error)
     }) 
     console.log(inputs);
 
     // clear form
-    if (inputs.fullname && inputs.phone && submit && inputs.car_id) {
+    if (inputs.fullname 
+      && inputs.phone 
+      && submit 
+      && inputs.car_id) {
       setInputs({
         fullname: '',
         phone: '',
@@ -46,7 +68,7 @@ const useForm = (callback) => {
   };
   
   //validation
-  // if (submit && fullname.length < 15) {
+  // if (submit && inputs.fullname.length < 15) {
   //   setError(true);
   // };
 
@@ -54,8 +76,11 @@ const useForm = (callback) => {
     handleSubmit,
     handleChange,
     inputs,
-    submit
-    // error
+    submit,
+    error,
+    loading,
+    success,
+    instruction
   };
 };
 
