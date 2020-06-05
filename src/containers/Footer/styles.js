@@ -5,7 +5,7 @@ import ImageBackgrround from '../../assets/images/malibu.3.png';
 
 export const Container = styled.div`
   width: 100vw;
-  height: 90vh;
+  height: 85vh;
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -8,12 +8,13 @@ export const ContainerStyled = styled.div`
 	height: 100%;
 	font-family: 'Poppins', sans-serif;
 	font-weight: 400;
-	padding-bottom: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 `;
 
 export const FormStyled = styled.form`
 	width: 80%;
-	margin-top: 30px;
 	height: fit-content;
 	display: flex;
 	flex-direction: column;
@@ -47,7 +48,6 @@ export const LinkToPolicy = styled(Link)`
 	&:hover {
 		color: black;
 		cursor: pointer;
-		text-decoration: none;
 	}
 `;
 

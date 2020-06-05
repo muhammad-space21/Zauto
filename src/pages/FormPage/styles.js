@@ -79,8 +79,8 @@ export const IconWrapper = styled.div`
 	width: fit-content;
 	height: fit-content;
 	margin-left: auto;
-	margin-right: 10px;
-	margin-top: 10px;
+	margin-right: 15px;
+	margin-top: 15px;
 		img {
 			width: 30px;
 			height: 30px;

@@ -71,7 +71,7 @@ const DescriptionComponentThree = ({
           showPlayButton={false}  
           items={images} 
           showNav={false}
-        />;
+        />
       </Col1>
       <Col2>
         <Model>{name}</Model>

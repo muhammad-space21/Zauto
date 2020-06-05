@@ -4,10 +4,11 @@ import { useParams } from 'react-router-dom';
 
 const useForm = (callback) => {
   const {id} = useParams();
+  const [submit, setSubmit] = useState(false);
   const [inputs, setInputs] = useState({
     fullname: '', phone: '', car_id: id
   });
-  const [submit, setSubmit] = useState(false);
+
   // const [error, setError] = useState(false);
 
   const handleSubmit = (event) => {
@@ -25,12 +26,14 @@ const useForm = (callback) => {
     console.log(inputs);
 
     // clear form
-    if (inputs.fullname && inputs.phone && submit) {
+    if (inputs.fullname && inputs.phone && submit && inputs.car_id) {
       setInputs({
         fullname: '',
-        phone: ''
+        phone: '',
+        car_id: ''
       },
-      setSubmit(false));
+      setSubmit(true)
+      )
     }
   };
 

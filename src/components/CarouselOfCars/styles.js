@@ -32,7 +32,7 @@ export const Wrapper = styled.div`
         }
     }
   &:hover {
-    cursor: grab;
+    cursor: pointer;
     transition: 2s;
   }
 `;
