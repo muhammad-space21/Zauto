@@ -84,25 +84,26 @@ export const Model = styled.div`
   }
 `;
 
-export const ModelHide = styled.span`
-  font-size: 60px;
+export const ModelHide = styled.div`
+  font-size: 30px;
   font-weight: 700;
-  line-height: 60px;
+  line-height: 35px;
   color: black;
   display: none;
+  text-align: center;
   font-family: 'Roboto', sans-serif;
-  @media screen and (max-width: 1100px) {
+  @media screen and (max-width: 1200px) {
     display: block;
-    font-size: 45px;
-    line-height: 45px;
+    font-size: 25px;
+    line-height: 25px;
     margin-bottom: 20px;
     margin-top: 20px;
   }
   @media screen and (max-width: 768px) {
-    font-size: 25px;
+    font-size: 20px;
   }
   @media screen and (min-width: 1500px) {
-    font-size: 85px;
+    font-size: 40px;
     line-height: 45px;
   }
 `;

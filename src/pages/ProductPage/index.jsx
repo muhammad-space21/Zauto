@@ -52,32 +52,28 @@ const ProductComponent = () => {
     fetchData()
   }, [id]);
 
-  const { gallery } = data;
-  console.log(gallery, 'gallery');
-  // JSON.parse(gallery);
-  // console.log(gallery, 'gallery parsed');
 
     const images = [
       {
         original: `https://admin.zauto.uz/${data.image}`,
         thumbnail: `https://admin.zauto.uz/${data.image}`,
       },
-      // {
-      //   original: `https://admin.zauto.uz/${data.gallery}`,
-      //   thumbnail: `https://admin.zauto.uz/${data.gallery},`
-      // },
-      // {
-      //   // original: `https://admin.zauto.uz/${data.gallery[0]}`,
-      //   // thumbnail: `https://admin.zauto.uz/${data.gallery[1]["gallery_image"]}`
-      // },
-      // {
-      //   original: `https://admin.zauto.uz/${data.gallery[2]["gallery_image"]}`,
-      //   thumbnail: `https://admin.zauto.uz/${data.gallery[2]["gallery_image"]}`
-      // },
-      // {
-      //   original: `https://admin.zauto.uz/${data.gallery[3]["gallery_image"]}`,
-      //   thumbnail: `https://admin.zauto.uz/${data.gallery[3]["gallery_image"]}`
-      // }
+      {
+        original: `https://admin.zauto.uz/${data.image0}`,
+        thumbnail: `https://admin.zauto.uz/${data.image0}`
+      },
+      {
+        original: `https://admin.zauto.uz/${data.image1}`,
+        thumbnail: `https://admin.zauto.uz/${data.image1}`
+      },
+      {
+        original: `https://admin.zauto.uz/${data.image2}`,
+        thumbnail: `https://admin.zauto.uz/${data.image2}`
+      },
+      {
+        original: `https://admin.zauto.uz/${data.image3}`,
+        thumbnail: `https://admin.zauto.uz/${data.image3}`
+      },
     ];
     
     return (

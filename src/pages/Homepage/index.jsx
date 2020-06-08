@@ -6,6 +6,8 @@ import Navbar from '../../containers/Navbar';
 import Header from '../../components/Header';
 import MarketingCards from '../../components/MarketingCards';
 import BestSalesCarousel from '../../components/BestSalesCarousel';
+// import BestSalesContainer from '../../containers/BestSalesContainer';
+
 import MenuCars from '../../containers/MenuCars';
 import CarouselOfCars from '../../components/CarouselOfCars';
 import CarsDescriptionsOverview from '../../components/CarsDescriptionsOverview';
@@ -17,7 +19,7 @@ const Homepage = () => (
     <Navbar />
     <Header />
     <MarketingCards />
-    <BestSalesCarousel />
+    {/* <BestSalesCarousel /> */}
     <MenuCars />
     <CarouselOfCars />
     <CarsDescriptionsOverview />

@@ -38,22 +38,22 @@ const DescriptionComponentOne = ({
       original: `https://admin.zauto.uz/${image}`,
       thumbnail: `https://admin.zauto.uz/${image}`
     },
-    {
-      original:  'https://hosty.xxx/i/fd29e6764e5be276c3ee05bae5bca81227679718.jpg',
-      thumbnail:  'https://hosty.xxx/i/fd29e6764e5be276c3ee05bae5bca81227679718.jpg'
-    },
-    {
-      original: 'https://hosty.xxx/i/57221533061a8b36cb157abdc64884cd8c697a15.jpg',
-      thumbnail: 'https://hosty.xxx/i/57221533061a8b36cb157abdc64884cd8c697a15.jpg'
-    },
-    {
-      original: 'https://hosty.xxx/i/469e647ce93c581b779da040a3817cb01ac53dae.jpg',
-      thumbnail: 'https://hosty.xxx/i/469e647ce93c581b779da040a3817cb01ac53dae.jpg'
-    },
-    {
-      original: 'https://hosty.xxx/i/1fbe205631194102a05065c27861c0f05d3f889c.jpg',
-      thumbnail: 'https://hosty.xxx/i/1fbe205631194102a05065c27861c0f05d3f889c.jpg'
-    }
+    // {
+    //   original: `https://admin.zauto.uz/${image0}`,
+    //   thumbnail: `https://admin.zauto.uz/${image0}`
+    // },
+    // {
+    //   original: `https://admin.zauto.uz/${image1}`,
+    //   thumbnail: `https://admin.zauto.uz/${image1}`
+    // },
+    // {
+    //   original: `https://admin.zauto.uz/${image2}`,
+    //   thumbnail: `https://admin.zauto.uz/${image2}`
+    // },
+    // {
+    //   original: `https://admin.zauto.uz/${image3}`,
+    //   thumbnail: `https://admin.zauto.uz/${image3}`
+    // },
   ];
 
   const history = useHistory();

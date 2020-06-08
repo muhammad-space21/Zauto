@@ -5,12 +5,18 @@ import {
   Row,
   Wrapper, 
   Title, 
-  LinkStyle,
+  Title1,
   SocialFollow, 
   Icons, 
   HrDotted,
   H6,
-  LogoWrapper
+  Hr,
+  LogoWrapper,
+  Col,
+  Col2,
+  Row2,
+  Number,
+  Address
 } from './styles';
 
 import IconFacebook from '../../assets/icons/facebook.JPG';
@@ -22,36 +28,50 @@ import Logo from '../../assets/images/logo@2x-1.png';
 
 const Footer = () => (
   <Container>
-    <LogoWrapper to='/'>
-      <img src={Logo} alt="logo"/>
-    </LogoWrapper>
     <Row>
-      <Wrapper>
-        <Title>Автомобили</Title>
-          <LinkStyle to='/avto-gm'>Авто GM</LinkStyle>
-          <LinkStyle to='/avto-hyundai'>Авто Hyundai</LinkStyle>
-          <LinkStyle to='/b/u-avto'>Б/У АВТО</LinkStyle>
-      </Wrapper>
-
-      <Wrapper>
-        <Title>О нас</Title>
-        <LinkStyle to='/contacts'>Контакты</LinkStyle>
-        <LinkStyle to='/career'>Карьера</LinkStyle>
-      </Wrapper>
-
-      <Wrapper>
-        <Title>Следите за нами</Title>
-        <SocialFollow>
-      <Icons><img src={IconFacebook} alt=""/></Icons>
-          <Icons><img src={IconTwitter} alt=""/></Icons>
-          <Icons><img src={IconGoogle} alt=""/></Icons>
-          <Icons><img src={IconUtube} alt=""/></Icons>
-          <Icons><img src={IconInsta} alt=""/></Icons>
-        </SocialFollow>
-      </Wrapper>
+      <Col>
+        <Title>Публичная оферта</Title>
+        <Title>Стать партнером</Title>
+        <Title>Частые вопросы</Title>
+      </Col>
+      <Col2>
+        <Wrapper>
+          <SocialFollow>
+            <Icons href='https://www.facebook.com/zauto.uz'>
+              <img src={IconFacebook} alt=""/>
+            </Icons>
+            <Icons href='https://www.instagram.com/zauto.uz/'>
+              <img src={IconInsta} alt=""/>
+            </Icons>
+          </SocialFollow>
+        </Wrapper>
+      </Col2>
     </Row>
+    <Hr />
+    <Row2>
+      <Wrapper>
+        <LogoWrapper to='/'>
+        <img src={Logo} alt="logo"/>
+      </LogoWrapper>
+      </Wrapper>
+      <Wrapper>
+        <H6>СЛУЖБА ПОДДЕРЖКИ</H6>
+          <Number>+998 95 479 0770</Number>
+          <Number>+998 95 479 7007</Number>
+        <Address>
+          Узбекистан, г. Ташкент, Юнусабадский
+          <br />
+          район, ул. Корходжи Ота, дом 3
+        </Address>
+      </Wrapper>
+      <Wrapper>
+        <Title1>Время работы</Title1>
+        <Title1>09:00 - 19:00</Title1>
+        <Title1>Пн - Сб</Title1>
+      </Wrapper>
+    </Row2>
     <HrDotted />
-    <H6>© All rights reserved</H6>
+    <H6>OOO «ZAAMIN-MARKET» © 2020. Все права защищены</H6>
   </Container>
 );
 

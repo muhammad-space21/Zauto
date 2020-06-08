@@ -27,7 +27,7 @@ const MenuCars = () => {
   const [expanded, setExpanded] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
-  const [catId, setCatId] = useState(3);
+  const [catId, setCatId] = useState(2);
 
   //fetching data
   const url = 'https://admin.zauto.uz/api/newcars';
@@ -49,11 +49,13 @@ const MenuCars = () => {
   function showMore () {
     if (itemsToShow === 12) {
       setItemsToShow(data.length);
-      console.log(itemsToShow, 'number of items');
+      console.log(data.length, 'data.length')
+      console.log(itemsToShow, 'number of items in if');
       setExpanded(true);
     } else {
       setItemsToShow(12);
       setExpanded(false);
+      console.log('number of items in else', itemsToShow);
     }
   };
 

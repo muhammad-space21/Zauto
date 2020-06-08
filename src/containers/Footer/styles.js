@@ -1,22 +1,15 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-import ImageBackgrround from '../../assets/images/malibu.3.png';
 
 export const Container = styled.div`
   width: 100vw;
-  height: 85vh;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url(${ImageBackgrround});
-  background-position: center; 
-  background-size: cover;
-  @media screen and (max-width: 768px) {
-    background-image:
-      linear-gradient(to bottom, #254971, #00648d, #008096, #009987, #00af66);
-  }
+  background-color: black;
 `;
 
 export const LogoWrapper = styled(Link)`
@@ -25,84 +18,148 @@ export const LogoWrapper = styled(Link)`
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  margin-right: auto;
+  margin-right: -20px;
   img {
-    width: 60%;
-    height: 25px;
-    margin-left: 50px;
-  }
-  @media screen and (max-width: 991px) {
-    margin-left: -20px;
+    width: 90%;
+    height: auto;
   }
 `;
 
 export const Row = styled.div`
-  width: 80vw;
+  width: 100%;
+  height: 10%;
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
+  /* flex-wrap: wrap; */
+  justify-content: space-between;
+  @media screen and (max-width: 800px) {
+    margin-top: 20px;
+  }
+`;
+
+export const Row2 = styled.div`
+  width: 80%;
   height: 80%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding-top: 150px;
+  align-items: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
   @media screen and (max-width: 800px) {
-    display: flex;
-    padding-top: 50px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+`;
+
+export const Col = styled.div`
+  width: 70%;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-left: 20px;
+  @media screen and (max-width: 800px) {
+    width: 80%;
+  }
+`;
+
+export const Col2 = styled.div`
+  width: 30%;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  @media screen and (max-width: 800px) {
+    width: 30%;
   }
 `;
 
 export const Title = styled.span`
-  font-size: 23px;
-  line-height: 20px;
+  font-size: 18px;
+  line-height: 18px;
   font-weight: 500;
   color: white;
-  margin-bottom: 30px;
-  @media screen and (max-width: 600px) {
-    font-size: 20px;
-    line-height: 20px;
+  margin-right: 10px;
+  @media screen and (max-width: 900px) {
+    font-size: 14px;
+    line-height: 14px;
+  }
+  @media screen and (max-width: 800px) {
+    display: none;
   }
 `;
 
-export const LinkStyle = styled(Link)`
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 37px;
+export const Title1 = styled.span`
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 500;
+  margin-bottom: 10px;
   color: white;
-    &:hover {
-      color: #00AF66;
-      text-decoration: none;
-    }
   @media screen and (max-width: 600px) {
-    font-size: 17px;
-    line-height: 30px;
+    font-size: 14px;
+    line-height: 14px;
+  }
+`;
+
+export const Number = styled.span`
+  font-size: 25px;
+  line-height: 25px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: white;
+  @media screen and (max-width: 991px) {
+    font-size: 18px;
+    line-height: 18px;
   }
 `;
 
 export const Wrapper = styled.div`
-  width: fit-content;
+  width: 30%;
   height: fit-content;
   display: flex;
   flex-direction: column;
-  margin-right: 50px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  @media screen and (max-width: 800px) {
+    width: 100%;
+  }
 `;
 
 export const H6 = styled.span`
   font-size: 15px;
   line-height: 20px;
   font-weight: 400;
-  color: #9096A0;
-  margin-right: auto;
-  margin-left: 80px;
-  margin-top: 30px;
-  @media screen and (max-width: 768px) {
-    color: white;
-    margin-left: 50px;
+  margin-bottom: 20px;
+  color: white;
+`;
 
-  }
+export const Address = styled.div`
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  color: white;
+  text-align: center;
 `;
 
 export const HrDotted = styled.div`
-  width: 90vw;
+  width: 100vw;
   border-bottom: 2px dotted white;
+  margin-bottom: 20px;
+`;
+
+export const Hr = styled.div`
+  width: 100vw;
+  border-bottom: 2px solid grey;
+  margin-top: 20px;
 `;
 
 export const SocialFollow = styled.div`
@@ -110,9 +167,14 @@ export const SocialFollow = styled.div`
   height: fit-content;
   display: flex;
   flex-direction: row;
+  float: right;
+  margin-right: 50px;
+  @media screen and (max-width: 900px) {
+  margin-right: 20px;
+  }
 `;
 
-export const Icons = styled.div`
+export const Icons = styled.a`
   width: 40px;
   height: 40px;
   border-radius: 50px;
@@ -120,7 +182,7 @@ export const Icons = styled.div`
   align-items: center;
   justify-content: center;
   background-color: #FFFFFF;
-  margin-right: 10px;
+  margin-right: 20px;
   @media screen and (max-width: 800px) {
     width: 30px;
     height: 30px;

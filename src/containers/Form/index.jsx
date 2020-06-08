@@ -67,7 +67,7 @@ const Form = () => {
           { submit && inputs.fullname !== '' && inputs.fullname.length < 15 ?
             (
               <ErrorMsg>
-                <Error>Полное имя должно быть более 15 символов!</Error>
+                <Error>Полное имя должно быть не менее 15 символов!</Error>
               </ErrorMsg>
             ) : null
           }
