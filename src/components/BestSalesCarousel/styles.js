@@ -30,7 +30,7 @@ export const Heading = styled.span`
 `;
 
 export const Title = styled.h1`
-  font-size: 30px;
+  font-size: 18px;
   @media screen and (max-width: 768px) {
     font-size: 22px;
   }

@@ -27,11 +27,9 @@ export const LogoWrapper = styled(Link)`
 
 export const Row = styled.div`
   width: 100%;
-  height: 10%;
   display: flex;
   flex-direction: row;
-  margin-top: 50px;
-  /* flex-wrap: wrap; */
+  margin-top: 20px;
   justify-content: space-between;
   @media screen and (max-width: 800px) {
     margin-top: 20px;
@@ -40,14 +38,13 @@ export const Row = styled.div`
 
 export const Row2 = styled.div`
   width: 80%;
-  height: 80%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 30px;
+  padding-bottom: 20px;
   @media screen and (max-width: 800px) {
     flex-direction: column;
     align-items: center;
@@ -126,7 +123,7 @@ export const Wrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   @media screen and (max-width: 800px) {
     width: 100%;
   }
@@ -159,7 +156,6 @@ export const HrDotted = styled.div`
 export const Hr = styled.div`
   width: 100vw;
   border-bottom: 2px solid grey;
-  margin-top: 20px;
 `;
 
 export const SocialFollow = styled.div`

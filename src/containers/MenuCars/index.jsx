@@ -107,9 +107,10 @@ const MenuCars = () => {
               onClick={showMore}
             >
               {
-                expanded ? <span>Показывай меньше</span>
+                expanded ? <span>Показать больше</span>
                 : 
-                <span>Показать больше</span>
+                <span>Показывай меньше</span>
+                
               }
             </ButtonPrimary>
           </BtnWrapper>

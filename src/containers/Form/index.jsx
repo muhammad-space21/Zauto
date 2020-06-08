@@ -64,20 +64,20 @@ const Form = () => {
               <Error>Ф. И. О отсутствует!</Error>  
             </ErrorMsg>
           }
-          { submit && inputs.fullname !== '' && inputs.fullname.length < 15 ?
+          { submit && inputs.fullname !== '' && inputs.fullname.length < 10 ?
             (
               <ErrorMsg>
-                <Error>Полное имя должно быть не менее 15 символов!</Error>
+                <Error>Полное имя должно быть не менее 10 символов!</Error>
               </ErrorMsg>
             ) : null
           }
           <InputTel
             type="tel"
             name="phone"
-            placeholder="(+998) 90 123-45-67"
+            placeholder="(998) 90 123-45-67"
             value={inputs.phone}
             onChange={handleChange}
-            mask={['(',/[+]/, /[9]/, /[9]/, /[8]/, ')', ' ', /\d/, /\d/, /\d/, /\d/, /\d/, '-', /\d/, /\d/, '-', /\d/, /\d/, ]}
+            mask={['(',/[9]/, /[9]/, /[8]/, ')', ' ', /\d/, /\d/, /\d/, /\d/, /\d/, '-', /\d/, /\d/, '-', /\d/, /\d/, ]}
             guide={true}
             // showMask={true}
           />
