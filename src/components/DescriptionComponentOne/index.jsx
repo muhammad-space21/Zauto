@@ -32,9 +32,6 @@ const DescriptionComponentOne = ({
   id,
   gallery
 }) => {
-
-  // const parsed = gallery.JSON.parse();
-  // console.log(parsed)
   
   const images = [
     {
@@ -74,7 +71,7 @@ const DescriptionComponentOne = ({
           showPlayButton={false}  
           items={images} 
           showNav={false}
-        />;
+        />
       </Col1>
       <Col2>
         <Model>{name}</Model>
@@ -97,7 +94,7 @@ const DescriptionComponentOne = ({
               applyBtnWhite
               onClick={routeChange}
             >
-              Связаться с консультантом
+              Подробнее
             </ButtonPrimary>
         </ButtonsWrapper>
       </Col2>

@@ -25,7 +25,6 @@ export const NavStyled = styled(Nav)`
       flex-direction: column;
       justify-content: space-evenly;
       background-color: black;
-      /* width: 120vw; */
       height: 75vh;
       margin: 0;
       padding: 0;
@@ -34,9 +33,10 @@ export const NavStyled = styled(Nav)`
 
 export const NavbarCollapse = styled(Navbar.Collapse)`
   z-index: 888;
-  /* width: 100vw; */
-  margin: 0;
-  padding: 0;
+  @media screen and (max-width: 991px) {
+    margin-left: -50px;
+    margin-right: -50px;
+  }
 `;
 
 export const NavLinkHide = styled(Nav.Link)`

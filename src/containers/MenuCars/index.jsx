@@ -23,7 +23,7 @@ import LogoChevrolet from '../../assets/icons/chevrolet.png';
 
 const MenuCars = () => {
   const [data, setData] = useState({});
-  const [itemsToShow, setItemsToShow] = useState({itemsToShow: 12});
+  const [itemsToShow, setItemsToShow] = useState(12);
   const [expanded, setExpanded] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
@@ -49,9 +49,10 @@ const MenuCars = () => {
   function showMore () {
     if (itemsToShow === 12) {
       setItemsToShow(data.length);
+      console.log(itemsToShow, 'number of items');
       setExpanded(true);
     } else {
-      setItemsToShow({itemsToShow: 12});
+      setItemsToShow(12);
       setExpanded(false);
     }
   };
@@ -92,7 +93,7 @@ const MenuCars = () => {
             <Row>
               { 
                 !loading && carList.length ? (carList
-                  .slice(0, 12)
+                  .slice(0, itemsToShow)
                   .map(({id, ...otherProps}) =>
                       (<MenuItems key={id} id={id} {...otherProps} />))
                 ):(<Spinner />)

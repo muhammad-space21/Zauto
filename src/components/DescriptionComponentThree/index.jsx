@@ -94,7 +94,7 @@ const DescriptionComponentThree = ({
               applyBtn
               onClick={routeChange}
             >
-              Связаться с консультантом
+              Подробнее
             </ButtonPrimary>
         </ButtonsWrapper>
       </Col2>

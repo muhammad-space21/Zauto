@@ -97,7 +97,7 @@ export const ApplyBtn = css`
   border: none;
   text-align: center;
   color: white;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 700;
   outline: none;
   background-color: black;
@@ -115,7 +115,7 @@ export const ApplyBtn = css`
     @media screen and (max-width: 768px) {
       width: 230px;
       height: 50px;
-      font-size: 12px;
+      font-size: 15px;
     }
 `;
 
@@ -125,7 +125,7 @@ export const ApplyBtnWhite = css`
   border: none;
   text-align: center;
   color: black;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 700;
   outline: none;
   background-color: white;
@@ -143,7 +143,7 @@ export const ApplyBtnWhite = css`
     @media screen and (max-width: 769px) {
       width: 230px;
       height: 50px;
-      font-size: 12px;
+      font-size: 15px;
     }
 `;
 
