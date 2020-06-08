@@ -26,8 +26,12 @@
 
 ul.sub-menu {
   position: absolute;
-  width: 180px;
+  width: 200px;
   height: 100px;
+  display: flex;
+  flex-direction: column;
+  // align-items: center;
+  justify-content: space-around;
   background: black;
   top: 80%;
   visibility: hidden;
@@ -36,17 +40,6 @@ ul.sub-menu {
   padding: 17px 0;
   @include transition(.3s);
   @media screen and (max-width: 991px) {
-    // width: fit-content;
-    // height: fit-content;
-    // position: relative;
-    // visibility: visible;
-    // box-shadow: none;
-    // opacity: 1;
-    // top: -20px;
-    // transition: none;
-    // padding: 0;
-    // display: block;
-    // margin-right: -38px;
     display: none;
   }
 }

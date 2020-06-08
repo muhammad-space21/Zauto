@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-
 import { Navbar, Nav } from 'react-bootstrap';
+import { HashLink as Link } from 'react-router-hash-link';
 
 
 export const NavbarStyled = styled(Navbar)`
@@ -39,30 +39,34 @@ export const NavbarCollapse = styled(Navbar.Collapse)`
   }
 `;
 
-export const NavLinkHide = styled(Nav.Link)`
+export const NavLinkHide = styled(Link)`
   display: none;
   font-size: 16px;
   line-height: 20px;
   font-weight: 300;
   color: white;
+  text-decoration: none;
   &:hover {
     color: #00AF66;
     cursor: pointer; 
+    text-decoration: none;
   }
   @media screen and (max-width: 991px) {
     display: block;
   }
 `;
 
-export const NavLinkCustom = styled(Nav.Link)`
+export const NavLinkCustom = styled(Link)`
   font-size: 16px;
   line-height: 20px;
   font-weight: 300;
   color: white;
   margin-right: 30px;
+  text-decoration: none;
   &:hover {
     color: white;
     cursor: pointer;
+    text-decoration: none;
     &::before {
       width: 70px;
     }
@@ -90,15 +94,18 @@ export const NavLinkCustom = styled(Nav.Link)`
   }
 `;
 
-export const NavLinkStyledDropdown = styled(Nav.Link)`
+export const NavLinkStyledDropdown = styled(Link)`
   font-size: 15px;
   line-height: 20px;
   font-weight: 300;
   color: white;
-  margin-right: 30px;
+  /* margin-right: 20px; */
+  text-decoration: none;
+  margin-left: 5px;
     &:hover {
       cursor: pointer;
       color: #00AF66; 
+      text-decoration: none;
     }
   @media screen and (max-width: 1100px) {
     padding-right: 20px;
@@ -109,15 +116,17 @@ export const NavLinkStyledDropdown = styled(Nav.Link)`
   }
 `;
 
-export const NavLinkStyled = styled(Nav.Link)`
+export const NavLinkStyled = styled(Link)`
   font-size: 16px;
   line-height: 20px;
   font-weight: 300;
   color: white;
   margin-right: 30px;
+  text-decoration: none;
   &:hover {
     color: white;
     cursor: pointer;
+    text-decoration: none;
     &::before {
       width: 70px;
     }
@@ -148,15 +157,17 @@ export const NavLinkStyled = styled(Nav.Link)`
   }
 `;
 
-export const NavLinkStyledLogin = styled(Nav.Link)`
+export const NavLinkStyledLogin = styled(Link)`
   display: flex;
   flex-direction: row;
   align-items: center;
   margin-right: 20px;
   color: white;
+  text-decoration: none;
   &:hover {
     cursor: pointer;
     color: #00AF66;
+    text-decoration: none;
   }
   span {
     display: none;

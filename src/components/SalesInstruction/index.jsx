@@ -55,7 +55,7 @@ const SalesInstruction = () => {
     : fadeIn(".fadeIn");
 
   return (
-    <Container className='fadeIn' ref={sectionRef}>
+    <Container id="5" className='fadeIn' ref={sectionRef}>
       <Heading>Как купить в рассрочку ?</Heading>
       <Row>
         <Card>

@@ -34,7 +34,7 @@ export const NavbarMain = () => (
           <NavStyled className="ml-auto">
             <NavLinkCustom href="/">Главная</NavLinkCustom>
             <li>
-              <a className='nav-item' href="#">Автомобили</a>
+              <NavLinkStyled className='nav-item' to="#1">Автомобили</NavLinkStyled>
               <ul className="sub-menu">
                 <NavLinkStyledDropdown href="Новые-автомобили">Новые автомобили</NavLinkStyledDropdown>
                 <NavLinkStyledDropdown href="С-пробегом">С пробегом</NavLinkStyledDropdown>
@@ -42,9 +42,9 @@ export const NavbarMain = () => (
             </li>
               <NavLinkHide href="Новые-автомобили">Новые автомобили</NavLinkHide>
               <NavLinkHide href="С-пробегом">С пробегом</NavLinkHide>
-            <NavLinkStyled href="Как-купить">Как купить</NavLinkStyled>
-            <NavLinkStyled href="Партнеры">Партнеры</NavLinkStyled>
-            <NavLinkStyled href="Контакты">Контакты</NavLinkStyled>
+            <NavLinkStyled to="/#5">Как купить</NavLinkStyled>
+            <NavLinkStyled to="/#6">Партнеры</NavLinkStyled>
+            <NavLinkStyled to="/#6">Контакты</NavLinkStyled>
             <NavItemStyled> 
               <HR />
               <img src={IconPhone} alt='icon-phone' /> 

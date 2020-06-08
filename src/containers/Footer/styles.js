@@ -23,6 +23,9 @@ export const LogoWrapper = styled(Link)`
     width: 90%;
     height: auto;
   }
+  @media screen and (max-width: 550px) {
+    display: none;
+  }
 `;
 
 export const Row = styled.div`
@@ -135,6 +138,17 @@ export const H6 = styled.span`
   font-weight: 400;
   margin-bottom: 20px;
   color: white;
+`;
+
+export const Reserved = styled.span`
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  color: white;
+  @media screen and (max-width: 550px) {
+    font-size: 12px;
+  }
 `;
 
 export const Address = styled.div`

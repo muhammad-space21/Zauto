@@ -65,7 +65,7 @@ const MenuCars = () => {
 
     return (
       <>
-        <ContainerBrandIcons>
+        <ContainerBrandIcons id="1">
           <Heading> Выберите модель автомобиля </Heading>
           <RowBrandIcons>
             <ImgHyundai>
