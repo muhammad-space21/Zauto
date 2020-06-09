@@ -6,7 +6,7 @@ import {
   ImageContainer
 } from './styles';
 
-import IconCalculator from '../../assets/icons/keys.png';
+import IconGuarantee from '../../assets/icons/gurantee.png';
 import IconCalendar from '../../assets/icons/calendar.png';
 import IconPassport from '../../assets/icons/passport.png';
 import IconDocument from '../../assets/icons/business-and-finance.png';
@@ -15,9 +15,9 @@ const MarketingCards = () => (
   <Container>
     <Card>
       <ImageContainer>
-        <img src={IconCalculator} alt="calculator"/>
+        <img src={IconGuarantee} alt="guarantee"/>
       </ImageContainer>
-      <span>Правила расчета</span>
+      <span>3 года гарантии</span>
     </Card>
     <Card>
       <ImageContainer>

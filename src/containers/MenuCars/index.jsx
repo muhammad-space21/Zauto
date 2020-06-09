@@ -14,7 +14,7 @@ import {
 } from './styles';
 
 import Spinner from '../../components/Spinner';
-import MenuItems from '../../containers/MenuItems';
+import MenuItems from '../../components/MenuItems';
 import ButtonPrimary from '../../components/Buttons/ButtonPrimary';
 
 import LogoHyndai from '../../assets/icons/hyunda.png';

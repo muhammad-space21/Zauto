@@ -2,16 +2,16 @@ import React from 'react';
 
 import { Container } from './styles';
 
-import Navbar from '../../containers/Navbar';
+import Navbar from '../../components/Navbar';
 import Header from '../../components/Header';
 import MarketingCards from '../../components/MarketingCards';
 // import BestSalesCarousel from '../../components/BestSalesCarousel';
 
 import MenuCars from '../../containers/MenuCars';
-import CarouselOfCars from '../../components/CarouselOfCars';
-import CarsDescriptionsOverview from '../../components/CarsDescriptionsOverview';
+import CarouselOfCars from '../../containers/CarouselOfCars';
+import CarsDescriptionsOverview from '../../containers/CarsDescriptionsOverview';
 import SalesInstruction from '../../components/SalesInstruction';
-import Footer from '../../containers/Footer';
+import Footer from '../../components/Footer';
 
 const Homepage = () => (
   <Container>

@@ -19,9 +19,9 @@ import {
 } from './styles';
 
 import NavbarMain from '../../containers/Navbar';
-import CarouselOfCars from '../../components/CarouselOfCars';
+import CarouselOfCars from '../../containers/CarouselOfCars';
 import SalesInstruction from '../../components/SalesInstruction';
-import Footer from '../../containers/Footer';
+import Footer from '../../components/Footer';
 import Spinner from '../../components/Spinner';
 import FormPage from '../../pages/FormPage';
 

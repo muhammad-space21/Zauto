@@ -1,8 +1,6 @@
-import React, { useRef } from 'react';
-import { useIntersection } from 'react-use';
-import gsap from "gsap";
+import React from 'react';
 
-import { 
+import {
   Container, 
   Heading, 
   Row,
@@ -12,7 +10,7 @@ import {
   BtnWrapper
 } from './styles';
 
-import ButtonPrimary from '../Buttons/ButtonPrimary';
+// import ButtonPrimary from '../Buttons/ButtonPrimary';
 
 import IconCertificate from '../../assets/icons/certificate.png';
 import IconStartup from '../../assets/icons/startup.png';
@@ -20,42 +18,8 @@ import IconDomain from '../../assets/icons/domain-registration.png';
 import IconMarketing from '../../assets/icons/viral-marketing.jpg';
 
 const SalesInstruction = () => {
-   // Ref for our element
-  const sectionRef = useRef(null);
-   // All the ref to be observed
-  const intersection = useIntersection(sectionRef, {
-    root: null,
-    rootMargin: "0px",
-    threshold: 0.3
-  });
-
-   // Animation for fading in
-  const fadeIn = element => {
-    gsap.to(element, 1, {
-      opacity: 1,
-      y: -60,
-      ease: "power4.out",
-      stagger: {
-        amount: 0.3
-      }
-    });
-  };
-   // Animation for fading out
-  const fadeOut = element => {
-    // gsap.to(element, 1, {
-    //   opacity: 0,
-    //   y: -20,
-    //   ease: "power4.out"
-    // });
-  };
-
-   // checking to see when the vieport is visible to the user
-  intersection && intersection.intersectionRatio < 0.3
-    ? fadeOut(".fadeIn")
-    : fadeIn(".fadeIn");
-
   return (
-    <Container id="5" className='fadeIn' ref={sectionRef}>
+    <Container id="5" >
       <Heading>Как купить в рассрочку ?</Heading>
       <Row>
         <Card>
@@ -67,7 +31,7 @@ const SalesInstruction = () => {
               дополнительные опции автомобиля и оставьте заявку.
           </Text>
           <BtnWrapper>
-              <ButtonPrimary secondary>ВЫБРАТЬ АВТО</ButtonPrimary>
+              {/* <ButtonPrimary secondary>ВЫБРАТЬ АВТО</ButtonPrimary> */}
           </BtnWrapper>
         </Card>
         <Card>
@@ -75,11 +39,11 @@ const SalesInstruction = () => {
           <Title>Обработка заявки</Title>
           <Text>С Вами свяжеться наш сотрудник для уточнения данных по Вашей заявке.</Text>
           <BtnWrapper>
-              <ButtonPrimary secondary>ОСТАВИТЬ ЗАЯВКУ</ButtonPrimary>
+              {/* <ButtonPrimary secondary>ОСТАВИТЬ ЗАЯВКУ</ButtonPrimary> */}
           </BtnWrapper>
         </Card>
       </Row>
-      <Row className='fadeIn' ref={sectionRef}>
+      <Row>
       <Card>
           <img src={IconCertificate} alt="icon"/>
           <Title>Оформите договор</Title>
@@ -88,7 +52,7 @@ const SalesInstruction = () => {
               После всей процедуры Вы в скором времени получите свой автомобиль.
           </Text>
           <BtnWrapper>
-              <ButtonPrimary secondary>ОСТАВИТЬ ЗАЯВКУ</ButtonPrimary>
+              {/* <ButtonPrimary secondary>ОСТАВИТЬ ЗАЯВКУ</ButtonPrimary> */}
           </BtnWrapper>
         </Card>
         <Card>
@@ -99,7 +63,7 @@ const SalesInstruction = () => {
               Платите маленькими платежами и получайте бонусы ZMARKET
           </Text>
           <BtnWrapper>
-              <ButtonPrimary secondary>ПОЛУЧИТЬ АВТО</ButtonPrimary>
+              {/* <ButtonPrimary secondary>ПОЛУЧИТЬ АВТО</ButtonPrimary> */}
           </BtnWrapper>
         </Card>
       </Row>

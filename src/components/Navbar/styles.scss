@@ -1,0 +1,51 @@
+// Mixins
+@mixin transition($time) {
+	-webkit-transition: all $time ease-out 0s;
+	-moz-transition: all $time ease-out 0s;
+	-ms-transition: all $time ease-out 0s;
+	-o-transition: all $time ease-out 0s;
+	transition: all $time ease-out 0s;
+}
+
+.nav-item {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 300;
+  color: white;
+  text-decoration: none;
+  margin-right: 30px;
+  font-family: 'Varela Round', sans-serif;
+    &:hover {
+      color: white;
+      text-decoration: none;
+    }
+    @media screen and (max-width: 991px) {
+      display: none;
+    }
+}
+
+ul.sub-menu {
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  // align-items: center;
+  justify-content: space-around;
+  background: black;
+  top: 80%;
+  visibility: hidden;
+  opacity: 0;
+  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.05);
+  padding: 17px 0;
+  @include transition(.3s);
+  @media screen and (max-width: 991px) {
+    display: none;
+  }
+}
+
+li:hover > ul.sub-menu {
+	visibility: visible;
+  opacity: 1;
+  top: 100%;
+}

@@ -11,7 +11,7 @@ const ScrollTop = ({ history, children }) => {
     return () => {
       unListen()
     }
-  }, []);
+  }, [history]);
 
   return <>{children}</>;
 };

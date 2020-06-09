@@ -103,8 +103,8 @@ export const Card = styled.div`
 export const ImageContainer = styled.div`
   margin-top: 30px;
   margin-bottom: 20px;
-  width: 40px;
-  height: 40px;
+  width: 43px;
+  height: 43px;
   img {
     width: 100%;
     height: 100%;
