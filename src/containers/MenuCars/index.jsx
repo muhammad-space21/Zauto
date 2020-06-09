@@ -43,13 +43,18 @@ const MenuCars = () => {
       setError('Fetch Failed!');
     })
   }, [url]);
-  
+
+
+// filter function of categories
+const found = Object.keys(data).find(key => data[key].id === catId);
+const carList = found ? data[found].car : [];
+
 
   // showMore function
   function showMore () {
     if (itemsToShow === 12) {
-      setItemsToShow(data.length);
-      console.log(data.length, 'data.length')
+      setItemsToShow(carList.length);
+      console.log(carList.length, 'carList.length')
       console.log(itemsToShow, 'number of items in if');
       setExpanded(true);
     } else {
@@ -59,9 +64,6 @@ const MenuCars = () => {
     }
   };
 
-  // filter function of categories
-  const found = Object.keys(data).find(key => data[key].id === catId);
-  const carList = found ? data[found].car : [];
 
     return (
       <>
@@ -107,9 +109,9 @@ const MenuCars = () => {
               onClick={showMore}
             >
               {
-                expanded ? <span>Показать больше</span>
+                expanded ? <span>Показывай меньше</span>
                 : 
-                <span>Показывай меньше</span>
+                <span>Показать больше</span>
                 
               }
             </ButtonPrimary>
@@ -118,4 +120,5 @@ const MenuCars = () => {
       </>
     )
   };
+
 export default withRouter(MenuCars);
