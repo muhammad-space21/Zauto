@@ -37,6 +37,9 @@ export const Row = styled.div`
   @media screen and (max-width: 800px) {
     margin-top: 20px;
   }
+  @media screen and (min-width: 1500px) {
+    width: 80vw;
+  }
 `;
 
 export const Row2 = styled.div`
@@ -52,6 +55,9 @@ export const Row2 = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+  }
+  @media screen and (min-width: 1500px) {
+    width: 80vw;
   }
 `;
 
@@ -110,7 +116,7 @@ export const TitleHide = styled.span`
   color: white;
   margin-right: 10px;
   margin-bottom: -30px;
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 550px) {
     display: block;
   }
 `;

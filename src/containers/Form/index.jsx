@@ -19,7 +19,6 @@ import useForm from '../../hooks/useForm';
 import SpinnerSmall from '../../components/SpinnerSmall';
 import ButtonPrimary from '../../components/Buttons/ButtonPrimary';
 
-
 const Form = () => {
   const { 
     handleSubmit,
@@ -31,6 +30,7 @@ const Form = () => {
     success,
     instruction
   } = useForm();
+
     return (
     <>
       <ContainerStyled>
@@ -76,12 +76,12 @@ const Form = () => {
             name="phone"
             placeholder="(998) 90 123-45-67"
             value={inputs.phone}
-            onChange={handleChange}
-            mask={['(',/[9]/, /[9]/, /[8]/, ')', ' ', /\d/, /\d/, /\d/, /\d/, /\d/, '-', /\d/, /\d/, '-', /\d/, /\d/, ]}
+            mask={['(',/[9]/, /[9]/, /[8]/, ')', ' ', /\d/, /\d/, ' ', /\d/, /\d/, /\d/, '-', /\d/, /\d/, '-', /\d/, /\d/, ]}
             guide={true}
-            // showMask={true}
+            showMask={true}
+            onChange={handleChange}
           />
-          { 
+          {
             submit && !inputs.phone &&
             <ErrorMsg>
               <Error>Номер телефона отсутствует!</Error>

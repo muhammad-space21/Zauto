@@ -23,3 +23,4 @@
 [0605/155742.578:ERROR:process_info.cc(359)] UncheckedAllocate
 [0605/160014.749:ERROR:process_info.cc(359)] UncheckedAllocate
 [0605/160855.543:ERROR:process_info.cc(359)] UncheckedAllocate
+[0609/144405.887:ERROR:file_io.cc(89)] ReadExactly: expected 36, observed 0

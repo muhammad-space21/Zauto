@@ -1,11 +1,12 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import MaskedInput from 'react-text-mask';
+// import IMask from 'imask';
+
 import { Alert } from 'react-bootstrap';
 
 export const AlertStyled = styled(Alert)`
 	width: 100%;
-	/* margin-bottom: -70px; */
 `;
 
 export const ContainerStyled = styled.div`

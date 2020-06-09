@@ -10,7 +10,7 @@ const useForm = (callback) => {
   const [success, setSuccess] = useState(false);
   const [instruction, setInstruction] = useState(true);
   const [inputs, setInputs] = useState({
-    fullname: '', phone: '', car_id: id
+    fullname: '', phone: '(998)', car_id: id
   });
 
 

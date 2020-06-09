@@ -19,7 +19,7 @@ export const Heading = styled.span`
   letter-spacing: 0px;
   color: #000000;
   font-weight: 500;
-  @media screen and (mx-width: 768px) {
+  @media screen and (max-width: 768px) {
     font-size: 38px;
     line-height: 40px;
   }
@@ -30,7 +30,7 @@ export const Heading = styled.span`
 `;
 
 export const Title = styled.h1`
-  font-size: 18px;
+  font-size: 16px;
   @media screen and (max-width: 768px) {
     font-size: 22px;
   }
@@ -47,7 +47,7 @@ export const Wrapper = styled.div`
       object-fit: cover;
     }
   &:hover {
-    cursor: grab;
+    cursor: pointer;
   }
 `;
 

@@ -5,8 +5,7 @@ import { Container } from './styles';
 import Navbar from '../../components/Navbar';
 import Header from '../../components/Header';
 import MarketingCards from '../../components/MarketingCards';
-// import BestSalesCarousel from '../../components/BestSalesCarousel';
-
+// import BestSalesCarousel from '../../containers/BestSalesCarousel';
 import MenuCars from '../../containers/MenuCars';
 import CarouselOfCars from '../../containers/CarouselOfCars';
 import CarsDescriptionsOverview from '../../containers/CarsDescriptionsOverview';

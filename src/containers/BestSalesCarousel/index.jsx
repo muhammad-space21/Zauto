@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useHistory } from 'react-router-dom';
 
 import { 
   Container, 
@@ -8,10 +9,7 @@ import {
   Title
 } from './styles';
 
-// import Img1 from '../../assets/images/gentra.jpg';
-// import Img2 from '../../assets/images/gentra.jpg';
-// import Img3 from '../../assets/images/Cobalt.psd2.png';
-import Spinner from '../Spinner';
+import Spinner from '../../components/Spinner';
 
 const BestSalesCarousel = () => {
   const [data, setData] = useState({});
@@ -82,7 +80,11 @@ const BestSalesCarousel = () => {
     ]
   };
 
-  console.log(data, 'data in carousel')
+
+  // routing
+  const history = useHistory();
+
+
     return (
       <Container>
         <Heading>Лучшие Продажи</Heading>
@@ -91,7 +93,7 @@ const BestSalesCarousel = () => {
           !loading && data.length ? (data
               .filter((item, idx) => idx < 5)
               .map(({id, image, name}) => (
-                <Wrapper id={id} key={id}>
+                <Wrapper id={id} key={id} onClick={() => history.push(`/${id}`)}>
                   <img src={`https://admin.zauto.uz/${image}`} alt='car'/>
                   <Title>{name}</Title>
                 </Wrapper>
