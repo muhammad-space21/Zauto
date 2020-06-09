@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import {
   NavbarStyled, 
@@ -23,9 +23,8 @@ import BrandLogo from '../../assets/images/logo@2x-1.png';
 import IconLogin from '../../assets/icons/login.png';
 
 export const NavbarMain = () => {
-  const [ collapse, setCollapse ] = useState(false);
   return (
-    <NavbarStyled collapseOnSelect={true} bg='default' variant='default' expand="lg">
+    <NavbarStyled bg='default' variant='default' expand="lg">
       <NavbarBrand href="/"> 
         <img src={BrandLogo} alt="Brand-logo"/> 
       </NavbarBrand>
@@ -33,7 +32,7 @@ export const NavbarMain = () => {
         <img src={IconMenu} alt='icon' /> 
       </NavbarToggle>
         <NavbarCollapse id="responsive-navbar-nav">
-          <NavStyled onSelect={() => setCollapse(false)} className="ml-auto">
+          <NavStyled className="ml-auto">
             <NavLinkCustom to="/">Главная</NavLinkCustom>
             <li>
               <NavLinkStyled className='nav-item' to="#1">Автомобили</NavLinkStyled>
@@ -45,7 +44,6 @@ export const NavbarMain = () => {
               <NavLinkHide to="Новые-автомобили">Новые автомобили</NavLinkHide>
               <NavLinkHide to="С-пробегом">С пробегом</NavLinkHide>
             <NavLinkStyled to="/#5">Как купить</NavLinkStyled>
-            {/* <NavLinkStyled to="/#6">Партнеры</NavLinkStyled> */}
             <NavLinkStyled to="/#6">Контакты</NavLinkStyled>
             <NavItemStyled> 
               <HR />

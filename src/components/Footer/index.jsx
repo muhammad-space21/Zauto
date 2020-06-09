@@ -71,7 +71,7 @@ const Footer = () => (
       </Wrapper>
     </Row2>
     <HrDotted />
-    <Reserved>OOO «ZAAMIN-MARKET» © 2020. Все права защищены</Reserved>
+    <Reserved>OOO «ZAUTO» © 2020. Все права защищены</Reserved>
   </Container>
 );
 
