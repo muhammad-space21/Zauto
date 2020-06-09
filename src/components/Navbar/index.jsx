@@ -32,16 +32,16 @@ export const NavbarMain = () => (
       </NavbarToggle>
         <NavbarCollapse id="responsive-navbar-nav">
           <NavStyled className="ml-auto">
-            <NavLinkCustom href="/">Главная</NavLinkCustom>
+            <NavLinkCustom to="/">Главная</NavLinkCustom>
             <li>
               <NavLinkStyled className='nav-item' to="#1">Автомобили</NavLinkStyled>
               <ul className="sub-menu">
-                <NavLinkStyledDropdown href="Новые-автомобили">Новые автомобили</NavLinkStyledDropdown>
-                <NavLinkStyledDropdown href="С-пробегом">С пробегом</NavLinkStyledDropdown>
+                <NavLinkStyledDropdown to="Новые-автомобили">Новые автомобили</NavLinkStyledDropdown>
+                <NavLinkStyledDropdown to="С-пробегом">С пробегом</NavLinkStyledDropdown>
               </ul>
             </li>
-              <NavLinkHide href="Новые-автомобили">Новые автомобили</NavLinkHide>
-              <NavLinkHide href="С-пробегом">С пробегом</NavLinkHide>
+              <NavLinkHide to="Новые-автомобили">Новые автомобили</NavLinkHide>
+              <NavLinkHide to="С-пробегом">С пробегом</NavLinkHide>
             <NavLinkStyled to="/#5">Как купить</NavLinkStyled>
             <NavLinkStyled to="/#6">Партнеры</NavLinkStyled>
             <NavLinkStyled to="/#6">Контакты</NavLinkStyled>

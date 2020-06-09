@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import { useHistory }  from 'react-router-dom';
 
 import { 
   Container, 
@@ -23,7 +24,6 @@ const CarouselOfCars = () => {
     .then((data) => {
       setLoading(false)
       setData(data)
-      console.log('data in overview', data)
     }).catch((err) => {
       setLoading(false)
       setError('Fetch Failed!')
@@ -75,6 +75,7 @@ const CarouselOfCars = () => {
       }
     ]
   };
+  const history = useHistory();
 
     return (
       <Container>
@@ -83,15 +84,15 @@ const CarouselOfCars = () => {
           !loading && data.length ? (data
               .filter((item, idx) => idx < 5)
               .map(({id, image}) => (
-                <Wrapper id={id} key={id}>
+                <Wrapper id={id} key={id} onClick={() => history.push(`/${id}`)}>
                   <img src={`https://admin.zauto.uz/${image}`} alt='car'/>
                 </Wrapper>
               ))
-            ) : <Spinner />
+          ) : <Spinner />
         }
         </SliderStyled>
       </Container>
     );
-  };
+};
 
 export default CarouselOfCars;

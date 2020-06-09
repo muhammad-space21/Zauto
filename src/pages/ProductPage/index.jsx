@@ -18,7 +18,7 @@ import {
   HR
 } from './styles';
 
-import NavbarMain from '../../containers/Navbar';
+import NavbarMain from '../../components/Navbar';
 import CarouselOfCars from '../../containers/CarouselOfCars';
 import SalesInstruction from '../../components/SalesInstruction';
 import Footer from '../../components/Footer';
@@ -52,7 +52,7 @@ const ProductComponent = () => {
     fetchData()
   }, [id]);
 
-
+    // array of gallery images
     const images = [
       {
         original: `https://admin.zauto.uz/${data.image}`,
