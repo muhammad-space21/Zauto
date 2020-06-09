@@ -41,18 +41,19 @@ const useForm = (callback) => {
         setLoading(false)
         setSuccess(false)
         setInstruction(false)
+        setSubmit(false)
         console.log(error)
     }) 
     console.log(inputs);
 
     // clear form
-    if (inputs.fullname 
+    if (inputs.fullname
       && inputs.phone 
       && submit 
       && inputs.car_id) {
       setInputs({
         fullname: '',
-        phone: '',
+        phone: '(998)',
         car_id: ''
       },
       setSubmit(true)
@@ -67,11 +68,6 @@ const useForm = (callback) => {
       {...inputs, [event.target.name]: event.target.value}
     ));
   };
-  
-  //validation
-  // if (submit && inputs.fullname.length < 15) {
-  //   setError(true);
-  // };
 
   return {
     handleSubmit,

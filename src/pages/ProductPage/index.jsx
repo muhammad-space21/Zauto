@@ -39,7 +39,7 @@ import IconMoney2 from '../../assets/icons/money(1).svg';
 const ProductComponent = () => {
   const { id } = useParams();
   const [data, setData] = useState({});
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(0);
   
   // fetch data from API
   useEffect(() => {
@@ -75,7 +75,12 @@ const ProductComponent = () => {
         thumbnail: `https://admin.zauto.uz/${data.image3}`
       },
     ];
-    
+
+    // Form open toggle
+    const handleClose = () => {
+      setOpen(prevCount => prevCount + 1)
+    };
+
     return (
     <Fragment>
       <NavbarMain />
@@ -164,7 +169,7 @@ const ProductComponent = () => {
                 <ButtonPrimary 
                   primaryLong 
                   primary
-                  onClick={() => setOpen(true)}
+                  onClick={handleClose}
                 >
                   Связаться с консультантом
                 </ButtonPrimary>
@@ -174,7 +179,9 @@ const ProductComponent = () => {
         </Container>)
         : (<Spinner />)
       }
-      {open && <FormPage />}
+      {open !== 0 ? (<FormPage />) : null}
+      {open === 2 ? (<FormPage />) : null}
+      {open === 3 ? (<FormPage />) : null}
       <CarouselOfCars />
       <SalesInstruction />
       <Footer />

@@ -31,6 +31,8 @@ const Form = () => {
     instruction
   } = useForm();
 
+  console.log(inputs.phone.length, 'length');
+
     return (
     <>
       <ContainerStyled>
@@ -57,6 +59,7 @@ const Form = () => {
             placeholder="Ф. И. О"
             value={inputs.fullname}
             onChange={handleChange}
+            required
           />
           { 
             submit && !inputs.fullname &&
@@ -82,10 +85,12 @@ const Form = () => {
             onChange={handleChange}
           />
           {
-            submit && !inputs.phone &&
-            <ErrorMsg>
-              <Error>Номер телефона отсутствует!</Error>
-            </ErrorMsg>
+            submit && isNaN(inputs.phone.length) ?
+            (
+              <ErrorMsg>
+                <Error>Номер телефона отсутствует!</Error>
+              </ErrorMsg>
+            ) : null
           }
           <Wrapper>
             <Checkbox type="checkbox" id="terms" name="terms" />
