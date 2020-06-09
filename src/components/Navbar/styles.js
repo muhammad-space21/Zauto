@@ -200,17 +200,23 @@ export const NavItemStyled = styled(Nav.Item)`
   display: flex;
   flex-direction: row;
   align-items: center;
+  &:hover {
+    text-decoration: none;
+  }
   img {
     width: 20px;
     height: 20px;
   }
-  span {
+  a {
     font-size: 16px;
     line-height: 21px;
     font-weight: 400;
     color: #ffffff;
     margin-left: 15px;
     font-family: 'Montserrat', sans-serif;
+    &:hover {
+      text-decoration: none;
+    }
     @media screen and (max-width: 991px) {
       margin-left: 10px;
       &:hover {

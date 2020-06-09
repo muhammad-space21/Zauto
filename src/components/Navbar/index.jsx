@@ -48,7 +48,7 @@ export const NavbarMain = () => (
             <NavItemStyled> 
               <HR />
               <img src={IconPhone} alt='icon-phone' /> 
-              <span>+99895-479-0770</span>
+              <a href="tel:99895-479-0770">+99895-479-0770</a>
             </NavItemStyled>
             <NavLinkStyledLogin href="https://login.zauto.uz">
               <img src={IconLogin} alt="icon-login"/> 

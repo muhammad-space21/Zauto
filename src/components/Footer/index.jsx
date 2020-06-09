@@ -17,7 +17,8 @@ import {
   Row2,
   Number,
   Address,
-  Reserved
+  Reserved,
+  TitleHide
 } from './styles';
 
 import IconFacebook from '../../assets/icons/facebook.JPG';
@@ -28,9 +29,10 @@ const Footer = () => (
   <Container id="6">
     <Row>
       <Col>
-        <Title>Публичная оферта</Title>
-        <Title>Стать партнером</Title>
-        <Title>Частые вопросы</Title>
+        <Title to="Публичная-оферта">Публичная оферта</Title>
+        <Title to="Стать-партнером">Стать партнером</Title>
+        <Title to="Частые-вопросы">Частые вопросы</Title>
+        <TitleHide>Мы в соцсетях</TitleHide>
       </Col>
       <Col2>
         <Wrapper>
@@ -54,8 +56,8 @@ const Footer = () => (
       </Wrapper>
       <Wrapper>
         <H6>СЛУЖБА ПОДДЕРЖКИ</H6>
-          <Number>+998 95 479 0770</Number>
-          <Number>+998 95 479 7007</Number>
+          <Number href="tel:998 95 479 0770">+998 95 479 0770</Number>
+          <Number href="tel:998 95 479 7007">+998 95 479 7007</Number>
         <Address>
           Узбекистан, г. Ташкент, Юнусабадский
           <br />
